@@ -11,7 +11,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -19,10 +19,10 @@
     "baseUrl": "./",
     "paths": {
       "@types/*": ["src/@types/*"],
-      "@types": ["src/@types"]
+      "@types": ["src/@types"],
     },
-    "typeRoots": ["./node_modules/@types/", "./src/@types/"]
+    "typeRoots": ["./node_modules/@types/", "./src/@types/"],
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
