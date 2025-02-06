@@ -1,6 +1,45 @@
 @import "tailwindcss";
 
-* {
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+
+@theme {
+  --default-font-family: "Pretendard Variable";
+
+  --color-white: #ffffff;
+  --color-white20: rgba(255, 255, 255, 20);
+  --color-white30: rgba(255, 255, 255, 30);
+  --color-dark: #222222;
+  --color-bg-light: #eeeeee;
+  --color-bg-dark-light: #2c2c2c;
+  --color-grey: #565656;
+  --color-grey-light: #999999;
+  --color-border: #d8d8d8;
+}
+
+body {
   margin: 0;
   padding: 0;
+}
+
+li,
+p,
+span {
+  letter-spacing: -0.025em;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
 }

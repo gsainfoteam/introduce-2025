@@ -1,11 +1,25 @@
-const App = () => {
-  // const { t } = useTranslation("main");
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
-  return (
-    <div>
-      <h1 className="text-red-700">hello world!</h1>
-    </div>
-  );
+import Layout from "./layout/Layout";
+import OnboardingPage from "./pages/onboarding";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route element={<Layout />}>
+        <Route path="/" element={<OnboardingPage />} />
+      </Route>
+    </>,
+  ),
+);
+
+const App = () => {
+  return <RouterProvider router={router} />;
 };
 
 export default App;
