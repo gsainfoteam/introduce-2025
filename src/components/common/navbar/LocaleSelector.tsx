@@ -17,7 +17,9 @@ const LocaleButton = ({
 }: LocaleButtonProps) => {
   return (
     <button
-      data-isselected={isSelected}
+      aria-pressed={isSelected}
+      role="radio"
+      aria-label={`select language: ${children}`}
       {...props}
       className={cn(
         mode === "dark"
