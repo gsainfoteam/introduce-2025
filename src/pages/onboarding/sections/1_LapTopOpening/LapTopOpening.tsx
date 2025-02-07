@@ -1,11 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useAtom } from "jotai";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import LapTopBottomImage from "src/assets/laptop/laptop-bottom.png";
 import LapTopCoverImage from "src/assets/laptop/laptop-cover-b.svg";
 import LapTopTopImage from "src/assets/laptop/laptop-top.png";
+import { navbarStateAtom } from "src/store/atoms";
 
 import styles from "./LapTopOpening.module.css";
 
@@ -20,6 +22,10 @@ const LapTopOpening = () => {
   const mockupRef = useRef<HTMLDivElement>(null);
   const screenRef = useRef<HTMLDivElement>(null);
 
+  const [, setNavbarState] = useAtom(navbarStateAtom);
+
+  const SCROLL_TRIGGER_ID = "laptopScroller";
+
   useGSAP(() => {
     ScrollTrigger.defaults({
       markers: true,
@@ -32,6 +38,7 @@ const LapTopOpening = () => {
         start: "100% bottom",
         end: "200% top",
         pin: true,
+        id: SCROLL_TRIGGER_ID,
       },
     });
 
@@ -62,6 +69,21 @@ const LapTopOpening = () => {
         duration: 0.3,
         ease: "power2.inOut",
       },
+      "-=0.2",
+    );
+
+    macbook.call(
+      () => {
+        const st = ScrollTrigger.getById(SCROLL_TRIGGER_ID);
+        if (st) {
+          if (st.direction > 0) {
+            setNavbarState({ mode: "light", hasBackground: true });
+          } else {
+            setNavbarState({ mode: "dark", hasBackground: false });
+          }
+        }
+      },
+      undefined,
       "-=0.2",
     );
   });

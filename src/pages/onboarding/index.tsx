@@ -7,9 +7,7 @@ const OnboardingPage = () => {
   return (
     <>
       <div className="fixed top-0 left-0 w-full z-10 content-wrapper">
-        <div className="content">
-          <Navbar mode="dark" />
-        </div>
+        <Navbar mode="dark" hasBackground={false} />
       </div>
       <LapTopOpening />
 
