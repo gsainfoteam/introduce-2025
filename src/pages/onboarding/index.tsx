@@ -11,6 +11,14 @@ const OnboardingPage = () => {
         </div>
       </div>
       <LapTopOpening />
+
+      <main className="content-wrapper">
+        <section className="mt-[120vh] content h-[500vh]">
+          <h1 className="w-full text-center text-6xl font-bold">
+            코드로 캠퍼스를 바꾸는 사람들
+          </h1>
+        </section>
+      </main>
     </>
   );
 };

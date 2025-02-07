@@ -15,6 +15,7 @@ const LapTopOpening = () => {
   const macbookRef = useRef<HTMLDivElement>(null);
   const laptopTopRef = useRef<HTMLDivElement>(null);
   const mockupRef = useRef<HTMLDivElement>(null);
+  const screenRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     ScrollTrigger.defaults({
@@ -40,6 +41,26 @@ const LapTopOpening = () => {
         scale: 5.3,
         ease: "power2.in",
       });
+
+    macbook.to(
+      screenRef.current,
+      {
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.inOut",
+      },
+      "-=0.5",
+    );
+
+    macbook.to(
+      macbookRef.current,
+      {
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.inOut",
+      },
+      "-=0.2",
+    );
   });
 
   return (
@@ -53,7 +74,11 @@ const LapTopOpening = () => {
           >
             <div className={`${styles.part} ${styles.top}`} ref={laptopTopRef}>
               <img src={LapTopTopImage} alt="LapTop" className={styles.top} />
-              <img src={LapTopCoverImage} alt="" className={styles.cover} />
+              <div className={`${styles.cover} relative`}>
+                <img src={LapTopCoverImage} alt="" />
+              </div>
+
+              <div className={styles.screen} ref={screenRef} />
 
               <h1 className={styles.pTitle}>인포팀은</h1>
             </div>
