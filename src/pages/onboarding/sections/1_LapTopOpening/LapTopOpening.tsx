@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import LapTopBottomImage from "src/assets/laptop/laptop-bottom.png";
 import LapTopCoverImage from "src/assets/laptop/laptop-cover-b.svg";
 import LapTopTopImage from "src/assets/laptop/laptop-top.png";
@@ -12,6 +13,8 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const LapTopOpening = () => {
+  const { t } = useTranslation("main");
+
   const macbookRef = useRef<HTMLDivElement>(null);
   const laptopTopRef = useRef<HTMLDivElement>(null);
   const mockupRef = useRef<HTMLDivElement>(null);
@@ -80,7 +83,9 @@ const LapTopOpening = () => {
 
               <div className={styles.screen} ref={screenRef} />
 
-              <h1 className={styles.pTitle}>인포팀은</h1>
+              <h1 className={styles.pTitle}>
+                {t("onboarding.introduction.infoteamIs")}
+              </h1>
             </div>
             <div className={`${styles.part} ${styles.bottom}`}>
               <img src={LapTopCoverImage} alt="" className={styles.cover} />
