@@ -20,5 +20,10 @@ export const main = {
           "저희는 이런 사람들이 모여 각자의 흥미에 따라 열심히 일하고 근사한 서비스를 만들어나가는 것을 목표로 합니다.",
       },
     },
+    coolDevCulture: {
+      asADevGroup: "개발 단체로써",
+      leadsCool: "멋진 개발 문화를 이끌어 나갑니다.",
+      slackGithubCollab: "Slack & Github 기반 협업",
+    },
   },
 };

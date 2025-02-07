@@ -9,14 +9,14 @@ const Introduction = () => {
   return (
     <>
       <section className="content">
-        <h1 className="w-full text-center text-6xl font-bold">
+        <h1 className="w-full text-center text-6xl font-bold text-dark">
           {t("onboarding.introduction.codeCampus")}
         </h1>
       </section>
 
       <div className="h-[300px]" />
 
-      <section className="content border-t border-b border-solid border-border py-16">
+      <section className="content border-t border-b border-solid border-border py-16 text-dark">
         <div className="flex w-full justify-center items-center">
           <Bracket />
 
@@ -24,7 +24,7 @@ const Introduction = () => {
           <img src={`${AVATARS_BASE_PATH}/2.png`} className="w-20 h-20" />
           <img src={`${AVATARS_BASE_PATH}/3.png`} className="w-20 h-20" />
 
-          <div className="-scale-x-100">
+          <div className="-scale-x-100 -z-10">
             <Bracket />
           </div>
         </div>
