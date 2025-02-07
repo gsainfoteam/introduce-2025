@@ -26,7 +26,7 @@ const Navbar = ({ mode }: HeaderProps) => {
             <li
               key={link.displayName}
               className={cn(
-                "tracking-tight py-1 px-2 rounded-sm transition hover:scale-95",
+                "tracking-tight py-1 px-2 rounded-sm transition hover:scale-95 cursor-pointer",
                 mode === "dark"
                   ? ["text-white hover:bg-bg-dark-light"]
                   : ["text-dark hover:bg-bg-light"],

@@ -10,8 +10,10 @@
     "lint": "eslint src/"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.0.3",
     "clsx": "^2.1.1",
+    "gsap": "^3.12.7",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
     "prettier": "^3.2.4",
