@@ -1,7 +1,5 @@
 import { ObjectLocale } from "src/commonTypes";
 
-import projects, { Project } from "./projects";
-
 export enum Role {
   Frontend,
   Backend,
@@ -12,7 +10,7 @@ export enum Role {
 }
 
 interface IntendedProjects {
-  project: Project;
+  projectId: number;
   role: Role[];
 }
 
@@ -42,8 +40,48 @@ const members: Member[] = [
     profileImage: "https://avatars.githubusercontent.com/u/125528915?v=4",
     intendedProjects: [
       {
-        project: projects[0],
+        projectId: 0,
         role: [Role.Backend, Role.Frontend, Role.App, Role.DevOps],
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: {
+      en: "Yebeen Lee",
+      ko: "이예빈",
+    },
+    githubID: "yebeen23",
+    roles: [Role.Frontend],
+    introduction: {
+      en: "yebeen introduction",
+      ko: "예빈 설명",
+    },
+    profileImage: "https://avatars.githubusercontent.com/u/126765312?v=4",
+    intendedProjects: [
+      {
+        projectId: 0,
+        role: [Role.Frontend],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: {
+      en: "Ikjun Choi",
+      ko: "최익준",
+    },
+    githubID: "no_ikjun",
+    roles: [Role.Backend],
+    introduction: {
+      en: "ikjun introduction",
+      ko: "익준 설명",
+    },
+    profileImage: "https://avatars.githubusercontent.com/u/96350366?v=4",
+    intendedProjects: [
+      {
+        projectId: 0,
+        role: [Role.Backend],
       },
     ],
   },

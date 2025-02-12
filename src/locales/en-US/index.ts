@@ -1,3 +1,4 @@
+import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import _members from "src/store/members";
 
 export const main = {
@@ -36,15 +37,12 @@ export const main = {
         inferenceLogo: "INFERENCE",
         description:
           "We share how we develop even we are in different project teams. <br /> Through Inference, team members gain new technical inspiration and also gain perspectives from different roles.",
-        examples: [
-          {
-            title: "How to Code Fast",
-            presenters: [_members[0]],
-            description:
-              "Let me show how to develop fast and flawlessly, using auto-completion, etc.",
-            link: "",
-          },
-        ],
+        examples: inferenceExamples.map((inferenceExample) => ({
+          id: inferenceExample.id,
+          title: inferenceExample.title.en,
+          presentersId: inferenceExample.presentersId,
+          description: inferenceExample.description.en,
+        })),
       },
     },
   },

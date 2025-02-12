@@ -1,3 +1,4 @@
+import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import _members from "src/store/members";
 
 export const main = {
@@ -35,15 +36,12 @@ export const main = {
         inferenceLogo: "INFERENCE",
         description:
           "다른 프로젝트팀에 있어도 인퍼런스를 통해 어떤 개발을 하는지 공유합니다. <br /> 인퍼런스를 통해 인포팀원들은 새로운 기술적 영감을 얻기도 하고, 자신과는 다른 역할에서의 시각을 얻기도 합니다.",
-        examples: [
-          {
-            title: "How to Code Fast",
-            presenters: [_members[0]],
-            description:
-              "자동완성 등을 사용해서 개발을 빠르고 실수 없이 하는 방법을 알아봅시다.",
-            link: "",
-          },
-        ],
+        examples: inferenceExamples.map((inferenceExample) => ({
+          id: inferenceExample.id,
+          title: inferenceExample.title.ko,
+          presentersId: inferenceExample.presentersId,
+          description: inferenceExample.description.ko,
+        })),
       },
     },
   },
