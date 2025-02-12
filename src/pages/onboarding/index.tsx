@@ -3,6 +3,7 @@ import Navbar from "src/components/common/navbar";
 import LapTopOpening from "./sections/1_LapTopOpening";
 import Introduction from "./sections/2_Introduction";
 import CoolDevCulture from "./sections/3_CoolDevCulture";
+import PassionateMembers from "./sections/4_PassionateMembers";
 
 const OnboardingPage = () => {
   return (
@@ -18,6 +19,10 @@ const OnboardingPage = () => {
         <div className="h-[600px]" />
 
         <CoolDevCulture />
+
+        <div className="h-[600px]" />
+
+        <PassionateMembers />
       </main>
     </div>
   );

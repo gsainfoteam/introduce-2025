@@ -8,6 +8,15 @@
   src: url("./assets/fonts/PretendardVariable.woff2") format("woff2-variations");
 }
 
+@font-face {
+  font-family: "League Gothic";
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  src: url("./assets/fonts/LeagueGothic-Regular-Variable.woff2")
+    format("woff2-variations");
+}
+
 @theme {
   --default-font-family: "Pretendard Variable";
 
@@ -20,6 +29,8 @@
   --color-grey: #565656;
   --color-grey-light: #999999;
   --color-border: #d8d8d8;
+
+  --font-league-gothic: "League Gothic";
 }
 
 body {

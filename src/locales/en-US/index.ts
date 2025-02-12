@@ -1,3 +1,5 @@
+import _members from "src/store/members";
+
 export const main = {
   title: "Hello, World!",
 
@@ -25,5 +27,35 @@ export const main = {
       leadsCool: "We lead a cool development culture.",
       slackGithubCollab: "Co-op based on Slack & Github",
     },
+    passionateMembers: {
+      title: "Team members who are truly passionate about development",
+      inference: {
+        title: "Inference: The Infoteam Conference",
+        subtitle:
+          "A conference-like event where we share our development experiences",
+        inferenceLogo: "INFERENCE",
+        description:
+          "We share how we develop even we are in different project teams. <br /> Through Inference, team members gain new technical inspiration and also gain perspectives from different roles.",
+        examples: [
+          {
+            title: "How to Code Fast",
+            presenters: [_members[0]],
+            description:
+              "Let me show how to develop fast and flawlessly, using auto-completion, etc.",
+            link: "",
+          },
+        ],
+      },
+    },
   },
 };
+
+export const members = _members.map((member) => ({
+  id: member.id,
+  name: member.name.en,
+  githubId: member.githubID,
+  role: member.roles,
+  introduction: member.introduction.en,
+  profileImage: member.profileImage,
+  intendedProjects: member.intendedProjects,
+}));

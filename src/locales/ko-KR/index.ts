@@ -1,3 +1,5 @@
+import _members from "src/store/members";
+
 export const main = {
   title: "안녕 세상아!",
 
@@ -25,5 +27,34 @@ export const main = {
       leadsCool: "멋진 개발 문화를 이끌어 나갑니다.",
       slackGithubCollab: "Slack & Github 기반 협업",
     },
+    passionateMembers: {
+      title: "개발에 누구보다 진심인 팀원들",
+      inference: {
+        title: "인포팀 컨퍼런스, 인퍼런스",
+        subtitle: "서로의 멋진 개발 경험을 공유하는 컨퍼런스-like 행사",
+        inferenceLogo: "INFERENCE",
+        description:
+          "다른 프로젝트팀에 있어도 인퍼런스를 통해 어떤 개발을 하는지 공유합니다. <br /> 인퍼런스를 통해 인포팀원들은 새로운 기술적 영감을 얻기도 하고, 자신과는 다른 역할에서의 시각을 얻기도 합니다.",
+        examples: [
+          {
+            title: "How to Code Fast",
+            presenters: [_members[0]],
+            description:
+              "자동완성 등을 사용해서 개발을 빠르고 실수 없이 하는 방법을 알아봅시다.",
+            link: "",
+          },
+        ],
+      },
+    },
   },
 };
+
+export const members = _members.map((member) => ({
+  id: member.id,
+  name: member.name.ko,
+  githubId: member.githubID,
+  role: member.roles,
+  introduction: member.introduction.ko,
+  profileImage: member.profileImage,
+  intendedProjects: member.intendedProjects,
+}));
