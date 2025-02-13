@@ -9,7 +9,7 @@ export enum Role {
   DevOps,
 }
 
-interface IntendedProjects {
+export interface IntendedProjects {
   projectId: number;
   role: Role[];
 }
