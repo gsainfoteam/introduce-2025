@@ -85,6 +85,161 @@ const members: Member[] = [
       },
     ],
   },
+  {
+    id: 3,
+    name: {
+      en: "Yejin Yang",
+      ko: "양예진",
+    },
+    githubID: "",
+    roles: [Role.Frontend, Role.Designer],
+    introduction: {
+      en: "yejin introduction",
+      ko: "예진 설명",
+    },
+    profileImage: "",
+    intendedProjects: [
+      {
+        projectId: 0,
+        role: [Role.Frontend, Role.Designer],
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: {
+      en: "Jonghyun Kim",
+      ko: "김종현",
+    },
+    githubID: "",
+    roles: [Role.Frontend],
+    introduction: {
+      en: "jonghyun introduction",
+      ko: "종현 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 5,
+    name: {
+      en: "Jeongwoo Lee",
+      ko: "이정우",
+    },
+    githubID: "crown-3",
+    roles: [Role.Frontend, Role.Designer],
+    introduction: {
+      en: "jeongwoo introduction",
+      ko: "정우 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 6,
+    name: {
+      en: "Huigyung Son",
+      ko: "손희경",
+    },
+    githubID: "",
+    roles: [Role.Frontend],
+    introduction: {
+      en: "huigyung introduction",
+      ko: "희경 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 7,
+    name: {
+      en: "Inseon Hwang",
+      ko: "황인선",
+    },
+    githubID: "",
+    roles: [Role.Frontend],
+    introduction: {
+      en: "inseon introduction",
+      ko: "인선 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 8,
+    name: {
+      en: "Sunghwan Kim",
+      ko: "김성환",
+    },
+    githubID: "",
+    roles: [Role.Backend],
+    introduction: {
+      en: "sunghwan introduction",
+      ko: "성환 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 9,
+    name: {
+      en: "Dongyeon Ahn",
+      ko: "안동연",
+    },
+    githubID: "",
+    roles: [Role.App],
+    introduction: {
+      en: "dongyeon introduction",
+      ko: "동연 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 10,
+    name: {
+      en: "Dahyun Oh",
+      ko: "오다현",
+    },
+    githubID: "",
+    roles: [Role.Backend],
+    introduction: {
+      en: "dahyun introduction",
+      ko: "다현 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 11,
+    name: {
+      en: "Shinhyuk Lee",
+      ko: "이신혁",
+    },
+    githubID: "",
+    roles: [Role.App, Role.Backend],
+    introduction: {
+      en: "shinhyuk introduction",
+      ko: "신혁 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 12,
+    name: {
+      en: "Jinseo Shim",
+      ko: "심진서",
+    },
+    githubID: "",
+    roles: [Role.Frontend],
+    introduction: {
+      en: "jinseo introduction",
+      ko: "진서 설명",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
 ];
 
 export default members;

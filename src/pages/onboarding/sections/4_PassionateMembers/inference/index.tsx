@@ -48,8 +48,8 @@ type ExampleProps =
 const Example = ({ title, presentersId, description }: ExampleProps) => {
   return (
     <div className="border border-border rounded-lg py-4.5 px-5 tracking-tight flex-1">
-      <h6 className="text-lg font-bold">{title}</h6>
-      <div>
+      <h6 className="text-lg font-bold mb-2">{title}</h6>
+      <div className="mb-2">
         {presentersId.map((presenterId) => (
           <MemberWrapper memberId={presenterId} key={presenterId}>
             <MemberLink />

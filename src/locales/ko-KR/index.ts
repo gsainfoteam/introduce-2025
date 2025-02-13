@@ -43,6 +43,10 @@ export const main = {
           description: inferenceExample.description.ko,
         })),
       },
+      toyProjects: {
+        title: "하고 싶어서 하는 토이프로젝트",
+        subtitle: '"이런 거 만들면 진짜 재밌을 것 같지 않아?"',
+      },
     },
   },
 };

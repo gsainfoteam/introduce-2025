@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { H4, ShortHr } from "src/components/common/headers";
 
 import Inference from "./inference";
+import ToyProjects from "./toyProjects";
 
 const PassionateMembers = () => {
   const { t } = useTranslation("main");
@@ -20,6 +21,10 @@ const PassionateMembers = () => {
 
       <section className="content">
         <Inference />
+
+        <div className="h-6" />
+
+        <ToyProjects />
       </section>
     </>
   );

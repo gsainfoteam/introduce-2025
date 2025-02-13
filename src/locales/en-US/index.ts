@@ -44,6 +44,10 @@ export const main = {
           description: inferenceExample.description.en,
         })),
       },
+      toyProjects: {
+        title: "Toy projects we do just because we want to",
+        subtitle: '"Wouldn\'t it be really fun to make something like this?"',
+      },
     },
   },
 };
