@@ -7,9 +7,9 @@ const Inference = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full px-9 py-8 border-border border rounded-2xl">
+    <div className="w-full px-9 py-8 border-border border rounded-2xl text-dark">
       <div className="flex w-full justify-between gap-4">
-        <div className="text-dark">
+        <div>
           <h5 className="text-2xl font-bold mb-2">
             {t("onboarding.passionateMembers.inference.title")}
           </h5>
@@ -47,7 +47,7 @@ type ExampleProps =
 
 const Example = ({ title, presentersId, description }: ExampleProps) => {
   return (
-    <div className="border border-border rounded-lg py-4.5 px-5 tracking-tight flex-1">
+    <div className="border border-border rounded-lg py-4.5 px-5 tracking-tight flex-1 bg-white/30">
       <h6 className="text-lg font-bold mb-2">{title}</h6>
       <div className="mb-2">
         {presentersId.map((presenterId) => (

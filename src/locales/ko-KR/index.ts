@@ -1,4 +1,5 @@
 import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
+import toyProjects from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
 import _members from "src/store/members";
 
 export const main = {
@@ -46,6 +47,13 @@ export const main = {
       toyProjects: {
         title: "하고 싶어서 하는 토이프로젝트",
         subtitle: '"이런 거 만들면 진짜 재밌을 것 같지 않아?"',
+        examples: toyProjects.map((toyProject) => ({
+          id: toyProject.id,
+          title: toyProject.title.ko,
+          intendersId: toyProject.intendersId,
+          description: toyProject.description.ko,
+          thumbnail: toyProject.thumbnail,
+        })),
       },
     },
   },
