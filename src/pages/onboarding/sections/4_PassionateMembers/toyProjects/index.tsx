@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
@@ -8,8 +9,16 @@ import ToyLogo from "./assets/toyLogo.svg?react";
 const ToyProjects = () => {
   const { t } = useTranslation();
 
+  const BG_GRADIENT: CSSProperties = {
+    background:
+      "radial-gradient(69.58% 55.03% at 91.56% 13.11%, #FFD0EA 0%, #FFF 100%)",
+  };
+
   return (
-    <div className="w-full px-9 py-8 border-border border rounded-2xl text-dark">
+    <div
+      className="w-full px-9 py-8 border-border border rounded-2xl text-dark"
+      style={BG_GRADIENT}
+    >
       <div className="flex w-full justify-between gap-4">
         <div className="text-dark">
           <h5 className="text-2xl font-bold mb-2">

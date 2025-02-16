@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
@@ -6,8 +7,16 @@ import { main as koMain } from "src/locales/ko-KR";
 const Inference = () => {
   const { t } = useTranslation();
 
+  const BG_GRADIENT: CSSProperties = {
+    background:
+      "radial-gradient(66.72% 66.72% at 85.94% 9.72%, #DDD7FF 0%, #FFF 84.5%)",
+  };
+
   return (
-    <div className="w-full px-9 py-8 border-border border rounded-2xl text-dark">
+    <div
+      className="w-full px-9 py-8 border-border border rounded-2xl text-dark"
+      style={BG_GRADIENT}
+    >
       <div className="flex w-full justify-between gap-4">
         <div>
           <h5 className="text-2xl font-bold mb-2">
