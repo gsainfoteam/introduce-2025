@@ -7,11 +7,13 @@ import {
 
 import Layout from "./layout/Layout";
 import OnboardingPage from "./pages/onboarding";
+import Members from "./pages/members";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<OnboardingPage />} />
+      <Route path="/members" element={<Members />} />
       <Route element={<Layout />}></Route>
     </>,
   ),
