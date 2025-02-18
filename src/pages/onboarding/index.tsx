@@ -4,6 +4,7 @@ import LapTopOpening from "./sections/1_LapTopOpening";
 import Introduction from "./sections/2_Introduction";
 import CoolDevCulture from "./sections/3_CoolDevCulture";
 import PassionateMembers from "./sections/4_PassionateMembers";
+import ZiggleIntroduction from "./sections/5_ZiggleIntroduction";
 
 const OnboardingPage = () => {
   return (
@@ -13,7 +14,7 @@ const OnboardingPage = () => {
       </div>
       <LapTopOpening />
 
-      <main className="mt-[120vh] content-wrapper h-[500vh]">
+      <main className="mt-[120vh] content-wrapper ">
         <Introduction />
 
         <div className="h-[600px]" />
@@ -23,6 +24,10 @@ const OnboardingPage = () => {
         <div className="h-[600px]" />
 
         <PassionateMembers />
+
+        <div className="h-[800px]" />
+
+        <ZiggleIntroduction />
       </main>
     </div>
   );

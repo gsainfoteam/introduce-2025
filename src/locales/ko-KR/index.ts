@@ -56,6 +56,10 @@ export const main = {
         })),
       },
     },
+    ziggleIntroduction: {
+      title: "지스트 공지 대통합 서비스",
+      tryNow: "지금 바로 이용해보기",
+    },
   },
 };
 

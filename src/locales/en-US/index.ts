@@ -57,6 +57,10 @@ export const main = {
         })),
       },
     },
+    ziggleIntroduction: {
+      title: "Gathering All the GIST Notices",
+      tryNow: "Try it out now",
+    },
   },
 };
 
