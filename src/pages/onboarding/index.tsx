@@ -5,6 +5,7 @@ import Introduction from "./sections/2_Introduction";
 import CoolDevCulture from "./sections/3_CoolDevCulture";
 import PassionateMembers from "./sections/4_PassionateMembers";
 import ZiggleIntroduction from "./sections/5_ZiggleIntroduction";
+import SmallGathering from "./sections/6_SmallGathering";
 
 const OnboardingPage = () => {
   return (
@@ -28,6 +29,10 @@ const OnboardingPage = () => {
         <div className="h-[800px]" />
 
         <ZiggleIntroduction />
+
+        <SmallGathering />
+
+        <div className="h-[800px]" />
       </main>
     </div>
   );

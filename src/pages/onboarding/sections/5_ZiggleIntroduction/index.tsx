@@ -1,6 +1,9 @@
 import { Fragment } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
+import CellophaneButton from "src/components/common/cellophaneButton";
+import { H4, H5 } from "src/components/common/headers";
 
 import AppStoreIcon from "./assets/appStore.svg?react";
 import Fire3DIconClay from "./assets/fire3dIconClay.png";
@@ -33,7 +36,7 @@ const ZiggleIntroduction = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full relative h-[3000px]">
+    <div className="w-full relative h-[2800px]">
       {/* bg */}
       <div className="top-0 left-0 absolute w-full -z-10">
         <div className="w-full h-[600px] bg-linear-180 from-white to-ziggle" />
@@ -90,14 +93,38 @@ const ZiggleIntroduction = () => {
 
         <div className="h-35" />
 
-        <section className="content flex justify-between items-center gap-8">
-          <div></div>
+        <section className="content flex justify-between items-center gap-8 ">
+          <div className="text-white">
+            <H4 className="text-white font-semibold text-left mb-6">
+              {t("onboarding.ziggleIntroduction.description.title")}
+            </H4>
+
+            <p>
+              <Trans i18nKey="onboarding.ziggleIntroduction.description.content1" />
+            </p>
+
+            <p className="mt-4">
+              <Trans i18nKey="onboarding.ziggleIntroduction.description.content2" />
+            </p>
+          </div>
 
           <img
             src={Fire3DIconClay}
             className="w-[240px] object-cover aspect-4/5"
           />
         </section>
+
+        <div className="h-[120px]" />
+
+        <H5 className="text-white">
+          {t("onboarding.ziggleIntroduction.wantToSeeMore")}
+        </H5>
+
+        <CellophaneButton className="font-medium mt-6 flex gap-2 items-center">
+          {t("onboarding.ziggleIntroduction.goSeeProjectButton")}
+
+          <ArrowRightIcon className="size-6" />
+        </CellophaneButton>
       </div>
     </div>
   );
