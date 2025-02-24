@@ -12,7 +12,7 @@ import WebIcon from "./assets/web.svg?react";
 import ZiggleDesktopScreenshot from "./assets/ziggle_screenshot_desktop.png";
 import ZiggleMobileScreenshot from "./assets/ziggle_screenshot_mobile.png";
 import ZiggleLogo from "./assets/ziggleLogo.svg?react";
-import ZiggleTextLogo from "./assets/ziggleTextLogo.svg?react";
+import ZiggleTextAnimation from "./ZiggleTextAnimation";
 
 const LINKS = [
   {
@@ -53,10 +53,11 @@ const ZiggleIntroduction = () => {
 
           <div className="h-8" />
 
-          {/* TODO: add text animation in textlogo */}
-          <ZiggleTextLogo />
+          <div className="w-[320px] -translate-x-[15px]">
+            <ZiggleTextAnimation />
+          </div>
 
-          <div className="h-30" />
+          <div className="h-35" />
 
           <h2 className="text-4xl font-bold">
             {t("onboarding.ziggleIntroduction.title")}

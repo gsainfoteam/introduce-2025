@@ -48,11 +48,11 @@ const Examples = ({ title, description, image }: ExampleProps) => {
         alt={`icon of ${title}`}
       />
 
-      <div className="text-dark font-semibold text-lg tracking-tight">
+      <div className="text-dark font-semibold text-lg tracking-tight text-center">
         {title}
       </div>
 
-      <div className="text-grey-light text-sm tracking-tight">
+      <div className="text-grey-light text-sm tracking-tight text-center">
         {description}
       </div>
     </div>
