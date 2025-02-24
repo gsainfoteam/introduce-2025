@@ -48,16 +48,16 @@ const members: Member[] = [
   {
     id: 1,
     name: {
-      en: "Yebeen Lee",
-      ko: "이예빈",
+      en: "Ganghyeon Seo",
+      ko: "서강현",
     },
-    githubID: "yebeen23",
+    githubID: "ganghyeonseo",
     roles: [Role.Frontend],
     introduction: {
-      en: "yebeen introduction",
-      ko: "예빈 설명",
+      en: "Currently responsible for backend development and infrastructure.",
+      ko: "백엔드 개발과 인프라를 담당하고 있습니다.",
     },
-    profileImage: "https://avatars.githubusercontent.com/u/126765312?v=4",
+    profileImage: "https://avatars.githubusercontent.com/u/48593646?v=4",
     intendedProjects: [
       {
         projectId: 0,
