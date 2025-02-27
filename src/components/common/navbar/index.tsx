@@ -30,7 +30,7 @@ const Navbar = ({
   return (
     <nav
       className={cn(
-        "py-4 w-full flex justify-center",
+        "py-3 w-full flex justify-center",
         hasBackground &&
           (mode === "dark"
             ? "bg-dark border-b border-neutral-600"
@@ -38,7 +38,7 @@ const Navbar = ({
       )}
     >
       <div className="content flex w-full justify-between">
-        <div className="h-[34px]">
+        <div className="*:h-[44px] *:w-fit">
           {mode === "dark" ? <DarkLogo /> : <WhiteLogo />}
         </div>
         <div className="flex items-center gap-16">
