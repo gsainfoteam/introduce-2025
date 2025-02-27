@@ -64,6 +64,8 @@ export const main = {
     ziggleIntroduction: {
       title: "Gathering All the GIST Notices",
       tryNow: "Try it out now",
+      webScreenshotAlt: "Screenshot of Ziggle Web Main Page",
+      mobileScreenshotAlt: "Screenshot of Ziggle Mobile Main Page",
       description: {
         title:
           "Ziggle was developed to improve the convenience of GIST campus notices.",

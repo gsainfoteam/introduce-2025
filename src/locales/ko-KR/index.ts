@@ -63,6 +63,8 @@ export const main = {
     ziggleIntroduction: {
       title: "지스트 공지 대통합 서비스",
       tryNow: "지금 바로 이용해보기",
+      webScreenshotAlt: "지글 웹 메인 스크린샷",
+      mobileScreenshotAlt: "지글 모바일 메인 스크린샷",
       description: {
         title: "지글은 지스트 교내 공지 편의성 증진을 위해 개발되었습니다.",
         content1:

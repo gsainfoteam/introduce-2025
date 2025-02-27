@@ -88,8 +88,16 @@ const ZiggleIntroduction = () => {
         <div className="h-20" />
 
         <section className="content flex gap-2 items-start justify-center">
-          <img src={ZiggleDesktopScreenshot} className="w-3/4" />
-          <img src={ZiggleMobileScreenshot} className="w-1/4" />
+          <img
+            src={ZiggleDesktopScreenshot}
+            className="w-3/4"
+            alt={t("onboarding.ziggleIntroduction.webScreenshotAlt")}
+          />
+          <img
+            src={ZiggleMobileScreenshot}
+            className="w-1/4"
+            alt={t("onboarding.ziggleIntroduction.mobileScreenshotAlt")}
+          />
         </section>
 
         <div className="h-35" />
