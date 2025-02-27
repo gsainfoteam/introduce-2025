@@ -2,7 +2,7 @@ import { ParseKeys } from "i18next";
 
 interface NavLink {
   displayName: ParseKeys;
-  link: string;
+  link?: string;
 }
 
 const links: NavLink[] = [
@@ -12,19 +12,16 @@ const links: NavLink[] = [
   },
   {
     displayName: "navbar.members",
-    link: "/members",
   },
   {
     displayName: "navbar.projects",
-    link: "/",
   },
   {
     displayName: "navbar.faq",
-    link: "/",
   },
   {
     displayName: "navbar.bugReport",
-    link: "/",
+    link: "https://cs.gistory.me/",
   },
 ];
 

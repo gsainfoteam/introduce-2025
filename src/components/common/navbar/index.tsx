@@ -43,19 +43,21 @@ const Navbar = ({
         </div>
         <div className="flex items-center gap-16">
           <ul className="flex gap-6">
-            {links.map((link) => (
-              <li
-                key={link.displayName}
-                className={cn(
-                  "tracking-tight py-1 px-2 rounded-sm transition hover:scale-95 cursor-pointer",
-                  mode === "dark"
-                    ? ["text-white hover:bg-bg-dark-light"]
-                    : ["text-dark hover:bg-bg-light"],
-                )}
-              >
-                <Link to={link.link}>{t(link.displayName)}</Link>
-              </li>
-            ))}
+            {links
+              .filter((link) => link.link)
+              .map((link) => (
+                <li
+                  key={link.displayName}
+                  className={cn(
+                    "tracking-tight py-1 px-2 rounded-sm transition hover:scale-95 cursor-pointer",
+                    mode === "dark"
+                      ? ["text-white hover:bg-bg-dark-light"]
+                      : ["text-dark hover:bg-bg-light"],
+                  )}
+                >
+                  <Link to={link.link ?? ""}>{t(link.displayName)}</Link>
+                </li>
+              ))}
           </ul>
           <LocaleSelector mode={mode} />
         </div>
