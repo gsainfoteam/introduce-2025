@@ -74,6 +74,7 @@ const Example = ({
 
       <img
         className="border border-border rounded-sm w-[140px] h-[79px]"
+        alt={`thumbnail of ${title}`}
         src={thumbnail}
       />
     </div>
