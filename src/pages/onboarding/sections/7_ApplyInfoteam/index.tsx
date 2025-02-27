@@ -1,5 +1,7 @@
 import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
+import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
+import CellophaneButton from "src/components/common/cellophaneButton";
 import { H2 } from "src/components/common/headers";
 
 import PositionCard from "./positionCard";
@@ -32,6 +34,11 @@ const ApplyInfoteam = () => {
           <PositionCard key={positionCard.title} {...positionCard} />
         ))}
       </div>
+
+      <CellophaneButton className="font-medium mt-18 flex gap-2 items-center">
+        {t("onboarding.applyInfoteam.goApplyButton")}
+        <ArrowRightIcon className="size-6" />
+      </CellophaneButton>
     </section>
   );
 };

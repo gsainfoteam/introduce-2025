@@ -13,7 +13,7 @@ const CellophaneButton = ({
   return (
     <button
       className={cn(
-        "px-9 py-4 bg-white/20 rounded-lg border-white border cursor-pointer hover:bg-white/30 transition",
+        "px-9 py-4 bg-white/20 rounded-lg border-white border cursor-pointer hover:bg-white/30 transition text-white",
         className,
       )}
       {...props}
