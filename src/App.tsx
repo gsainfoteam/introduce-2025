@@ -11,9 +11,8 @@ import OnboardingPage from "./pages/onboarding";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route element={<Layout />}>
-        <Route path="/" element={<OnboardingPage />} />
-      </Route>
+      <Route path="/" element={<OnboardingPage />} />
+      <Route element={<Layout />}></Route>
     </>,
   ),
 );

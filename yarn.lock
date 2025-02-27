@@ -572,6 +572,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gsap/react@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@gsap/react@npm:2.1.2"
+  peerDependencies:
+    gsap: ^3.12.5
+    react: ">=17"
+  checksum: 237288d9923a5c0f243a7986e655cb09ab600db7cc117d6329334f1e895e31567635ca53587aabf65924e0cc02887b054aeda5f0b04c7d2091c95e75f7d8162d
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.13":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -2966,6 +2976,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.12.7":
+  version: 3.12.7
+  resolution: "gsap@npm:3.12.7"
+  checksum: 15f5da56d02f04be8eb4b58cb733fbd71619647608c0854717697da8b1922a5ce4ea5487cba0c66f428aa645247e143e462bec885f8470725c2c9ab393247e25
+  languageName: node
+  linkType: hard
+
 "has-bigints@npm:^1.0.1, has-bigints@npm:^1.0.2":
   version: 1.0.2
   resolution: "has-bigints@npm:1.0.2"
@@ -3497,6 +3514,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jotai@npm:^2.11.3":
+  version: 2.11.3
+  resolution: "jotai@npm:2.11.3"
+  peerDependencies:
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 03f0ca3b60469ce487bb4f23455315358da35bb511aaaef8778cf414ec61b3fb3dcc827f15cb8167a272364743a70520267f0870ba726bebd5cfa50635080e3d
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -3742,6 +3774,25 @@ __metadata:
   bin:
     loose-envify: cli.js
   checksum: 6517e24e0cad87ec9888f500c5b5947032cdfe6ef65e1c1936a0c48a524b81e65542c9c3edc91c97d5bddc806ee2a985dbc79be89215d613b1de5db6d1cfe6f4
+  languageName: node
+  linkType: hard
+
+"lottie-react@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "lottie-react@npm:2.4.1"
+  dependencies:
+    lottie-web: ^5.10.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: ac79931d98ea38fd3a9139139fb976d24a3e4e0ede86c74d69c5571b971122ee7e98432949f0f4af33f48b736fe8448918f124d48548dd46925bab484c09e73f
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.10.2":
+  version: 5.12.2
+  resolution: "lottie-web@npm:5.12.2"
+  checksum: af5bc3bc405fd760de8b17a36158d5a8c3e8c586c711d0c63681ddf056b65bc6b54ea36b1fcad782fb02dbe12e696a40e0ba72daf41b8f10ab5b5d1113793636
   languageName: node
   linkType: hard
 
@@ -4669,6 +4720,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sample-front@workspace:."
   dependencies:
+    "@gsap/react": ^2.1.2
     "@tailwindcss/vite": ^4.0.3
     "@types/eslint": ^8.56.2
     "@types/node": ^20.11.5
@@ -4684,8 +4736,11 @@ __metadata:
     eslint-plugin-react: ^7.33.2
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-simple-import-sort: ^10.0.0
+    gsap: ^3.12.7
     i18next: ^23.7.16
     i18next-browser-languagedetector: ^7.2.0
+    jotai: ^2.11.3
+    lottie-react: ^2.4.1
     prettier: ^3.2.4
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -5030,10 +5085,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.3, tailwindcss@npm:^4.0.3":
+"tailwindcss@npm:4.0.3":
   version: 4.0.3
   resolution: "tailwindcss@npm:4.0.3"
   checksum: 18a24ade85781a7979e485ea0c518ec39001818144676b69db3aa6f013a8c8ce76f876710c12212b5d8fa09a40aacf77c54937ef1f512d74cd3f65dc1ae14c8b
+  languageName: node
+  linkType: hard
+
+"tailwindcss@npm:^4.0.3":
+  version: 4.0.9
+  resolution: "tailwindcss@npm:4.0.9"
+  checksum: 0be256536feba52292958bbe7fed990865776707366742ad6d7c5d7868284984ef83f85b3df6faec42b02e106ccf66addea2d14f1e2a75f5263018f7d763840c
   languageName: node
   linkType: hard
 

@@ -8,6 +8,15 @@
   src: url("./assets/fonts/PretendardVariable.woff2") format("woff2-variations");
 }
 
+@font-face {
+  font-family: "League Gothic";
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  src: url("./assets/fonts/LeagueGothic-Regular-Variable.woff2")
+    format("woff2-variations");
+}
+
 @theme {
   --default-font-family: "Pretendard Variable";
 
@@ -20,6 +29,23 @@
   --color-grey: #565656;
   --color-grey-light: #999999;
   --color-border: #d8d8d8;
+
+  --color-ziggle: #ff4500;
+
+  --font-league-gothic: "League Gothic";
+}
+
+@theme {
+  --animate-scroll-up: scroll-up 5s linear infinite;
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
 }
 
 body {
@@ -36,7 +62,8 @@ span {
 .content-wrapper {
   width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content {
