@@ -86,6 +86,11 @@ const LapTopOpening = () => {
       undefined,
       "-=0.2",
     );
+
+    return () => {
+      macbook.kill();
+      ScrollTrigger.getById(SCROLL_TRIGGER_ID)?.kill();
+    };
   });
 
   return (
