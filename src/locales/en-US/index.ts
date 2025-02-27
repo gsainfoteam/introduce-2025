@@ -30,6 +30,8 @@ export const main = {
       asADevGroup: "As a developer group,",
       leadsCool: "We lead a cool development culture.",
       slackGithubCollab: "Co-op based on Slack & Github",
+      illustAlt:
+        "Infoteam communicating through Slack and collaborating based on Github Issues and Pull Requests",
     },
     passionateMembers: {
       title: "Team members who are truly passionate about development",

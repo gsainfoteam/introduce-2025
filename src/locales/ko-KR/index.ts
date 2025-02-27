@@ -30,6 +30,8 @@ export const main = {
       asADevGroup: "개발 단체로써",
       leadsCool: "멋진 개발 문화를 이끌어 나갑니다.",
       slackGithubCollab: "Slack & Github 기반 협업",
+      illustAlt:
+        "Slack을 통해 소통하고, Github Issue와 Pull Request 기반으로 협업하는 인포팀",
     },
     passionateMembers: {
       title: "개발에 누구보다 진심인 팀원들",

@@ -27,7 +27,7 @@ const CoolDevCulture = () => {
       <section className="content">
         <img
           src={i18n.language === "en-US" ? EngIllust : KorIllust}
-          className=""
+          alt={t("onboarding.coolDevCulture.illustAlt")}
         />
       </section>
     </>
