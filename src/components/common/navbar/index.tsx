@@ -25,9 +25,7 @@ const Navbar = ({
 
   useEffect(() => {
     setNavbarState({ mode: initialMode, hasBackground: initialHasBackground });
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [initialMode, initialHasBackground, setNavbarState]);
 
   return (
     <nav
