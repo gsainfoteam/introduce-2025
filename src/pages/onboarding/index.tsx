@@ -31,6 +31,8 @@ const OnboardingPage = () => {
 
         <ZiggleIntroduction />
 
+        <div className="h-[400px]" />
+
         <SmallGathering />
 
         <div className="h-[200px]" />

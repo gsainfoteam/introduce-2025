@@ -36,19 +36,19 @@ const ZiggleIntroduction = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full relative h-[2800px]">
+    <div className="w-full relative">
       {/* bg */}
-      <div className="top-0 left-0 absolute w-full -z-10">
-        <div className="w-full h-[600px] bg-linear-180 from-white to-ziggle" />
-        <div className="w-full h-[1400px] bg-ziggle" />
-        <div className="w-full h-[600px] bg-linear-180 from-ziggle to-white" />
+      <div className="top-0 left-0 absolute w-full -z-10 flex flex-col h-full">
+        <div className="w-full flex-[3] bg-linear-180 from-white to-ziggle" />
+        <div className="w-full flex-[7] bg-ziggle" />
+        <div className="w-full flex-[3] bg-linear-180 from-ziggle to-white" />
       </div>
 
       {/* contents */}
       <div className="w-full flex flex-col items-center relative tracking-tight text-white">
-        <section className="content flex flex-col items-center">
-          <div className="h-[200px]" />
+        <div className="h-[200px]" />
 
+        <section className="content flex flex-col items-center">
           <ZiggleLogo />
 
           <div className="h-8" />
@@ -116,7 +116,7 @@ const ZiggleIntroduction = () => {
           />
         </section>
 
-        <div className="h-[120px]" />
+        <div className="h-[100px]" />
 
         <H5 className="text-white">
           {t("onboarding.ziggleIntroduction.wantToSeeMore")}
@@ -127,6 +127,8 @@ const ZiggleIntroduction = () => {
 
           <ArrowRightIcon className="size-6" />
         </CellophaneButton>
+
+        <div className="h-[300px]" />
       </div>
     </div>
   );
