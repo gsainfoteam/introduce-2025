@@ -112,6 +112,7 @@ const ZiggleIntroduction = () => {
           <img
             src={Fire3DIconClay}
             className="w-[240px] object-cover aspect-4/5"
+            alt="fire3DIconClay"
           />
         </section>
 
