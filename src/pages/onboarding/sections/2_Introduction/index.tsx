@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import Bracket from "src/assets/common/bracket/bracket.svg?react";
-
-const AVATARS_BASE_PATH = "src/assets/notion_style_avatars";
+import Avatar1 from "src/assets/notion_style_avatars/1.png";
+import Avatar2 from "src/assets/notion_style_avatars/2.png";
+import Avatar3 from "src/assets/notion_style_avatars/3.png";
 
 const Introduction = () => {
   const { t } = useTranslation("main");
@@ -20,9 +21,9 @@ const Introduction = () => {
         <div className="flex w-full justify-center items-center">
           <Bracket />
 
-          <img src={`${AVATARS_BASE_PATH}/1.png`} className="w-20 h-20" />
-          <img src={`${AVATARS_BASE_PATH}/2.png`} className="w-20 h-20" />
-          <img src={`${AVATARS_BASE_PATH}/3.png`} className="w-20 h-20" />
+          <img src={Avatar1} className="w-20 h-20" />
+          <img src={Avatar2} className="w-20 h-20" />
+          <img src={Avatar3} className="w-20 h-20" />
 
           <div className="-scale-x-100 -z-10">
             <Bracket />
