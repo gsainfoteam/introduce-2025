@@ -35,6 +35,19 @@
   --font-league-gothic: "League Gothic";
 }
 
+@theme {
+  --animate-scroll-up: scroll-up 5s linear infinite;
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

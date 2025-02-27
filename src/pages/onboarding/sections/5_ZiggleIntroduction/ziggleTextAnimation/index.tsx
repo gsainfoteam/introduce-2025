@@ -5,7 +5,7 @@
 
 import { useLottie, useLottieInteractivity } from "lottie-react";
 
-import animationData from "./assets/ziggleTextAnimation.json";
+import animationData from "../assets/ziggleTextAnimation.json";
 
 const options = {
   animationData: animationData,
@@ -19,7 +19,7 @@ const ZiggleTextAnimation = () => {
     mode: "scroll",
     actions: [
       {
-        visibility: [0, 0.5],
+        visibility: [0.2, 0.55],
         type: "seek",
         frames: [0, 60],
       },

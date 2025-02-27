@@ -1,6 +1,7 @@
 import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import toyProjects from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
 import smallGatheringExamples from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
+import positionCards from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
 import _members from "src/store/members";
 
 export const main = {
@@ -80,7 +81,19 @@ export const main = {
         description: smallGatheringExample.description.ko,
         image: smallGatheringExample.image,
       })),
-      etc: "+ 밥 먹으러 나가기, 운동하기 등",
+      etc: "+ 밥 먹으러 나가기, 같이 게임하기, 운동하기 등",
+    },
+    applyInfoteam: {
+      title: "인포팀이 마음에 들었다면",
+      subtitle: "인포팀은 언제든지 인재를 환영합니다.",
+      positionCards: positionCards.map((positionCard) => ({
+        title: positionCard.title,
+        subtitle: positionCard.subtitle,
+        description: positionCard.description.ko,
+        link: positionCard.link,
+        bgColor: positionCard.bgColor,
+      })),
+      goApplyButton: "인포팀 지원하러 가기",
     },
   },
 };

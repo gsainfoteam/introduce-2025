@@ -5085,10 +5085,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.3, tailwindcss@npm:^4.0.3":
+"tailwindcss@npm:4.0.3":
   version: 4.0.3
   resolution: "tailwindcss@npm:4.0.3"
   checksum: 18a24ade85781a7979e485ea0c518ec39001818144676b69db3aa6f013a8c8ce76f876710c12212b5d8fa09a40aacf77c54937ef1f512d74cd3f65dc1ae14c8b
+  languageName: node
+  linkType: hard
+
+"tailwindcss@npm:^4.0.3":
+  version: 4.0.9
+  resolution: "tailwindcss@npm:4.0.9"
+  checksum: 0be256536feba52292958bbe7fed990865776707366742ad6d7c5d7868284984ef83f85b3df6faec42b02e106ccf66addea2d14f1e2a75f5263018f7d763840c
   languageName: node
   linkType: hard
 

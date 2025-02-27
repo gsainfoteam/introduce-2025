@@ -1,6 +1,7 @@
 import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import toyProjects from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
 import smallGatheringExamples from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
+import positionCards from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
 import _members from "src/store/members";
 
 export const main = {
@@ -83,6 +84,18 @@ export const main = {
         image: smallGatheringExample.image,
       })),
       etc: "+ go out for meal, play games, exercise, etc.",
+    },
+    applyInfoteam: {
+      title: "If you like the Infoteam",
+      subtitle: "We always welcome talented individuals.",
+      positionCards: positionCards.map((positionCard) => ({
+        title: positionCard.title,
+        subtitle: positionCard.subtitle,
+        description: positionCard.description.en,
+        link: positionCard.link,
+        bgColor: positionCard.bgColor,
+      })),
+      goApplyButton: "Apply to Infoteam",
     },
   },
 };

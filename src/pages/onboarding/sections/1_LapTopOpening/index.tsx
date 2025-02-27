@@ -28,7 +28,7 @@ const LapTopOpening = () => {
 
   useGSAP(() => {
     ScrollTrigger.defaults({
-      markers: true,
+      markers: false,
     });
 
     const macbook = gsap.timeline({

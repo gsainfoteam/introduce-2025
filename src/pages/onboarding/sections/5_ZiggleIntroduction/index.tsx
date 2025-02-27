@@ -12,7 +12,7 @@ import WebIcon from "./assets/web.svg?react";
 import ZiggleDesktopScreenshot from "./assets/ziggle_screenshot_desktop.png";
 import ZiggleMobileScreenshot from "./assets/ziggle_screenshot_mobile.png";
 import ZiggleLogo from "./assets/ziggleLogo.svg?react";
-import ZiggleTextAnimation from "./ZiggleTextAnimation";
+import ZiggleTextAnimation from "./ziggleTextAnimation";
 
 const LINKS = [
   {
