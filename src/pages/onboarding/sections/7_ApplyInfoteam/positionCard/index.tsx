@@ -43,7 +43,7 @@ const PositionCard = ({
               "animate-scroll-up absolute",
               "whitespace-nowrap text-white font-league-gothic text-xl flex items-center justify-center w-full *:mb-3",
             )}
-            style={{ writingMode: "sideways-lr" }}
+            style={{ writingMode: "vertical-lr" }}
           >
             <div>APPLY NOW</div>
             <div>APPLY NOW</div>
