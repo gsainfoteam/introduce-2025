@@ -79,13 +79,14 @@ const MobileSidebar = ({
                     "tracking-tight py-2 px-6 rounded-sm hover:scale-95 cursor-pointer text-lg font-medium",
                     "transform transition-all duration-300 ease-out",
                     mode === "dark"
-                      ? ["text-white hover:bg-bg-dark-light"]
-                      : ["text-dark hover:bg-bg-light"],
+                      ? "text-white hover:bg-bg-dark-light"
+                      : "text-dark hover:bg-bg-light",
+                    isOpen
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 -translate-y-5",
                   )}
                   onClick={onClose}
                   style={{
-                    opacity: isOpen ? 1 : 0,
-                    transform: isOpen ? "translateY(0)" : "translateY(-20px)",
                     transitionDelay: isOpen ? `${index * 70}ms` : "0ms",
                   }}
                 >
@@ -94,10 +95,11 @@ const MobileSidebar = ({
               ))}
           </ul>
           <div
-            className="transition-all duration-300 ease-out"
+            className={cn(
+              "transition-all duration-300 ease-out",
+              isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5",
+            )}
             style={{
-              opacity: isOpen ? 1 : 0,
-              transform: isOpen ? "translateY(0)" : "translateY(-20px)",
               transitionDelay: isOpen
                 ? `${links.filter((link) => link.link).length * 70}ms`
                 : "0ms",
