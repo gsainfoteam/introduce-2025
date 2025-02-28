@@ -33,6 +33,8 @@
   --color-ziggle: #ff4500;
 
   --font-league-gothic: "League Gothic";
+
+  --breakpoint-md: 1000px;
 }
 
 @theme {
