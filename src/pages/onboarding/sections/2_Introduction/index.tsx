@@ -10,12 +10,12 @@ const Introduction = () => {
   return (
     <>
       <section className="content">
-        <h1 className="w-full text-center text-6xl font-bold text-dark">
+        <h1 className="w-full text-center text-4xl px-8 md:px-0 md:text-6xl font-bold text-dark">
           {t("onboarding.introduction.codeCampus")}
         </h1>
       </section>
 
-      <div className="h-[300px]" />
+      <div className="md:h-[300px] h-[200px]" />
 
       <section className="content border-t border-b border-solid border-border py-16 text-dark">
         <div className="flex w-full justify-center items-center">
