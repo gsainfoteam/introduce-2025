@@ -1,6 +1,6 @@
 import { ObjectLocale } from "src/commonTypes";
 
-interface InferenceExample {
+interface qnadetail {
   id: number;
   title: ObjectLocale;
   presentersId: number[];
@@ -8,7 +8,7 @@ interface InferenceExample {
   category: string;
 }
 
-const inferenceExamples: InferenceExample[] = [
+const qnadetails: qnadetail[] = [
   {
     id: 1,
     title: {
@@ -141,4 +141,4 @@ const inferenceExamples: InferenceExample[] = [
   },
 ];
 
-export default inferenceExamples;
+export default qnadetails;
