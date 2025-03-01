@@ -20,7 +20,7 @@ const links: NavLink[] = [
   },
   {
     displayName: "navbar.faq",
-    link: "/",
+    link: "/faq",
   },
   {
     displayName: "navbar.bugReport",
