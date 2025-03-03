@@ -19,13 +19,25 @@ const PassionateMembers = () => {
 
       <div className="h-10" />
 
-      <section className="content flex flex-col items-center">
-        <Inference />
+      <div className="md:block hidden">
+        <section className="content flex flex-col items-center">
+          <Inference />
 
-        <div className="h-6" />
+          <div className="h-6" />
 
-        <ToyProjects />
-      </section>
+          <ToyProjects />
+        </section>
+      </div>
+
+      <div className="md:hidden block">
+        <section className="flex flex-col items-center">
+          <Inference />
+
+          <div className="h-6" />
+
+          <ToyProjects />
+        </section>
+      </div>
     </>
   );
 };
