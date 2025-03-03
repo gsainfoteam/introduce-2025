@@ -19,15 +19,15 @@ const OnboardingPage = () => {
       <main className="mt-[120vh] content-wrapper ">
         <Introduction />
 
-        <div className="h-[600px]" />
+        <div className="h-[300px] md:h-[600px]" />
 
         <CoolDevCulture />
 
-        <div className="h-[600px]" />
+        <div className="h-[300px] md:h-[600px]" />
 
         <PassionateMembers />
 
-        <div className="h-[800px]" />
+        <div className="h-[400px] md:h-[800px]" />
 
         <ZiggleIntroduction />
 

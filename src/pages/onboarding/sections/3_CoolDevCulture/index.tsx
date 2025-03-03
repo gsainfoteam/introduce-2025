@@ -3,6 +3,8 @@ import { H2, H4, H5, ShortHr } from "src/components/common/headers";
 
 import EngIllust from "./assets/1_en.png";
 import KorIllust from "./assets/1_ko.png";
+import EngMobileIllust from "./assets/1_mobile_en.png";
+import KorMobileIllust from "./assets/1_mobile_ko.png";
 
 const CoolDevCulture = () => {
   const { t, i18n } = useTranslation("main");
@@ -28,6 +30,13 @@ const CoolDevCulture = () => {
         <img
           src={i18n.language === "en-US" ? EngIllust : KorIllust}
           alt={t("onboarding.coolDevCulture.illustAlt")}
+          className="hidden md:block"
+        />
+
+        <img
+          src={i18n.language === "en-US" ? EngMobileIllust : KorMobileIllust}
+          alt={t("onboarding.coolDevCulture.illustAlt")}
+          className="md:hidden block"
         />
       </section>
     </>

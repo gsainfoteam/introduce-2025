@@ -51,6 +51,15 @@
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: keep-all;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -74,6 +83,7 @@ span {
   max-width: 1000px;
 
   @media screen and (max-width: 1000px) {
-    padding: 0 var(--content-spacing);
+    padding-left: var(--content-spacing);
+    padding-right: var(--content-spacing);
   }
 }

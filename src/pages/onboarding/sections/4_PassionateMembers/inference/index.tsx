@@ -14,10 +14,10 @@ const Inference = () => {
 
   return (
     <div
-      className="w-full px-9 py-8 border-border border rounded-2xl text-dark"
+      className="w-full px-6 md:px-9 py-6 md:py-8 border-border border rounded-2xl text-dark"
       style={BG_GRADIENT}
     >
-      <div className="flex w-full justify-between gap-4">
+      <div className="flex w-full flex-col-reverse md:flex-row md:justify-between gap-4">
         <div>
           <h5 className="text-2xl font-bold mb-2">
             {t("onboarding.passionateMembers.inference.title")}
@@ -40,7 +40,7 @@ const Inference = () => {
 
       <div className="h-8" />
 
-      <div className="w-full flex gap-2">
+      <div className="w-full flex-col flex md:flex-row gap-2">
         {t("onboarding.passionateMembers.inference.examples", {
           returnObjects: true,
         }).map((example) => (
@@ -56,7 +56,7 @@ type ExampleProps =
 
 const Example = ({ title, presentersId, description }: ExampleProps) => {
   return (
-    <div className="border border-border rounded-lg py-4.5 px-5 tracking-tight flex-1 bg-white/30">
+    <div className="border border-border rounded-lg py-4 md:py-4.5 px-4.5 md:px-5 tracking-tight flex-1 bg-white/30">
       <h6 className="text-lg font-bold mb-2">{title}</h6>
       <div className="mb-2">
         {presentersId.map((presenterId) => (

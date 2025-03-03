@@ -9,7 +9,7 @@ interface HeaderProps extends PropsWithChildren {
 export const H2 = ({ children, className }: HeaderProps) => (
   <h2
     className={cn(
-      "font-bold text-dark w-full text-center text-5xl my-3",
+      "font-bold text-dark w-full text-center text-3xl md:text-5xl my-3",
       className,
     )}
   >
@@ -19,7 +19,10 @@ export const H2 = ({ children, className }: HeaderProps) => (
 
 export const H4 = ({ children, className }: HeaderProps) => (
   <h4
-    className={cn("font-bold text-dark w-full text-center text-3xl", className)}
+    className={cn(
+      "font-bold text-dark w-full text-center text-2xl md:text-3xl",
+      className,
+    )}
   >
     {children}
   </h4>
@@ -28,7 +31,7 @@ export const H4 = ({ children, className }: HeaderProps) => (
 export const H5 = ({ children, className }: HeaderProps) => (
   <h5
     className={cn(
-      "font-medium text-dark w-full text-center text-2xl tracking-tight",
+      "font-medium text-dark w-full text-center text-lg md:text-2xl tracking-tight",
       className,
     )}
   >
