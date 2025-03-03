@@ -19,7 +19,7 @@ const PassionateMembers = () => {
 
       <div className="h-10" />
 
-      <section className="content">
+      <section className="content flex flex-col items-center">
         <Inference />
 
         <div className="h-6" />

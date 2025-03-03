@@ -26,7 +26,7 @@ const CoolDevCulture = () => {
 
       <div className="h-15" />
 
-      <section className="content">
+      <section className="content flex flex-col items-center">
         <img
           src={i18n.language === "en-US" ? EngIllust : KorIllust}
           alt={t("onboarding.coolDevCulture.illustAlt")}
@@ -36,7 +36,7 @@ const CoolDevCulture = () => {
         <img
           src={i18n.language === "en-US" ? EngMobileIllust : KorMobileIllust}
           alt={t("onboarding.coolDevCulture.illustAlt")}
-          className="md:hidden block"
+          className="md:hidden max-w-[500px] w-full block"
         />
       </section>
     </>
