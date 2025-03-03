@@ -49,7 +49,7 @@ const ZiggleIntroduction = () => {
         <div className="h-[200px]" />
 
         <section className="content flex flex-col items-center">
-          <ZiggleLogo />
+          <ZiggleLogo className="md:size-60 size-30" />
 
           <div className="h-8" />
 

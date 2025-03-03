@@ -14,7 +14,7 @@ const Inference = () => {
 
   return (
     <div
-      className="w-full px-6 md:px-9 py-6 md:py-8 border-border border rounded-2xl text-dark md:max-w-auto max-w-[500px]"
+      className="w-full px-6 md:px-9 py-6 md:py-8 border-border border rounded-2xl text-dark md:max-w-full max-w-[500px]"
       style={BG_GRADIENT}
     >
       <div className="flex w-full flex-col-reverse md:flex-row md:justify-between gap-4">
