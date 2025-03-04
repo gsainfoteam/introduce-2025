@@ -75,7 +75,7 @@ export const main = {
           "To improve this inconvenient user experience, the Infoteam developed the 'Ziggle' notice service in 2023. <br /> Throughout the development process, we incorporated various user feedback and continuously improved the service, <br /> leading to the completion of the current Ziggle.",
       },
       wantToSeeMore: "Want to see more of Infoteam's projects?",
-      goSeeProjectButton: "Go check out the project introduction",
+      goSeeProjectButton: "Project Introductions",
     },
     smallGathering: {
       notOnlyDev: "Not Just Development",

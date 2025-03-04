@@ -49,17 +49,17 @@ const ZiggleIntroduction = () => {
         <div className="h-[200px]" />
 
         <section className="content flex flex-col items-center">
-          <ZiggleLogo />
+          <ZiggleLogo className="md:size-60 size-30" />
 
-          <div className="h-8" />
+          <div className="md:h-8 h-4" />
 
-          <div className="w-[320px] -translate-x-[15px]">
+          <div className="w-[200px] md:w-[320px] -translate-x-[8px] md:-translate-x-[15px]">
             <ZiggleTextAnimation />
           </div>
 
-          <div className="h-35" />
+          <div className="h-20 md:h-35" />
 
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-center">
             {t("onboarding.ziggleIntroduction.title")}
           </h2>
 
@@ -90,19 +90,19 @@ const ZiggleIntroduction = () => {
         <section className="content flex gap-2 items-start justify-center">
           <img
             src={ZiggleDesktopScreenshot}
-            className="w-3/4"
+            className="w-3/4 hidden md:block"
             alt={t("onboarding.ziggleIntroduction.webScreenshotAlt")}
           />
           <img
             src={ZiggleMobileScreenshot}
-            className="w-1/4"
+            className="md:w-1/4 w-full max-w-[320px] md:max-w-full"
             alt={t("onboarding.ziggleIntroduction.mobileScreenshotAlt")}
           />
         </section>
 
-        <div className="h-35" />
+        <div className="h-20 md:h-35" />
 
-        <section className="content flex justify-between items-center gap-8 ">
+        <section className="content flex flex-col-reverse md:flex-row md:justify-between items-center gap-8">
           <div className="text-white">
             <H4 className="text-white font-semibold text-left mb-6">
               {t("onboarding.ziggleIntroduction.description.title")}
@@ -119,7 +119,7 @@ const ZiggleIntroduction = () => {
 
           <img
             src={Fire3DIconClay}
-            className="w-[240px] object-cover aspect-4/5"
+            className="w-[160px] md:w-[240px] object-cover aspect-4/5"
             alt="fire3DIconClay"
           />
         </section>

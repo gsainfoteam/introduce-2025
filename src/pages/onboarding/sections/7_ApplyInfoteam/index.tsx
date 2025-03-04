@@ -21,13 +21,13 @@ const ApplyInfoteam = () => {
     >
       <H2 className="text-white">{t("onboarding.applyInfoteam.title")}</H2>
 
-      <h6 className="text-white text-lg font-medium tracking-tight">
+      <h6 className="text-white text-lg font-medium tracking-tight text-center">
         {t("onboarding.applyInfoteam.subtitle")}
       </h6>
 
       <div className="h-12" />
 
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap justify-center">
         {t("onboarding.applyInfoteam.positionCards", {
           returnObjects: true,
         }).map((positionCard) => (

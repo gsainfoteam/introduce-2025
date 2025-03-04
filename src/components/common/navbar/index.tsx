@@ -50,11 +50,11 @@ const Navbar = ({
               ? "bg-dark border-b border-neutral-600"
               : "bg-white border-border border-b"),
           hasBackground && isMobileMenuOpen && "bg-transparent border-b-0",
-          "md:px-0 pl-3 pr-5 ",
+          "md:px-0",
         )}
       >
         <div className="content flex w-full justify-between items-center">
-          <div className="*:h-[44px] *:w-fit">
+          <div className="*:h-[44px] *:w-fit -ml-2.5 md:ml-0">
             {mode === "dark" ? (
               <>
                 <DarkLogo className="hidden md:block" />

@@ -35,6 +35,7 @@
   --font-league-gothic: "League Gothic";
 
   --breakpoint-md: 1000px;
+  --content-spacing: 20px;
 }
 
 @theme {
@@ -48,6 +49,15 @@
       transform: translateY(-50%);
     }
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: keep-all;
 }
 
 body {
@@ -71,4 +81,9 @@ span {
 .content {
   width: 100%;
   max-width: 1000px;
+
+  @media screen and (max-width: 1000px) {
+    padding-left: var(--content-spacing);
+    padding-right: var(--content-spacing);
+  }
 }

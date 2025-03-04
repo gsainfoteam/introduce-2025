@@ -10,43 +10,47 @@ const Introduction = () => {
   return (
     <>
       <section className="content">
-        <h1 className="w-full text-center text-6xl font-bold text-dark">
+        <h1 className="w-full text-center text-4xl px-8 md:px-0 md:text-6xl font-bold text-dark">
           {t("onboarding.introduction.codeCampus")}
         </h1>
       </section>
 
-      <div className="h-[300px]" />
+      <div className="md:h-[300px] h-[100px]" />
 
-      <section className="content border-t border-b border-solid border-border py-16 text-dark">
+      <section className="content text-dark">
+        <div className="w-full border-t border-border mb-16" />
+
         <div className="flex w-full justify-center items-center">
-          <Bracket />
+          <Bracket className="md:w-4.5 w-3" />
 
-          <img src={Avatar1} className="w-20 h-20" />
-          <img src={Avatar2} className="w-20 h-20" />
-          <img src={Avatar3} className="w-20 h-20" />
+          <img src={Avatar1} className="size-16 md:size-20" />
+          <img src={Avatar2} className="size-16 md:size-20" />
+          <img src={Avatar3} className="size-16 md:size-20" />
 
           <div className="-scale-x-100 -z-10">
-            <Bracket />
+            <Bracket className="md:w-4.5 w-3" />
           </div>
         </div>
 
         <div className="h-8" />
 
-        <p className="text-4xl font-medium tracking-tight leading-relaxed">
+        <p className="text-2xl md:text-4xl font-medium tracking-tight leading-relaxed break-normal">
           {t("onboarding.introduction.descriptions.one")}
         </p>
 
         <div className="h-8" />
 
-        <p className="text-4xl font-medium tracking-tight leading-relaxed">
+        <p className="text-2xl md:text-4xl font-medium tracking-tight leading-relaxed break-normal">
           {t("onboarding.introduction.descriptions.two")}
         </p>
 
         <div className="h-8" />
 
-        <p className="text-4xl font-medium tracking-tight leading-relaxed">
+        <p className="text-2xl md:text-4xl font-medium tracking-tight leading-relaxed break-normal">
           {t("onboarding.introduction.descriptions.three")}
         </p>
+
+        <div className="w-full border-t border-border mt-16" />
       </section>
     </>
   );
