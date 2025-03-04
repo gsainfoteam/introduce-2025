@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
 import { main as koMain } from "src/locales/ko-KR";
+import cn from "src/utils/cn";
 
 import ToyLogo from "./assets/toyLogo.svg?react";
 
@@ -16,7 +17,13 @@ const ToyProjects = () => {
 
   return (
     <div
-      className="w-full px-6 md:px-9 py-6 md:py-8 border-border rounded-none md:rounded-2xl text-dark max-w-[500px] md:max-w-full border-t border-b md:border"
+      className={cn(
+        "w-full px-6 md:px-9 py-6 md:py-8",
+        "border-border rounded-none md:rounded-2xl",
+        "text-dark",
+        "md:max-w-full *:max-w-[600px] md:*:max-w-full flex flex-col items-center",
+        "border-t border-b md:border",
+      )}
       style={BG_GRADIENT}
     >
       <div className="flex w-full flex-col-reverse md:flex-row md:justify-between gap-4">

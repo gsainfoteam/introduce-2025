@@ -51,9 +51,9 @@ const ZiggleIntroduction = () => {
         <section className="content flex flex-col items-center">
           <ZiggleLogo className="md:size-60 size-30" />
 
-          <div className="h-8" />
+          <div className="md:h-8 h-4" />
 
-          <div className="w-[320px] -translate-x-[15px]">
+          <div className="w-[200px] md:w-[320px] -translate-x-[8px] md:-translate-x-[15px]">
             <ZiggleTextAnimation />
           </div>
 

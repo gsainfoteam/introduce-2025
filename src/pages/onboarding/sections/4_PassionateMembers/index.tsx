@@ -29,7 +29,7 @@ const PassionateMembers = () => {
         </section>
       </div>
 
-      <div className="md:hidden block">
+      <div className="md:hidden block w-full">
         <section className="flex flex-col items-center">
           <Inference />
 
