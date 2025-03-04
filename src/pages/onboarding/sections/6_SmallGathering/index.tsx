@@ -30,7 +30,7 @@ const SmallGathering = () => {
 
       <div className="h-8" />
 
-      <div className="font-medium tracking-tight text-dark text-lg">
+      <div className="font-medium tracking-tight text-dark text-lg text-center">
         {t("onboarding.smallGathering.etc")}
       </div>
     </section>
@@ -53,7 +53,7 @@ const Examples = ({ title, description, image }: ExampleProps) => {
           {title}
         </div>
 
-        <div className="text-grey-light text-sm tracking-tight text-center">
+        <div className="text-grey-light text-sm tracking-tight md:text-center text-left">
           {description}
         </div>
       </div>
