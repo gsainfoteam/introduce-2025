@@ -20,27 +20,29 @@ const roleStyles: Record<Role, { text: string; bg: string }> = {
 };
 
 const teamLeaders = members.filter((member) => [14, 8, 5].includes(member.id));
+const sortedLeaders = [...teamLeaders].sort((a, b) =>
+  a.id === 14 ? -1 : b.id === 14 ? 1 : 0,
+);
 
 const Members = () => {
   return (
     <div className="w-full flex flex-col items-center">
-      {teamLeaders.length > 0 && (
+      {sortedLeaders.length > 0 && (
         <section className="w-full max-w-6xl my-8">
           <div className="flex flex-col items-center">
             <H4>Team Leaders</H4>
-            <ShortHr />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 place-items-center">
-            {teamLeaders.map((member) => (
+          <div className="flex flex-wrap gap-6 mt-6 justify-center">
+            {sortedLeaders.map((member) => (
               <div
                 key={`leader-${member.id}`}
-                className="w-[240px] h-[400px] bg-white rounded-lg flex flex-col p-4 border shadow"
+                className="w-[180px] h-[300px] bg-white rounded-lg flex flex-col p-4 border border-border"
               >
                 <img
                   src={member.profileImage}
                   alt={member.name.ko}
-                  className="w-[200px] h-[200px] mb-4 rounded-md"
+                  className="w-full h-[150px] object-cover mb-4"
                 />
                 <h2 className="text-lg font-bold">{member.name.ko}</h2>
                 {member.githubID && (
@@ -92,19 +94,18 @@ const Members = () => {
           <section key={role} className="w-full max-w-6xl my-8">
             <div className="flex flex-col items-center">
               <H4>{roleLabels[role]}</H4>
-              <ShortHr />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 place-items-center">
+            <div className="grid grid-cols-5 gap-6 mt-6 place-items-center">
               {filteredMembers.map((member) => (
                 <div
                   key={`${role}-${member.id}`}
-                  className="w-[240px] h-[400px] bg-white rounded-lg flex flex-col p-4 border shadow"
+                  className="w-[180px] h-[300px] bg-white rounded-lg flex flex-col p-4 border border-border"
                 >
                   <img
                     src={member.profileImage}
                     alt={member.name.ko}
-                    className="w-[200px] h-[200px] mb-4 rounded-md"
+                    className="w-full h-[150px] object-cover mb-4"
                   />
                   <h2 className="text-lg font-bold">{member.name.ko}</h2>
                   {member.githubID && (
