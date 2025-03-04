@@ -31,20 +31,22 @@ const Members = () => {
             <ShortHr />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 place-items-center">
+          <div className="grid lg:grid-cols-5 gap-6 mt-6 place-items-center">
             {teamLeaders.map((member) => (
               <div
                 key={`leader-${member.id}`}
-                className="w-[240px] h-[400px] bg-white rounded-lg flex flex-col p-4 border shadow"
+                className="w-[180px] h-[300px] bg-white rounded-lg flex flex-col p-4 border border-border"
               >
                 <img
                   src={member.profileImage}
                   alt={member.name.ko}
-                  className="w-[200px] h-[200px] mb-4 rounded-md"
+                  className="w-[150px] h-[150px] object-cover mb-4 rounded-md justify-center"
                 />
-                <h2 className="text-lg font-bold">{member.name.ko}</h2>
+                <h2 className="text-lg font-bold text-left">
+                  {member.name.ko}
+                </h2>
                 {member.githubID && (
-                  <p className="text-sm text-blue-500 mt-1">
+                  <p className="text-sm text-blue-500 mt-1 text-left">
                     <a
                       href={`https://github.com/${member.githubID}`}
                       target="_blank"
@@ -55,7 +57,7 @@ const Members = () => {
                     </a>
                   </p>
                 )}
-                <div className="flex flex-wrap gap-2 mt-3">
+                <div className="flex flex-wrap gap-2 mt-3 justify-left">
                   {member.roles.map((r) => (
                     <span
                       key={r}
@@ -95,20 +97,22 @@ const Members = () => {
               <ShortHr />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 place-items-center">
+            <div className="grid lg:grid-cols-5 gap-6 mt-6 place-items-center">
               {filteredMembers.map((member) => (
                 <div
                   key={`${role}-${member.id}`}
-                  className="w-[240px] h-[400px] bg-white rounded-lg flex flex-col p-4 border shadow"
+                  className="w-[180px] h-[300px] bg-white rounded-lg flex flex-col p-4 border border-border"
                 >
                   <img
                     src={member.profileImage}
                     alt={member.name.ko}
-                    className="w-[200px] h-[200px] mb-4 rounded-md"
+                    className="w-full h-[150px] object-cover mb-4 rounded-md"
                   />
-                  <h2 className="text-lg font-bold">{member.name.ko}</h2>
+                  <h2 className="text-lg font-bold text-center">
+                    {member.name.ko}
+                  </h2>
                   {member.githubID && (
-                    <p className="text-sm text-blue-500 mt-1">
+                    <p className="text-sm text-blue-500 mt-1 text-center">
                       <a
                         href={`https://github.com/${member.githubID}`}
                         target="_blank"
@@ -119,7 +123,7 @@ const Members = () => {
                       </a>
                     </p>
                   )}
-                  <div className="flex flex-wrap gap-2 mt-3">
+                  <div className="flex flex-wrap gap-2 mt-3 justify-center">
                     {member.roles.map((r) => (
                       <span
                         key={r}
