@@ -20,7 +20,7 @@ const SmallGathering = () => {
 
       <div className="h-10" />
 
-      <div className="flex gap-2 w-full justify-center">
+      <div className="flex md:flex-row flex-col gap-2 w-full justify-center items-center">
         {t("onboarding.smallGathering.examples", { returnObjects: true }).map(
           (example) => (
             <Examples key={example.id} {...example} />
@@ -41,19 +41,21 @@ type ExampleProps = (typeof koMain.onboarding.smallGathering.examples)[number];
 
 const Examples = ({ title, description, image }: ExampleProps) => {
   return (
-    <div className="w-[220px] h-[260px] border border-border rounded-lg flex flex-col px-5 py-6 gap-3 items-center justify-center">
+    <div className="w-full max-w-[400px] md:w-[220px] md:h-[260px] border border-border rounded-lg flex flex-row-reverse justify-between md:flex-col px-5 py-6 gap-3 items-center md:justify-center">
       <img
         src={image}
-        className="size-20 object-contain"
+        className="size-10 md:size-20 object-contain"
         alt={`icon of ${title}`}
       />
 
-      <div className="text-dark font-semibold text-lg tracking-tight text-center">
-        {title}
-      </div>
+      <div className="flex flex-col items-start md:items-center">
+        <div className="text-dark font-semibold text-lg tracking-tight text-center">
+          {title}
+        </div>
 
-      <div className="text-grey-light text-sm tracking-tight text-center">
-        {description}
+        <div className="text-grey-light text-sm tracking-tight text-center">
+          {description}
+        </div>
       </div>
     </div>
   );
