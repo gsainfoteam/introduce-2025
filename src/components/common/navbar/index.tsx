@@ -54,16 +54,16 @@ const Navbar = ({
         )}
       >
         <div className="content flex w-full justify-between items-center">
-          <div className="*:h-[44px] *:w-fit -ml-2.5 md:ml-0">
+          <div className="-ml-2.5 md:ml-0">
             {mode === "dark" ? (
               <>
-                <DarkLogo className="hidden md:block" />
-                <DarkLogoCompact className="md:hidden block" />
+                <DarkLogo className="hidden md:block h-11" />
+                <DarkLogoCompact className="md:hidden block size-11" />
               </>
             ) : (
               <>
-                <WhiteLogo className="hidden md:block" />
-                <WhiteLogoCompact className="md:hidden block" />
+                <WhiteLogo className="hidden md:block h-11" />
+                <WhiteLogoCompact className="md:hidden block size-11" />
               </>
             )}
           </div>
