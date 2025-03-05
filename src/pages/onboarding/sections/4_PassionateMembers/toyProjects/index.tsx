@@ -83,7 +83,7 @@ const Example = ({
       </div>
 
       <img
-        className="border border-border rounded-sm w-full md:w-[140px] h-fit"
+        className="border border-border rounded-sm w-full md:w-[140px] h-min"
         alt={`thumbnail of ${title}`}
         src={thumbnail}
       />
