@@ -21,33 +21,37 @@ const FaqDetail: React.FC = () => {
   }
 
   return (
-    <div className="flex">
-      <div className="w-64 p-4">
-        <h2 className="text-xl font-semibold mb-4">카테고리</h2>
-        <ul>
-          <li
-            className={`cursor-pointer mb-2 ${selectedCategory === "recruitment" ? "text-[#FF4500]" : ""}`}
-          >
-            리크루팅
-          </li>
-          <li
-            className={`cursor-pointer mb-2 ${selectedCategory === "service" ? "text-[#FF4500]" : ""}`}
-          >
-            서비스
-          </li>
-        </ul>
-      </div>
+    <div className="flex-grow p-6">
+      <h1 className="text-4xl font-bold text-left text-gray-800 mb-8">
+        자주 묻는 질문 (FAQ)
+      </h1>
+      <div className="flex">
+        <div className="w-64 p-4">
+          <ul>
+            <li
+              className={`cursor-pointer mb-2 ${selectedCategory === "recruitment" ? "text-[#FF4500]" : ""}`}
+            >
+              리크루팅
+            </li>
+            <li
+              className={`cursor-pointer mb-2 ${selectedCategory === "service" ? "text-[#FF4500]" : ""}`}
+            >
+              서비스
+            </li>
+          </ul>
+        </div>
 
-      <div className="flex-grow p-6">
-        <button
-          onClick={() => navigate(-1)}
-          className="flex items-center text-[#7A7A7A] mb-4"
-        >
-          <span className="text-2xl mr-2">←</span> 질문 목록
-        </button>
+        <div className="flex-grow p-6">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center text-[#7A7A7A] mb-4"
+          >
+            <span className="text-2xl mr-2">←</span> 질문 목록
+          </button>
 
-        <h1 className="text-3xl font-bold">{faq.title.ko}</h1>
-        <p className="mt-4">{faq.description.ko}</p>
+          <h1 className="text-3xl font-bold">{faq.title.ko}</h1>
+          <p className="mt-4">{faq.description.ko}</p>
+        </div>
       </div>
     </div>
   );
