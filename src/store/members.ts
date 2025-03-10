@@ -270,6 +270,21 @@ const members: Member[] = [
     profileImage: "../../src/assets/pic/이신혁.jpg",
     intendedProjects: [],
   },
+  {
+    id: 15,
+    name: {
+      en: "Seo Eun Won",
+      ko: "서은원",
+    },
+    githubID: "seoeunwon",
+    roles: [Role.Designer],
+    introduction: {
+      en: "I am designer of the Infoteam.",
+      ko: "인포팀에서 디자인을 맡고 있습니다.",
+    },
+    profileImage: "https://avatars.githubusercontent.com/u/125674335?v=4",
+    intendedProjects: [],
+  },
 ];
 
 export default members;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import inferenceExamples from "./qna.ts";
 
 const PreQna: React.FC = () => {
