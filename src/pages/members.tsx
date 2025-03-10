@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { H4 } from "src/components/common/headers";
 import members, { Role, Member } from "../store/members";
+import Modal from "./modal.tsx";
 
 const roleLabels: Record<Role, string> = {
   [Role.Frontend]: "FE",
@@ -22,8 +24,21 @@ const roleStyles: Record<Role, { text: string; bg: string }> = {
 const TEAM_LEADER_IDS = [14, 8, 5];
 
 const MemberCard = ({ member }: { member: Member }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCardClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="w-[180px] h-[300px] bg-white rounded-lg flex flex-col p-4 border border-border">
+    <div
+      className="w-[180px] h-[300px] bg-white rounded-lg flex flex-col p-4 border border-border cursor-pointer"
+      onClick={handleCardClick}
+    >
       <img
         src={member.profileImage}
         alt={member.name.ko}
@@ -52,6 +67,11 @@ const MemberCard = ({ member }: { member: Member }) => {
           </span>
         ))}
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        <h2 className="text-lg font-bold mb-4">{member.name.ko}의 소개</h2>
+        <p>{member.introduction?.ko}</p>
+      </Modal>
     </div>
   );
 };

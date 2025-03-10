@@ -153,7 +153,7 @@ const members: Member[] = [
   {
     id: 7,
     name: {
-      en: "Inseon Hwang",
+      en: "Hongje Choi",
       ko: "최홍제",
     },
     githubID: "enc2586",
@@ -198,7 +198,7 @@ const members: Member[] = [
   {
     id: 10,
     name: {
-      en: "Dahyun Oh",
+      en: "Soyul Yoon",
       ko: "윤소율",
     },
     githubID: "ysym1208",
@@ -213,10 +213,10 @@ const members: Member[] = [
   {
     id: 11,
     name: {
-      en: "Shinhyuk Lee",
+      en: "Jeongeun Lim",
       ko: "임정은",
     },
-    githubID: "",
+    githubID: "tnsdo",
     roles: [Role.Designer, Role.Frontend],
     introduction: {
       en: "I am in charge of frontend and design in the Infoteam",
