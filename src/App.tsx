@@ -8,8 +8,8 @@ import {
 import Layout from "./layout/Layout";
 import OnboardingPage from "./pages/onboarding";
 import Members from "./pages/members";
-import QnA from "./pages/qna/QnA.tsx";
-import FaqDetail from "./pages/qna/DetailQnA.tsx";
+import QnA from "./pages/qna/FaqList.tsx";
+import FaqDetail from "./pages/qna/DetailFaq.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
