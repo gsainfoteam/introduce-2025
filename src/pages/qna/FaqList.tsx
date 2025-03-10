@@ -16,12 +16,12 @@ const Faq: React.FC = () => {
   );
 
   return (
-    <div className="flex-grow p-6">
+    <div className="flex-grow p-6 context">
       <h1 className="text-4xl font-bold text-left text-gray-800 mb-8">
         자주 묻는 질문 (FAQ)
       </h1>
       <div className="flex">
-        <div className="w-64 p-4">
+        <div className="w-64 p-4 flex-shrink-0">
           <ul>
             <li
               className={`cursor-pointer mb-2 ${selectedCategory === "recruitment" ? "text-[#FF4500]" : ""}`}
