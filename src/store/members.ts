@@ -117,7 +117,7 @@ const members: Member[] = [
       en: "Someone who is responsible for backend/infrastructure on the infoteam project.",
       ko: "인포팀에서 벡엔드/인프라를 맡고있는 사람.",
     },
-    profileImage: "../../src/assets/pic/박시원.tiff",
+    profileImage: "https://avatars.githubusercontent.com/u/82248392?v=4",
     intendedProjects: [],
   },
   {
