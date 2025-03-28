@@ -7,7 +7,7 @@ import {
 
 import Layout from "./layout/Layout";
 import OnboardingPage from "./pages/onboarding";
-import Members from "./pages/members";
+import Members from "./pages/memberspage/members";
 import QnA from "./pages/qna/QnA.tsx";
 
 const router = createBrowserRouter(

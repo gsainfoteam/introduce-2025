@@ -95,7 +95,7 @@ const members: Member[] = [
     roles: [Role.Frontend, Role.Designer],
     introduction: {
       en: "yejin introduction",
-      ko: "예진 설명",
+      ko: "프론트엔드와 디자인을 담당하고 있습니다.",
     },
     profileImage: "https://avatars.githubusercontent.com/u/57053429?v=4",
     intendedProjects: [
@@ -281,6 +281,36 @@ const members: Member[] = [
     introduction: {
       en: "I am designer of the Infoteam.",
       ko: "인포팀에서 디자인을 맡고 있습니다.",
+    },
+    profileImage: "https://avatars.githubusercontent.com/u/125674335?v=4",
+    intendedProjects: [],
+  },
+  {
+    id: 16,
+    name: {
+      en: "Azamat",
+      ko: "Azamat",
+    },
+    githubID: "AzamatMedetbekov",
+    roles: [Role.Backend],
+    introduction: {
+      en: "Want to work on BE in Infoteam.",
+      ko: "인포팀에서 백엔드로 일하기를 희망합니다.",
+    },
+    profileImage: "",
+    intendedProjects: [],
+  },
+  {
+    id: 17,
+    name: {
+      en: "Kunho Kim",
+      ko: "김건호",
+    },
+    githubID: "6QB6",
+    roles: [Role.Frontend],
+    introduction: {
+      en: "newbie developer",
+      ko: "개발 왕초보",
     },
     profileImage: "https://avatars.githubusercontent.com/u/125674335?v=4",
     intendedProjects: [],
