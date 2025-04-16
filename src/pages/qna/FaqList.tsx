@@ -17,20 +17,21 @@ const Faq: React.FC = () => {
 
   return (
     <div className="flex-grow p-6 context">
-      <h1 className="text-4xl font-bold text-left text-gray-800 mb-8">
+      <h1 className="text-4xl p-6 font-bold text-left text-gray-800 mb-8">
         자주 묻는 질문 (FAQ)
       </h1>
       <div className="flex">
-        <div className="w-64 p-4 flex-shrink-0">
+        <div className="w-64 p-6 flex-shrink-0">
           <ul>
             <li
-              className={`cursor-pointer mb-2 ${selectedCategory === "recruitment" ? "text-[#FF4500]" : ""}`}
+              className={`cursor-pointer mb-10 ${selectedCategory === "recruitment" ? "text-[#FF4500]" : ""}`}
               onClick={() => setSelectedCategory("recruitment")}
             >
               리크루팅
             </li>
+
             <li
-              className={`cursor-pointer mb-2 ${selectedCategory === "service" ? "text-[#FF4500]" : ""}`}
+              className={`cursor-pointer mb-10 ${selectedCategory === "service" ? "text-[#FF4500]" : ""}`}
               onClick={() => setSelectedCategory("service")}
             >
               서비스
@@ -46,9 +47,14 @@ const Faq: React.FC = () => {
                 className="mb-4 cursor-pointer hover:bg-gray-100 p-2 transition-all"
                 onClick={() => handleNavigate(question.id)}
               >
-                <h2 className="text-xl font-semibold text-gray-800 text-left">
-                  {question.title.ko}
-                </h2>
+                <div className="flex items-center gap-[50px]">
+                  <h2 className="text-xl text-gray-800 text-left font-semibold">
+                    Q
+                  </h2>
+                  <h2 className="text-xl text-gray-800 text-left">
+                    {question.title.ko}
+                  </h2>
+                </div>
               </div>
             ))}
           </div>
