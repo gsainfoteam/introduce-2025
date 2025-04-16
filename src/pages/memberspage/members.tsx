@@ -2,6 +2,7 @@ import { H4 } from "src/components/common/headers";
 import members, { Role } from "../../store/members";
 import MemberCard from "./MemberCard";
 import { roleLabels, TEAM_LEADER_IDS } from "./roles";
+import Navbar from "src/components/common/navbar";
 
 const Members = () => {
   const teamLeaders = members.filter((member) =>
@@ -11,13 +12,14 @@ const Members = () => {
   const LEADER_PRIORITY = [14, 8, 5];
 
   const sortedLeaders = [...teamLeaders].sort((a, b) => {
-    const priorityA = LEADER_PRIORITY.indexOf(a.id);
-    const priorityB = LEADER_PRIORITY.indexOf(b.id);
+    const priorityA = TEAM_LEADER_IDS.indexOf(a.id);
+    const priorityB = TEAM_LEADER_IDS.indexOf(b.id);
     return priorityA - priorityB;
   });
 
   return (
     <div className="w-full flex flex-col items-center">
+      <Navbar mode="light" hasBackground={true} />
       {sortedLeaders.length > 0 && (
         <section className="content my-8">
           <div className="flex flex-col items-center">

@@ -2,6 +2,7 @@ import ReactDOM from "react-dom";
 import { roleLabels, roleStyles } from "./roles";
 import { Member } from "../../store/members";
 import { Role } from "../../store/members";
+import { useTranslation } from "react-i18next";
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface ModalProps {
 
 const Modal = ({ isOpen, onClose, member }: ModalProps) => {
   if (!isOpen) return null;
+  const { i18n } = useTranslation();
 
   return ReactDOM.createPortal(
     <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -29,9 +31,13 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
             />
             <div className="flex flex-col ml-4 mt-4 justify-center">
               <div className="flex items-center">
-                <h2 className="text-l font-bold">이름</h2>
+                <h2 className="text-l font-bold">
+                  {i18n.language === "ko-KR" ? "이름" : "name"}
+                </h2>
                 <div className="ml-2" />
-                <p>{member.name.ko}</p>
+                <p>
+                  {i18n.language === "ko-KR" ? member.name.ko : member.name.en}
+                </p>
               </div>
 
               <div className="flex items-center">
@@ -51,7 +57,9 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
                 )}
               </div>
               <div className="flex items-center">
-                <h2 className="text-l font-bold">역할</h2>
+                <h2 className="text-l font-bold">
+                  {i18n.language === "ko-KR" ? "역할" : "role"}
+                </h2>
                 <div className="ml-2" />
                 <div className="flex flex-wrap gap-2">
                   {member.roles.map((role, index) =>
@@ -68,7 +76,11 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
               </div>
             </div>
           </div>
-          <p className="mt-4">{member.introduction?.ko || "소개 없음"}</p>
+          <p className="mt-4">
+            {i18n.language === "ko-KR"
+              ? member.introduction.ko
+              : member.introduction.en}
+          </p>
         </div>
       </div>
     </div>,

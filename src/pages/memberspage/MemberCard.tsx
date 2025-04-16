@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { H4 } from "src/components/common/headers";
+import { useTranslation } from "react-i18next";
 import members, { Role, Member } from "../../store/members";
 import Modal from "./modal.tsx";
 import { roleLabels, roleStyles, TEAM_LEADER_IDS } from "./roles.ts";
 
 const MemberCard = ({ member }: { member: Member }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   const handleCardClick = () => {
     setIsOpen(true);
@@ -26,7 +28,9 @@ const MemberCard = ({ member }: { member: Member }) => {
           alt={member.name.ko}
           className="w-full h-[150px] object-cover mb-4"
         />
-        <h2 className="text-lg font-bold">{member.name.ko}</h2>
+        <h2 className="text-lg font-bold">
+          {i18n.language === "ko-KR" ? member.name.ko : member.name.en}
+        </h2>
         {member.githubID && (
           <p className="text-sm text-blue-500 mt-1">
             <a
