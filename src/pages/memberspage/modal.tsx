@@ -1,16 +1,12 @@
 import ReactDOM from "react-dom";
 import { roleLabels, roleStyles } from "./roles";
+import { Member } from "../../store/members";
+import { Role } from "../../store/members";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  member: {
-    name: { ko: string };
-    githubID: string;
-    introduction?: { ko: string };
-    profileImage: string;
-    roles: string[];
-  };
+  member: Member;
 }
 
 const Modal = ({ isOpen, onClose, member }: ModalProps) => {
@@ -58,14 +54,16 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
                 <h2 className="text-l font-bold">역할</h2>
                 <div className="ml-2" />
                 <div className="flex flex-wrap gap-2">
-                  {member.roles.map((role, index) => (
-                    <span
-                      key={index}
-                      className={`px-1 rounded-[4px] text-[14px] ${roleStyles[role]?.text} ${roleStyles[role]?.bg}`}
-                    >
-                      {roleLabels[role]}
-                    </span>
-                  ))}
+                  {member.roles.map((role, index) =>
+                    roleStyles[role] && roleLabels[role] ? (
+                      <span
+                        key={index}
+                        className={`px-1 rounded-[4px] text-[14px] ${roleStyles[role]?.text} ${roleStyles[role]?.bg}`}
+                      >
+                        {roleLabels[role]}
+                      </span>
+                    ) : null,
+                  )}
                 </div>
               </div>
             </div>
