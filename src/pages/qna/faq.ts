@@ -11,7 +11,7 @@ const faqdetails: faqdetail[] = [
   {
     id: 1,
     title: {
-      en: "What is Infoseble?",
+      en: "What is Info-ssible?",
       ko: "인포서블이 무엇인가요?",
     },
     description: {
