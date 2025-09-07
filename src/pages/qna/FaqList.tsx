@@ -1,20 +1,35 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import faqdetails from "./faq.ts";
-import Navbar from "src/components/common/navbar/index.tsx";
+import React, { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import Navbar from "src/components/common/navbar/index.tsx";
+
+import faqDetails from "./faq.ts";
 
 const Faq: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] =
-    useState<string>("recruitment");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedCategory = searchParams.get("type") as
+    | "recruitment"
+    | "service";
+  const setSelectedCategory = useCallback(
+    (type: "recruitment" | "service") => {
+      setSearchParams({ type });
+    },
+    [setSearchParams],
+  );
   const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (!selectedCategory) {
+      setSelectedCategory("recruitment");
+    }
+  }, [selectedCategory, setSelectedCategory]);
 
   const handleNavigate = (id: number) => {
     navigate(`/faq/${id}`);
   };
 
-  const questions = faqdetails.filter(
+  const questions = faqDetails.filter(
     (question) => question.category === selectedCategory,
   );
 
