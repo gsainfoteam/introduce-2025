@@ -18,6 +18,7 @@ const links: NavLink[] = [
   },
   {
     displayName: "navbar.faq",
+    link: "/faq",
   },
   {
     displayName: "navbar.bugReport",
