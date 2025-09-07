@@ -11,11 +11,11 @@ const faqdetails: faqdetail[] = [
   {
     id: 1,
     title: {
-      en: "What is Info-ssible?",
+      en: "What is Mission Infossible?",
       ko: "인포서블이 무엇인가요?",
     },
     description: {
-      en: "Infoseble is the recruitment process for joining Infoteam, where you will acquire the necessary development knowledge.",
+      en: "Infossible is the recruitment process for joining Infoteam, where you will acquire the necessary development knowledge.",
       ko: "인포서블은 인포팀에 가입하기 위한 모집 과정으로, 개발에 필요한 지식을 습득할 수 있습니다.",
     },
     category: "recruitment",
@@ -27,7 +27,7 @@ const faqdetails: faqdetail[] = [
       ko: "개발 경험이 전혀 없어도 가입할 수 있나요?",
     },
     description: {
-      en: "Yes, you can. Starting with Info-sibble, the recruitment process for the infoteam, you can gain the knowledge you need to develop. After the selection, we run an onboarding program where you will receive basic program language training and learn how to use various tools . After the basic seminar, we also have a mentoring system where you can ask questions and get answers to anything you don't understand.",
+      en: "Yes, you can. Starting with Infossible, the recruitment process for the infoteam, you can gain the knowledge you need to develop. After the selection, we run an onboarding program where you will receive basic program language training and learn how to use various tools . After the basic seminar, we also have a mentoring system where you can ask questions and get answers to anything you don't understand.",
       ko: "네! 가능합니다! 인포팀 모집과정인 인포서블에서부터 여러분은 개발에 필요한 지식을 습득할 수 있습니다. 선발 이후에는 온보딩 프로그램을 운영하여, 언어 기초 교육을 받고 여러 도구 사용 방법을 배울 수 있습니다. 또한 기본 세미나 이후에는 멘토링 시스템이 운영 되어, 모르는 것을 편하게 질문하고 답변 받을 수 있습니다.",
     },
     category: "recruitment",
