@@ -9,6 +9,7 @@ import Layout from "./layout/Layout";
 import FaqDetail from "./pages/faq/DetailFaq.tsx";
 import { FaqLayout } from "./pages/faq/FaqLayout.tsx";
 import Faq from "./pages/faq/FaqList.tsx";
+import Members from "./pages/memberspage/members";
 import OnboardingPage from "./pages/onboarding";
 
 const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
         <Route path="/faq" element={<Faq />} />
         <Route path="/faq/:id" element={<FaqDetail />} />
       </Route>
+      <Route path="/members" element={<Members />} />
       <Route element={<Layout />}></Route>
     </>,
   ),

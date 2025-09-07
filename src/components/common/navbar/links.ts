@@ -12,6 +12,7 @@ const links: NavLink[] = [
   },
   {
     displayName: "navbar.members",
+    link: "/members",
   },
   {
     displayName: "navbar.projects",

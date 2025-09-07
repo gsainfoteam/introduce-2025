@@ -52,7 +52,7 @@ export const FaqLayout = () => {
       <div className="sticky top-0 left-0 w-full z-10 content-wrapper">
         <Navbar mode="light" hasBackground={true} />
       </div>
-      <div className="max-w-[1000px] mx-auto py-[54px]">
+      <div className="content py-[54px]">
         <h1 className="text-4xl font-bold text-left text-gray-800">
           {i18n.language === "ko-KR" ? "자주 묻는 질문" : "FAQ"}
         </h1>
