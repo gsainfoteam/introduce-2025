@@ -1,13 +1,13 @@
 import { ObjectLocale } from "src/commonTypes";
 
-interface faqdetail {
+interface FaqDetail {
   id: number;
   title: ObjectLocale;
   description: ObjectLocale;
   category: "recruitment" | "service";
 }
 
-const faqdetails: faqdetail[] = [
+const faqDetails: FaqDetail[] = [
   {
     id: 1,
     title: {
@@ -130,4 +130,4 @@ const faqdetails: faqdetail[] = [
   },
 ];
 
-export default faqdetails;
+export default faqDetails;
