@@ -17,6 +17,13 @@
     format("woff2-variations");
 }
 
+@font-face {
+  font-family: "GangwonEduPower";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./assets/fonts/GangwonEduPower.woff2") format("woff2");
+}
+
 @theme {
   --default-font-family: "Pretendard Variable";
 
@@ -34,6 +41,9 @@
   --color-primary-light: #fff4f0;
 
   --font-league-gothic: "League Gothic";
+  --font-gangwon-edu-power: "GangwonEduPower";
+  --font-inconsolata: "Inconsolata";
+  --font-inclusive-sans: "Inclusive Sans";
 
   --breakpoint-md: 1000px;
   --content-spacing: 20px;

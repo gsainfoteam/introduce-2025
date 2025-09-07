@@ -22,6 +22,7 @@ export interface Member {
   introduction: ObjectLocale;
   profileImage: string;
   intendedProjects: IntendedProjects[];
+  year: number;
 }
 
 const members: Member[] = [
@@ -44,6 +45,7 @@ const members: Member[] = [
         role: [Role.Backend, Role.Frontend, Role.App, Role.DevOps],
       },
     ],
+    year: 2023,
   },
   {
     id: 1,
@@ -64,6 +66,7 @@ const members: Member[] = [
         role: [Role.Frontend],
       },
     ],
+    year: 2019,
   },
   {
     id: 2,
@@ -84,6 +87,7 @@ const members: Member[] = [
         role: [Role.Backend],
       },
     ],
+    year: 2020,
   },
   {
     id: 3,
@@ -104,6 +108,7 @@ const members: Member[] = [
         role: [Role.Frontend, Role.Designer],
       },
     ],
+    year: 2021,
   },
   {
     id: 4,
@@ -119,6 +124,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/82248392?v=4",
     intendedProjects: [],
+    year: 2022,
   },
   {
     id: 5,
@@ -134,6 +140,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/101192718?v=4",
     intendedProjects: [],
+    year: 2023,
   },
   {
     id: 6,
@@ -149,6 +156,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/110380670?v=4",
     intendedProjects: [],
+    year: 2024,
   },
   {
     id: 7,
@@ -164,6 +172,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/85762538?v=4",
     intendedProjects: [],
+    year: 2025,
   },
   {
     id: 8,
@@ -179,6 +188,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/90755177?v=4",
     intendedProjects: [],
+    year: 2025,
   },
   {
     id: 9,
@@ -194,6 +204,7 @@ const members: Member[] = [
     },
     profileImage: "../../src/assets/pic/안동연.jpg",
     intendedProjects: [],
+    year: 2027,
   },
   {
     id: 10,
@@ -209,6 +220,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/162329866?v=4",
     intendedProjects: [],
+    year: 2026,
   },
   {
     id: 11,
@@ -224,6 +236,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/162328957?v=4",
     intendedProjects: [],
+    year: 2027,
   },
   {
     id: 12,
@@ -239,6 +252,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/160876904?v=4",
     intendedProjects: [],
+    year: 2027,
   },
   {
     id: 13,
@@ -254,6 +268,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/155029954?v=4",
     intendedProjects: [],
+    year: 2028,
   },
   {
     id: 14,
@@ -269,6 +284,7 @@ const members: Member[] = [
     },
     profileImage: "../../src/assets/pic/이신혁.jpg",
     intendedProjects: [],
+    year: 2029,
   },
   {
     id: 15,
@@ -284,6 +300,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/125674335?v=4",
     intendedProjects: [],
+    year: 2030,
   },
   {
     id: 16,
@@ -299,6 +316,7 @@ const members: Member[] = [
     },
     profileImage: "",
     intendedProjects: [],
+    year: 2031,
   },
   {
     id: 17,
@@ -314,6 +332,7 @@ const members: Member[] = [
     },
     profileImage: "https://avatars.githubusercontent.com/u/125674335?v=4",
     intendedProjects: [],
+    year: 2032,
   },
 ];
 
