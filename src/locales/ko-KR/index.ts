@@ -1,5 +1,7 @@
 import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import toyProjects from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
+import smallGatheringExamples from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
+import positionCards from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
 import _members from "src/store/members";
 
 export const main = {
@@ -28,6 +30,8 @@ export const main = {
       asADevGroup: "개발 단체로써",
       leadsCool: "멋진 개발 문화를 이끌어 나갑니다.",
       slackGithubCollab: "Slack & Github 기반 협업",
+      illustAlt:
+        "Slack을 통해 소통하고, Github Issue와 Pull Request 기반으로 협업하는 인포팀",
     },
     passionateMembers: {
       title: "개발에 누구보다 진심인 팀원들",
@@ -59,6 +63,41 @@ export const main = {
     ziggleIntroduction: {
       title: "지스트 공지 대통합 서비스",
       tryNow: "지금 바로 이용해보기",
+      webScreenshotAlt: "지글 웹 메인 스크린샷",
+      mobileScreenshotAlt: "지글 모바일 메인 스크린샷",
+      description: {
+        title: "지글은 지스트 교내 공지 편의성 증진을 위해 개발되었습니다.",
+        content1:
+          "지글 개발 전, 지스트 교내 공지는 모두 카카오톡을 통해 이루어졌습니다. <br /> 때문에 공지를 한눈에 보기 어렵고, 공지 수정이 어렵다는 단점이 있었습니다. <br /> 또한 공지를 위해서는 각 방에 초대되어야 했습니다.",
+        content2:
+          "인포팀은 이렇듯 불편한 사용자 경험을 개선하기 위해 2023년 ‘지글’ 공지 서비스를 개발하였습니다. <br /> 개발 과정에서 사용자로부터 여러 가지 피드백을 수용하여 점차 발전해 나갔고, <br /> 현재의 지글이 완성되었습니다.",
+      },
+      wantToSeeMore: "인포팀의 프로젝트를 더 보고 싶다면?",
+      goSeeProjectButton: "프로젝트 소개 보러 가기",
+    },
+    smallGathering: {
+      notOnlyDev: "개발 말고",
+      doVariousActivities: "다른 활동도 많이 합니다",
+      title: "같이 놀아요, 소모임",
+      examples: smallGatheringExamples.map((smallGatheringExample) => ({
+        id: smallGatheringExample.id,
+        title: smallGatheringExample.title.ko,
+        description: smallGatheringExample.description.ko,
+        image: smallGatheringExample.image,
+      })),
+      etc: "+ 밥 먹으러 나가기, 같이 게임하기, 운동하기 등",
+    },
+    applyInfoteam: {
+      title: "인포팀이 마음에 들었다면",
+      subtitle: "인포팀은 언제든지 인재를 환영합니다.",
+      positionCards: positionCards.map((positionCard) => ({
+        title: positionCard.title,
+        subtitle: positionCard.subtitle,
+        description: positionCard.description.ko,
+        link: positionCard.link,
+        bgColor: positionCard.bgColor,
+      })),
+      goApplyButton: "인포팀 지원하러 가기",
     },
   },
 };

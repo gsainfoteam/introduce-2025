@@ -29,10 +29,36 @@
   --color-grey: #565656;
   --color-grey-light: #999999;
   --color-border: #d8d8d8;
-
   --color-ziggle: #ff4500;
+  --color-primary: #ff4500;
+  --color-primary-light: #fff4f0;
 
   --font-league-gothic: "League Gothic";
+
+  --breakpoint-md: 1000px;
+  --content-spacing: 20px;
+}
+
+@theme {
+  --animate-scroll-up: scroll-up 5s linear infinite;
+
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: keep-all;
 }
 
 body {
@@ -56,4 +82,9 @@ span {
 .content {
   width: 100%;
   max-width: 1000px;
+
+  @media screen and (max-width: 1000px) {
+    padding-left: var(--content-spacing);
+    padding-right: var(--content-spacing);
+  }
 }

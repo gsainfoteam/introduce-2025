@@ -6,17 +6,22 @@ import {
 } from "react-router-dom";
 
 import Layout from "./layout/Layout";
-import OnboardingPage from "./pages/onboarding";
+import FaqDetail from "./pages/faq/DetailFaq.tsx";
+import { FaqLayout } from "./pages/faq/FaqLayout.tsx";
+import Faq from "./pages/faq/FaqList.tsx";
 import Members from "./pages/memberspage/members";
-import QnA from "./pages/qna/QnA.tsx";
+import OnboardingPage from "./pages/onboarding";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<OnboardingPage />} />
+      <Route element={<FaqLayout />}>
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/faq/:id" element={<FaqDetail />} />
+      </Route>
       <Route path="/members" element={<Members />} />
       <Route element={<Layout />}></Route>
-      <Route path="/faq" element={<QnA />} />
     </>,
   ),
 );
