@@ -92,6 +92,7 @@ span {
 .content {
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
 
   @media screen and (max-width: 1000px) {
     padding-left: var(--content-spacing);
