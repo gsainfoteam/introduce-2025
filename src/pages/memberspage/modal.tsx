@@ -15,8 +15,14 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg w-[600px] h-[400px] relative border border-border shadow-lg">
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50"
+      onClick={() => onClose()}
+    >
+      <div
+        className="bg-white rounded-lg w-[600px] h-[400px] relative border border-border shadow-lg"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="bg-gray-300 p-4" />
         <button
           className="absolute top-2.5 left-2 bg-red-500 text-red-500 px-1.5 py-1.5 rounded-full"
