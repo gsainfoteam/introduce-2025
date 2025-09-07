@@ -30,7 +30,7 @@ export interface Member {
 export const members: Member[] = data.map((v) => ({
   ...v,
   profileImage: v.profileImage ? `/profiles/${v.profileImage}` : "/favicon.svg",
-  roles: v.roles.map((r) => Role[r as keyof typeof Role]),
+  roles: v.roles.map((r) => Role[r as keyof typeof Role]).filter(Boolean),
   intendedProjects: v.intendedProjects.map((id) => ({
     projectId: id,
     role: [],
