@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import HamburgerIcon from "src/assets/common/menu/menu.svg?react";
 import CloseIcon from "src/assets/common/xmark/xmark.svg?react";
 import DarkLogo from "src/assets/logos/logo-dark.svg?react";
@@ -27,6 +27,8 @@ const Navbar = ({
   const { t } = useTranslation("main");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [{ mode, hasBackground }, setNavbarState] = useAtom(navbarStateAtom);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setNavbarState({ mode: initialMode, hasBackground: initialHasBackground });
@@ -38,6 +40,18 @@ const Navbar = ({
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleNavigate = (path: string) => {
+    if (path.startsWith("/")) {
+      if (location.pathname === path) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate(path);
+      }
+    } else {
+      window.open(path, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
@@ -54,7 +68,10 @@ const Navbar = ({
         )}
       >
         <div className="content flex w-full justify-between items-center">
-          <div className="-ml-2.5 md:ml-0">
+          <div
+            className="-ml-2.5 md:ml-0 cursor-pointer"
+            onClick={() => handleNavigate("/")}
+          >
             {mode === "dark" ? (
               <>
                 <DarkLogo className="hidden md:block h-11" />
@@ -95,13 +112,14 @@ const Navbar = ({
                   <li
                     key={link.displayName}
                     className={cn(
-                      "tracking-tight py-1 px-2 rounded-sm transition hover:scale-95 cursor-pointer",
+                      "tracking-tight py-1 px-2.5 rounded-lg transition hover:scale-95 cursor-pointer",
                       mode === "dark"
                         ? ["text-white hover:bg-bg-dark-light"]
                         : ["text-dark hover:bg-bg-light"],
                     )}
+                    onClick={() => handleNavigate(link.link ?? "")}
                   >
-                    <Link to={link.link ?? ""}>{t(link.displayName)}</Link>
+                    {t(link.displayName)}
                   </li>
                 ))}
             </ul>
