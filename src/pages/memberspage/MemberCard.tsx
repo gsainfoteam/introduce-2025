@@ -51,8 +51,8 @@ const MemberCard = ({ member }: { member: Member }) => {
             </div>
           </div>
           <div className="flex justify-between items-center">
-            {member.githubID && (
-              <div className="border border-border px-[5px] flex gap-[6px] text-[13px] font-inconsolata font-semibold items-center">
+            <div className="border border-border px-[5px] flex gap-[6px] text-[13px] font-inconsolata font-semibold items-center">
+              {member.githubID ? (
                 <a
                   href={`https://github.com/${member.githubID}`}
                   target="_blank"
@@ -62,30 +62,32 @@ const MemberCard = ({ member }: { member: Member }) => {
                 >
                   @{member.githubID}
                 </a>
-                <div className="border-x border-border size-5 overflow-hidden relative">
-                  <div className="flex flex-col gap-[1px] w-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45">
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                    <div className="h-[1px] bg-border" />
-                  </div>
+              ) : (
+                member.name.en
+              )}
+              <div className="border-x border-border size-5 overflow-hidden relative">
+                <div className="flex flex-col gap-[1px] w-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45">
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
+                  <div className="h-[1px] bg-border" />
                 </div>
-
-                <span>{member.year}</span>
               </div>
-            )}
+
+              <span>{member.year}</span>
+            </div>
             <Fofo className="text-dark size-5" />
           </div>
         </div>
