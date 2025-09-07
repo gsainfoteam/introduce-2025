@@ -1,5 +1,7 @@
 import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import toyProjects from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
+import smallGatheringExamples from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
+import positionCards from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
 import _members from "src/store/members";
 
 export const main = {
@@ -28,6 +30,8 @@ export const main = {
       asADevGroup: "As a developer group,",
       leadsCool: "We lead a cool development culture.",
       slackGithubCollab: "Co-op based on Slack & Github",
+      illustAlt:
+        "Infoteam communicating through Slack and collaborating based on Github Issues and Pull Requests",
     },
     passionateMembers: {
       title: "Team members who are truly passionate about development",
@@ -60,6 +64,42 @@ export const main = {
     ziggleIntroduction: {
       title: "Gathering All the GIST Notices",
       tryNow: "Try it out now",
+      webScreenshotAlt: "Screenshot of Ziggle Web Main Page",
+      mobileScreenshotAlt: "Screenshot of Ziggle Mobile Main Page",
+      description: {
+        title:
+          "Ziggle was developed to improve the convenience of GIST campus notices.",
+        content1:
+          "Before Ziggle, all GIST campus notices were delivered through KakaoTalk. <br /> As a result, it was difficult to view notices at a glance, and modifying notices was also challenging. <br /> Additionally, users had to be invited to each chat room to receive notices.",
+        content2:
+          "To improve this inconvenient user experience, the Infoteam developed the 'Ziggle' notice service in 2023. <br /> Throughout the development process, we incorporated various user feedback and continuously improved the service, <br /> leading to the completion of the current Ziggle.",
+      },
+      wantToSeeMore: "Want to see more of Infoteam's projects?",
+      goSeeProjectButton: "Project Introductions",
+    },
+    smallGathering: {
+      notOnlyDev: "Not Just Development",
+      doVariousActivities: "We Do Various Activities",
+      title: "Let's Have Fun Together, Small Gatherings",
+      examples: smallGatheringExamples.map((smallGatheringExample) => ({
+        id: smallGatheringExample.id,
+        title: smallGatheringExample.title.en,
+        description: smallGatheringExample.description.en,
+        image: smallGatheringExample.image,
+      })),
+      etc: "+ go out for meal, play games, exercise, etc.",
+    },
+    applyInfoteam: {
+      title: "If you like the Infoteam",
+      subtitle: "We always welcome talented individuals.",
+      positionCards: positionCards.map((positionCard) => ({
+        title: positionCard.title,
+        subtitle: positionCard.subtitle,
+        description: positionCard.description.en,
+        link: positionCard.link,
+        bgColor: positionCard.bgColor,
+      })),
+      goApplyButton: "Apply to Infoteam",
     },
   },
 };

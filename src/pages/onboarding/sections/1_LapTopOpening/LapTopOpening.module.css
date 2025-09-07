@@ -52,18 +52,14 @@
 }
 
 .mockup.opened .part .top {
-  transform: translate3d(0, 0, -11px) rotateX(90deg) scale(1, 1);
+  transform: translate3d(0, 0, -11px) rotateX(90deg);
 }
 
 .macbook .pTitle {
-  transform: translate3d(0, 0, -100px) rotateX(90deg);
-  color: #fff;
-  font-size: 30px;
   top: 0;
   left: 0;
   position: absolute;
   width: 100%;
-  font-size: 60px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -89,19 +85,15 @@
 .mockup .screen {
   display: flex;
   position: absolute;
-  top: 4%;
   left: 3%;
   right: 3%;
   border-radius: 6px;
-  background-color: var(--color-white);
   overflow: hidden;
   height: 90%;
   font-size: 20px;
   font-weight: 600;
   display: flex;
   object-fit: cover;
-
-  opacity: 0;
 }
 
 .mockup .part.bottom {

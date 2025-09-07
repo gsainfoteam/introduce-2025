@@ -28,7 +28,7 @@ const LapTopOpening = () => {
 
   useGSAP(() => {
     ScrollTrigger.defaults({
-      markers: true,
+      markers: false,
     });
 
     const macbook = gsap.timeline({
@@ -86,30 +86,50 @@ const LapTopOpening = () => {
       undefined,
       "-=0.2",
     );
+
+    return () => {
+      macbook.kill();
+      ScrollTrigger.getById(SCROLL_TRIGGER_ID)?.kill();
+    };
   });
 
   return (
     <>
       <main className="relative h-screen">
-        <div className={styles.macbook} ref={macbookRef}>
+        <div className={`${styles.macbook} `} ref={macbookRef}>
           <div className="bg-gradient-to-b from-[#3F3F3F] to-dark to-80% absolute left-0 top-0 w-full h-full flex" />
           <div
-            className={`${styles.mockup} ${styles.loaded} ${styles.opened}`}
+            className={`${styles.mockup} ${styles.loaded} ${styles.opened} *:px-[10%] *:md:px-0`}
             ref={mockupRef}
           >
             <div className={`${styles.part} ${styles.top}`} ref={laptopTopRef}>
-              <img src={LapTopTopImage} alt="LapTop" className={styles.top} />
+              <img
+                src={LapTopTopImage}
+                alt="LapTop"
+                className={`${styles.top} px-[10%] md:px-0 translate-z-1 md:translate-z-0`}
+              />
               <div className={`${styles.cover} relative`}>
                 <img src={LapTopCoverImage} alt="" />
               </div>
 
-              <div className={styles.screen} ref={screenRef} />
+              <div
+                className={`${styles.screen} px-[10%] md:px-0 top-[5%] left-[1.5%] right-[1.5%] md:top-[4%] md:left-[3%] md:right-[3%]`}
+              >
+                <div
+                  className="w-full h-full bg-white opacity-0 rounded-md"
+                  ref={screenRef}
+                />
+              </div>
 
-              <h1 className={styles.pTitle}>
+              <h1
+                className={`${styles.pTitle} text-5xl md:text-6xl text-white rotate-x-90 -translate-z-[80px] md:-translate-z-[100px]`}
+              >
                 {t("onboarding.introduction.infoteamIs")}
               </h1>
             </div>
-            <div className={`${styles.part} ${styles.bottom}`}>
+            <div
+              className={`${styles.part} ${styles.bottom} scale-80 md:scale-100`}
+            >
               <img src={LapTopCoverImage} alt="" className={styles.cover} />
               <img src={LapTopBottomImage} alt="" className={styles.bottom} />
             </div>
