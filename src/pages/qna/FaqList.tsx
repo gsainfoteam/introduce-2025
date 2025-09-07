@@ -1,87 +1,44 @@
-import React, { useCallback, useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import Navbar from "src/components/common/navbar/index.tsx";
 
 import faqDetails from "./faq.ts";
 
 const Faq: React.FC = () => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const selectedCategory = searchParams.get("type") as
     | "recruitment"
     | "service";
-  const setSelectedCategory = useCallback(
-    (type: "recruitment" | "service") => {
-      setSearchParams({ type });
-    },
-    [setSearchParams],
-  );
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    if (!selectedCategory) {
-      setSelectedCategory("recruitment");
-    }
-  }, [selectedCategory, setSelectedCategory]);
 
   const handleNavigate = (id: number) => {
-    navigate(`/faq/${id}`);
+    navigate(`/faq/${id}?type=${selectedCategory}`);
   };
 
   const questions = faqDetails.filter(
     (question) => question.category === selectedCategory,
   );
 
-  return (
-    <div className="flex-grow context mt-20">
-      <div className="fixed top-0 left-0 w-full z-10 content-wrapper">
-        <Navbar mode="light" hasBackground={true} />
-      </div>
-      <h1 className="text-4xl p-12 font-bold text-left text-gray-800">
-        {i18n.language === "ko-KR" ? "자주 묻는 질문" : "FAQ"}
-      </h1>
-      <div className="flex">
-        <div className="w-64 p-12 flex-shrink-0">
-          <ul>
-            <li
-              className={`cursor-pointer mb-10 text-xl ${selectedCategory === "recruitment" ? "text-[#FF4500]" : ""}`}
-              onClick={() => setSelectedCategory("recruitment")}
-            >
-              {i18n.language === "ko-KR" ? "리크루팅" : "Recruitment"}
-            </li>
-            <li
-              className={`cursor-pointer mb-10 text-xl ${selectedCategory === "service" ? "text-[#FF4500]" : ""}`}
-              onClick={() => setSelectedCategory("service")}
-            >
-              {i18n.language === "ko-KR" ? "서비스" : "Service"}
-            </li>
-          </ul>
-        </div>
+  const { i18n } = useTranslation();
 
-        <div className="flex-grow p-6">
-          <div>
-            {questions.map((question) => (
-              <div
-                key={question.id}
-                className="mb-4 cursor-pointer hover:bg-gray-100 p-2 transition-all"
-                onClick={() => handleNavigate(question.id)}
-              >
-                <div className="flex items-center gap-[50px]">
-                  <h2 className="text-xl text-gray-800 text-left font-semibold">
-                    Q
-                  </h2>
-                  <h2 className="text-xl text-gray-800 text-left">
-                    {i18n.language === "ko-KR"
-                      ? question.title.ko
-                      : question.title.en}
-                  </h2>
-                </div>
-              </div>
-            ))}
+  return (
+    <div className="flex-1 flex flex-col gap-4">
+      {questions.map((question) => (
+        <div
+          key={question.id}
+          className="cursor-pointer hover:bg-primary-light px-4 py-3 transition-all hover:text-primary text-dark rounded-lg"
+          onClick={() => handleNavigate(question.id)}
+        >
+          <div className="flex items-center gap-[30px] text-xl text-left">
+            <h2 className="font-semibold">Q</h2>
+            <h2>
+              {i18n.language === "ko-KR"
+                ? question.title.ko
+                : question.title.en}
+            </h2>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
