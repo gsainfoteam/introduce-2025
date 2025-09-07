@@ -4,7 +4,7 @@ interface faqdetail {
   id: number;
   title: ObjectLocale;
   description: ObjectLocale;
-  category: string;
+  category: "recruitment" | "service";
 }
 
 const faqdetails: faqdetail[] = [
