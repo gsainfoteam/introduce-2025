@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { H4 } from "src/components/common/headers";
 import Navbar from "src/components/common/navbar";
 
-import members, { Member, Role } from "../../store/members";
+import { Member, members, Role } from "../../store/members";
 import MemberCard from "./MemberCard";
 import { roleLabels, TEAM_LEADER_IDS } from "./roles";
 

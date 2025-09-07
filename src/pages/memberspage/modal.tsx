@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom";
-import { roleLabels, roleStyles } from "./roles";
-import { Member } from "../../store/members";
-import { Role } from "../../store/members";
 import { useTranslation } from "react-i18next";
+
+import { Member } from "../../store/members";
+import { roleLabels, roleStyles } from "./roles";
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,8 +11,8 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, member }: ModalProps) => {
-  if (!isOpen) return null;
   const { i18n } = useTranslation();
+  if (!isOpen) return null;
 
   return ReactDOM.createPortal(
     <div className="fixed inset-0 flex items-center justify-center z-50">

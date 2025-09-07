@@ -2,7 +2,7 @@ import inferenceExamples from "src/pages/onboarding/sections/4_PassionateMembers
 import toyProjects from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
 import smallGatheringExamples from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
 import positionCards from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
-import _members from "src/store/members";
+import { members as _members } from "src/store/members";
 
 export const main = {
   title: "Hello, World!",

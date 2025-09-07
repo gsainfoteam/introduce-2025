@@ -14,7 +14,7 @@ interface Member {
   githubId: string;
   role: Role[];
   introduction: string;
-  profileImage: string;
+  profileImage: string | null;
   intendedProjects: IntendedProjects[];
 }
 

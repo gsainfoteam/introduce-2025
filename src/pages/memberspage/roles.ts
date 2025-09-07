@@ -1,6 +1,6 @@
 import { Role } from "../../store/members";
 
-export const TEAM_LEADER_IDS = [14, 8, 5];
+export const TEAM_LEADER_IDS = [114];
 
 export const roleLabels: Record<Role, string> = {
   [Role.Frontend]: "FE",
