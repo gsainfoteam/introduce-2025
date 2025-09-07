@@ -35,10 +35,16 @@ const ApplyInfoteam = () => {
         ))}
       </div>
 
-      <CellophaneButton className="font-medium mt-18 flex gap-2 items-center">
-        {t("onboarding.applyInfoteam.goApplyButton")}
-        <ArrowRightIcon className="size-6" />
-      </CellophaneButton>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://infoteam-rulrudino.notion.site/13c365ea27df80f28cc8e46e3d8ec84e?pvs=105"
+      >
+        <CellophaneButton className="font-medium mt-18 flex gap-2 items-center">
+          {t("onboarding.applyInfoteam.goApplyButton")}
+          <ArrowRightIcon className="size-6" />
+        </CellophaneButton>
+      </a>
     </section>
   );
 };
