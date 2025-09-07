@@ -19,6 +19,31 @@ export const main = {
     introduction: {
       infoteamIs: "인포팀은",
       codeCampus: "코드로 캠퍼스를 바꾸는 사람들",
+      highlightText: "개발에 흥미를 가진 사람들이",
+      teamDescriptionPart1: "",
+      teamDescriptionPart2:
+        "지스트를 더 살기 좋고 재밌는 곳으로 만들기 위해 모인 팀입니다.",
+      goalTextPart1: "이런 사람들이 모여",
+      goalTextHighlight: "각자의 흥미에 따라 열심히 일하고",
+      goalTextPart2: "근사한 서비스를 만들어나가는 것을 목표로 합니다.",
+      teamIntro:
+        "개발에 흥미를 가진 사람들이 지스트를 더 살기 좋고 재밌는 곳으로 만들기 위해 모인 팀입니다.",
+      cards: {
+        sophisticatedCode: {
+          title: "정교한 코드",
+          description: "깔끔하고 효율적인 코드를 짜는 게 재밌는 사람",
+        },
+        beautifulService: {
+          title: "예쁜 서비스",
+          description: "UI/UX를 고민하며 예쁜 서비스를 만드는 게 재밌는 사람 ",
+        },
+        withManyPeople: {
+          title: "많은 사람들과 함께",
+          description: "많은 사람들이 내 서비스를 사용하는 게 재밌는 사람",
+        },
+      },
+      goalText:
+        "이런 사람들이 모여 각자의 흥미에 따라 열심히 일하고 근사한 서비스를 만들어나가는 것을 목표로 합니다.",
       descriptions: {
         one: "인포팀은 개발에 흥미를 가진 사람들이 지스트를 더 살기 좋고 재밌는 곳으로 만들기 위해 모인 팀입니다.",
         two: "누구는 정교한 코드를 짜는 게 재밌을수도, 누구는 예쁜 서비스를 만드는 게 재밌을수도, 누구는 사람들이 내 서비스를 많이 사용하는게 재밌을 수도 있습니다.",
