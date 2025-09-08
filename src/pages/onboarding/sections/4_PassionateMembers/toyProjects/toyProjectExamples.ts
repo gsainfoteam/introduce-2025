@@ -62,12 +62,12 @@ const toyProjects: ToyProject[] = [
     id: 3,
     title: {
       en: "Funline Skating",
-      ko: "빤라인 스케이팅",
+      ko: "뻔라인 스케이팅",
     },
     intendersId: [8, 9, 10, 3],
     description: {
       en: "Enter a student ID and find the best 'Funline' (fastest path) in a fancy way!",
-      ko: "학번을 입력하면 fancy하게 뻔선, 빤후를 찾아주는 서비스",
+      ko: "학번을 입력하면 fancy하게 뻔선, 뻔후를 찾아주는 서비스",
     },
     thumbnail: ToyProjectThumbnail3,
   },
