@@ -70,7 +70,15 @@ const Navbar = ({
         <div className="content flex w-full justify-between items-center">
           <div
             className="-ml-2.5 md:ml-0 cursor-pointer"
+            role="link"
+            tabIndex={0}
+            aria-label="Home"
             onClick={() => handleNavigate("/")}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                handleNavigate("/");
+              }
+            }}
           >
             {mode === "dark" ? (
               <>
@@ -117,7 +125,15 @@ const Navbar = ({
                         ? ["text-white hover:bg-bg-dark-light"]
                         : ["text-dark hover:bg-bg-light"],
                     )}
+                    role="link"
+                    tabIndex={0}
+                    aria-label={t(link.displayName)}
                     onClick={() => handleNavigate(link.link ?? "")}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        handleNavigate(link.link ?? "");
+                      }
+                    }}
                   >
                     {t(link.displayName)}
                   </li>

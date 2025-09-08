@@ -22,7 +22,14 @@ const MemberCard = ({ member }: { member: Member }) => {
     <>
       <div
         className="group w-[280px] bg-white rounded-2xl flex flex-col p-6 border border-border cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-100 hover:-translate-y-2 hover:border-border"
+        role="button"
+        tabIndex={0}
         onClick={handleCardClick}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleCardClick();
+          }
+        }}
       >
         <div className="relative overflow-hidden rounded-xl mb-5">
           <img
@@ -54,7 +61,7 @@ const MemberCard = ({ member }: { member: Member }) => {
           </div>
 
           <div className="space-y-4">
-            <div className="border-t border-border/30" />
+            <div className="border-t border-border/50" />
 
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-lg border border-border transition-colors duration-200 hover:bg-gray-100">

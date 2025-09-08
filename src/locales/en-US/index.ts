@@ -130,6 +130,14 @@ export const main = {
       goApplyButton: "Apply to Infoteam",
     },
   },
+
+  memberModal: {
+    title: "Member Info",
+    name: "Name",
+    github: "GitHub",
+    role: "Role",
+    introduction: "Introduction",
+  },
 };
 
 export const members = _members.map((member) => ({

@@ -125,6 +125,14 @@ export const main = {
       goApplyButton: "인포팀 지원하러 가기",
     },
   },
+
+  memberModal: {
+    title: "멤버 정보",
+    name: "이름",
+    github: "GitHub",
+    role: "역할",
+    introduction: "소개",
+  },
 };
 
 export const members = _members.map((member) => ({
