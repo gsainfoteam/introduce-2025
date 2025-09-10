@@ -13,24 +13,27 @@ export const roleLabels: Record<Role, string> = {
 
 export const roleStyles: Record<Role, { text: string; bg: string }> = {
   [Role.Frontend]: {
-    text: "text-[#1B8FD7] border-[#1B8FD7]",
+    text: "text-[#0F7BC7] border-[#9BCBDE]",
     bg: "bg-[#CBE2F1]",
   },
   [Role.Backend]: {
-    text: "text-[#D4A100] border-[#D4A100]",
+    text: "text-[#B8900E] border-[#E6C875]",
     bg: "bg-[#FFF3CD]",
   },
-  [Role.App]: { text: "text-[#9B59B6] border-[#9B59B6]", bg: "bg-[#E8DAEF]" },
+  [Role.App]: {
+    text: "text-[#8348A3] border-[#C4A6D1]",
+    bg: "bg-[#E8DAEF]",
+  },
   [Role.Designer]: {
-    text: "text-[#28A745] border-[#28A745]",
+    text: "text-[#218838] border-[#A8D4B7]",
     bg: "bg-[#D4EDDA]",
   },
   [Role.Manager]: {
-    text: "text-[#6C757D] border-[#6C757D]",
+    text: "text-[#5A6268] border-[#BDC0C4]",
     bg: "bg-[#E2E3E5]",
   },
   [Role.DevOps]: {
-    text: "text-[#E74C3C] border-[#E74C3C]",
+    text: "text-[#DC3545] border-[#F1B5B8]",
     bg: "bg-[#FADBD8]",
   },
 };

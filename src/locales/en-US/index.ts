@@ -17,8 +17,36 @@ export const main = {
 
   onboarding: {
     introduction: {
-      infoteamIs: "The Infoteam",
+      infoteamIs: "The Infoteam is",
       codeCampus: "improves the campus with code",
+      highlightText: "a group of people interested in development",
+      teamDescriptionPart1: "who",
+      teamDescriptionPart2:
+        "have come together to make GIST a better and more enjoyable place to live.",
+      goalTextPart1:
+        "Our goal is to bring together these passionate individuals,",
+      goalTextHighlight:
+        "allowing them to work hard based on their own interests",
+      goalTextPart2: "and create amazing services.",
+      teamIntro:
+        "is a group of people who are interested in development and have come together to make GIST a better and more enjoyable place to live.",
+      cards: {
+        sophisticatedCode: {
+          title: "Sophisticated Code",
+          description: "People who enjoy writing clean and efficient code",
+        },
+        beautifulService: {
+          title: "Beautiful Services",
+          description:
+            "People who enjoy creating beautiful services with thoughtful UI/UX",
+        },
+        withManyPeople: {
+          title: "With Many People",
+          description: "People who enjoy seeing many people use their services",
+        },
+      },
+      goalText:
+        "Our goal is to bring together these passionate individuals, allowing them to work hard based on their own interests and create amazing services.",
       descriptions: {
         one: "The Infoteam is a group of people who are interested in development and have come together to make GIST a better and more enjoyable place to live.",
         two: "For some, the fun may come from writing sophisticated code; for others, it might be from creating beautiful services; and for others, it could be from seeing many people use their service.",
@@ -101,6 +129,14 @@ export const main = {
       })),
       goApplyButton: "Apply to Infoteam",
     },
+  },
+
+  memberModal: {
+    title: "Member Info",
+    name: "Name",
+    github: "GitHub",
+    role: "Role",
+    introduction: "Introduction",
   },
 };
 

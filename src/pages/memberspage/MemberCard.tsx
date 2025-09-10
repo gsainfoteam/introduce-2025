@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import cn from "src/utils/cn/index.ts";
 
 import { Member } from "../../store/members";
-import Fofo from "./fofo.svg?react";
 import Modal from "./modal.tsx";
 import { roleLabels, roleStyles } from "./roles.ts";
 
@@ -22,25 +21,35 @@ const MemberCard = ({ member }: { member: Member }) => {
   return (
     <>
       <div
-        className="w-[240px] bg-white rounded-lg flex flex-col p-[18px] border-[3px] border-border cursor-pointer gap-5"
+        className="group w-[280px] bg-white rounded-2xl flex flex-col p-6 border border-border cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-100 hover:-translate-y-2 hover:border-border"
+        role="button"
+        tabIndex={0}
         onClick={handleCardClick}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            handleCardClick();
+          }
+        }}
       >
-        <img
-          src={member.profileImage}
-          alt={member.name.ko}
-          className="w-full aspect-square object-cover"
-        />
-        <div className="h-[130px] flex flex-col justify-between">
-          <div className="flex flex-col gap-[10px]">
-            <h2 className="text-2xl font-bold font-gangwon-edu-power">
+        <div className="relative overflow-hidden rounded-xl mb-5">
+          <img
+            src={member.profileImage}
+            alt={member.name.ko}
+            className="w-full aspect-square object-cover"
+          />
+        </div>
+
+        <div className="flex-1 flex flex-col justify-between gap-5">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold font-gangwon-edu-power text-gray-900">
               {i18n.language === "ko-KR" ? member.name.ko : member.name.en}
             </h2>
-            <div className="flex flex-wrap gap-2 font-inclusive-sans">
+            <div className="flex flex-wrap gap-2">
               {member.roles.map((r) => (
                 <span
                   key={r}
                   className={cn(
-                    `px-1 rounded-sm text-sm border`,
+                    `px-2 py-1 rounded-full text-sm font-medium border transition-colors duration-200`,
                     roleStyles[r].text,
                     roleStyles[r].bg,
                   )}
@@ -50,45 +59,36 @@ const MemberCard = ({ member }: { member: Member }) => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between items-center">
-            <div className="border border-border px-[5px] flex gap-[6px] text-[13px] font-inconsolata font-semibold items-center">
-              {member.githubID ? (
-                <a
-                  href={`https://github.com/${member.githubID}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  @{member.githubID}
-                </a>
-              ) : (
-                member.name.en
-              )}
-              <div className="border-x border-border size-5 overflow-hidden relative">
-                <div className="flex flex-col gap-[1px] w-[40px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45">
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                  <div className="h-[1px] bg-border" />
-                </div>
+
+          <div className="space-y-4">
+            <div className="border-t border-border/50" />
+
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-lg border border-border transition-colors duration-200 hover:bg-gray-100">
+                <span className="text-gray-500">@</span>
+                {member.githubID ? (
+                  <a
+                    href={`https://github.com/${member.githubID}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600 transition-colors duration-200 font-inconsolata text-sm font-medium text-gray-600"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {member.githubID}
+                  </a>
+                ) : (
+                  <span className="font-inconsolata text-sm font-medium text-gray-600">
+                    {member.name.en}
+                  </span>
+                )}
               </div>
 
-              <span>{member.year}</span>
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-blue-50 rounded-lg border border-blue-200">
+                <span className="text-blue-600 font-semibold text-sm">
+                  {member.year}
+                </span>
+              </div>
             </div>
-            <Fofo className="text-dark size-5" />
           </div>
         </div>
       </div>

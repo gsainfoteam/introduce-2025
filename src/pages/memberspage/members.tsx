@@ -35,7 +35,9 @@ const Members = () => {
 
   return (
     <div className="w-full">
-      <Navbar mode="light" hasBackground={true} />
+      <div className="fixed top-0 left-0 w-full z-10 content-wrapper">
+        <Navbar mode="light" hasBackground={true} />
+      </div>
       <div className="flex flex-col items-center content">
         <h1 className="py-[120px] text-6xl font-bold">
           {i18n.language === "ko-KR" ? "멤버" : "Members"}
