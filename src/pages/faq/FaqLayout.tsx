@@ -66,12 +66,12 @@ export const FaqLayout = () => {
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
               />
-              <Category
+              {/* <Category
                 type="service"
                 label={i18n.language === "ko-KR" ? "서비스" : "Service"}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
-              />
+              /> */}
             </ul>
           </div>
 
