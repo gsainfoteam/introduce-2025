@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Footer from "src/components/common/footer";
 import { H4 } from "src/components/common/headers";
 import Navbar from "src/components/common/navbar";
 
@@ -38,7 +39,7 @@ const Members = () => {
       <div className="fixed top-0 left-0 w-full z-10 content-wrapper">
         <Navbar mode="light" hasBackground={true} />
       </div>
-      <div className="flex flex-col items-center content">
+      <div className="flex flex-col items-center content pb-16">
         <h1 className="py-[120px] text-6xl font-bold">
           {t("membersPage.title")}
         </h1>
@@ -73,6 +74,7 @@ const Members = () => {
           })}
         </div>
       </div>
+      <Footer mode="light" />
     </div>
   );
 };
