@@ -49,4 +49,13 @@ const smallGatheringExamples: SmallGatheringExample[] = [
   },
 ];
 
+export const getSmallGatheringExamples = (lang: "ko" | "en") => {
+  return smallGatheringExamples.map((example) => ({
+    id: example.id,
+    title: example.title[lang],
+    description: example.description[lang],
+    image: example.image,
+  }));
+};
+
 export default smallGatheringExamples;

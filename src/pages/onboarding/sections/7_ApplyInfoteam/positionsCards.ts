@@ -38,4 +38,14 @@ const positionCards: PositionCard[] = [
   },
 ];
 
+export const getPositionCards = (lang: "ko" | "en") => {
+  return positionCards.map((card) => ({
+    title: card.title,
+    subtitle: card.subtitle,
+    description: card.description[lang],
+    link: card.link,
+    bgColor: card.bgColor,
+  }));
+};
+
 export default positionCards;

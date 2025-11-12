@@ -31,7 +31,7 @@ const Members = () => {
     const priorityB = TEAM_LEADER_IDS.indexOf(b.id);
     return priorityA - priorityB;
   });
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="w-full">
@@ -40,12 +40,12 @@ const Members = () => {
       </div>
       <div className="flex flex-col items-center content">
         <h1 className="py-[120px] text-6xl font-bold">
-          {i18n.language === "ko-KR" ? "멤버" : "Members"}
+          {t("membersPage.title")}
         </h1>
         <div className="flex flex-col gap-44">
           {sortedLeaders.length > 0 && (
             <Section
-              title={i18n.language === "ko-KR" ? "팀장" : "Team Leaders"}
+              title={t("membersPage.teamLeaders")}
               members={sortedLeaders}
             />
           )}

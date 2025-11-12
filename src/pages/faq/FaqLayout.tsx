@@ -45,7 +45,7 @@ export const FaqLayout = () => {
       setSelectedCategory("recruitment");
     }
   }, [selectedCategory, setSelectedCategory]);
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="flex-grow context">
@@ -54,7 +54,7 @@ export const FaqLayout = () => {
       </div>
       <div className="content py-[54px]">
         <h1 className="text-4xl font-bold text-left text-gray-800">
-          {i18n.language === "ko-KR" ? "자주 묻는 질문" : "FAQ"}
+          {t("faq.title")}
         </h1>
         <div className="h-[1px] bg-border mt-8 mb-9" />
         <div className="flex gap-3">
@@ -62,13 +62,13 @@ export const FaqLayout = () => {
             <ul className="flex flex-col gap-6">
               <Category
                 type="recruitment"
-                label={i18n.language === "ko-KR" ? "리크루팅" : "Recruitment"}
+                label={t("faq.categories.recruitment")}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
               />
               {/* <Category
                 type="service"
-                label={i18n.language === "ko-KR" ? "서비스" : "Service"}
+                label={t("faq.categories.service")}
                 selectedCategory={selectedCategory}
                 setSelectedCategory={setSelectedCategory}
               /> */}

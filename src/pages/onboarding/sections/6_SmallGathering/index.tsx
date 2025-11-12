@@ -1,9 +1,19 @@
 import { useTranslation } from "react-i18next";
 import { H2, H4, H5, ShortHr } from "src/components/common/headers";
-import { main as koMain } from "src/locales/ko-KR";
+import { getSmallGatheringExamples } from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
+
+interface ExampleProps {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
 
 const SmallGathering = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language === "ko-KR" ? "ko" : "en";
+  const examples = getSmallGatheringExamples(lang);
 
   return (
     <section className="content flex flex-col items-center">
@@ -21,11 +31,9 @@ const SmallGathering = () => {
       <div className="h-10" />
 
       <div className="flex md:flex-row flex-col gap-2 w-full justify-center items-center">
-        {t("onboarding.smallGathering.examples", { returnObjects: true }).map(
-          (example) => (
-            <Examples key={example.id} {...example} />
-          ),
-        )}
+        {examples.map((example) => (
+          <Examples key={example.id} {...example} />
+        ))}
       </div>
 
       <div className="h-8" />
@@ -36,8 +44,6 @@ const SmallGathering = () => {
     </section>
   );
 };
-
-type ExampleProps = (typeof koMain.onboarding.smallGathering.examples)[number];
 
 const Examples = ({ title, description, image }: ExampleProps) => {
   return (

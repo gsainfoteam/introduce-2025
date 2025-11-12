@@ -46,4 +46,13 @@ const inferenceExamples: InferenceExample[] = [
   },
 ];
 
+export const getInferenceExamples = (lang: "ko" | "en") => {
+  return inferenceExamples.map((example) => ({
+    id: example.id,
+    title: example.title[lang],
+    presentersId: example.presentersId,
+    description: example.description[lang],
+  }));
+};
+
 export default inferenceExamples;

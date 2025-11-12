@@ -86,4 +86,14 @@ const toyProjects: ToyProject[] = [
   },
 ];
 
+export const getToyProjects = (lang: "ko" | "en") => {
+  return toyProjects.map((project) => ({
+    id: project.id,
+    title: project.title[lang],
+    intendersId: project.intendersId,
+    description: project.description[lang],
+    thumbnail: project.thumbnail,
+  }));
+};
+
 export default toyProjects;

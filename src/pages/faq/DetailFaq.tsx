@@ -8,10 +8,10 @@ const FaqDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const faq = faqDetails.find((ex) => ex.id.toString() === id);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   if (!faq) {
-    return <div>해당 질문을 찾을 수 없습니다.</div>;
+    return <div>{t("faq.detail.notFound")}</div>;
   }
 
   return (
@@ -20,8 +20,7 @@ const FaqDetail: React.FC = () => {
         onClick={() => navigate(-1)}
         className="flex items-center text-[#7A7A7A] cursor-pointer"
       >
-        <span className="text-2xl mr-2">←</span>{" "}
-        {i18n.language === "ko-KR" ? "질문 목록" : "Question List"}
+        <span className="text-2xl mr-2">←</span> {t("faq.detail.backToList")}
       </button>
 
       <h1 className="text-3xl font-bold">

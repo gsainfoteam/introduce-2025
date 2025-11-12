@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
 import CellophaneButton from "src/components/common/cellophaneButton";
 import { H2 } from "src/components/common/headers";
+import { getPositionCards } from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
 
 import PositionCard from "./positionCard";
 
@@ -12,7 +13,10 @@ const BG_GRADIENT: CSSProperties = {
 };
 
 const ApplyInfoteam = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language === "ko-KR" ? "ko" : "en";
+  const positionCards = getPositionCards(lang);
 
   return (
     <section
@@ -28,9 +32,7 @@ const ApplyInfoteam = () => {
       <div className="h-12" />
 
       <div className="flex gap-3 flex-wrap justify-center">
-        {t("onboarding.applyInfoteam.positionCards", {
-          returnObjects: true,
-        }).map((positionCard) => (
+        {positionCards.map((positionCard) => (
           <PositionCard key={positionCard.title} {...positionCard} />
         ))}
       </div>

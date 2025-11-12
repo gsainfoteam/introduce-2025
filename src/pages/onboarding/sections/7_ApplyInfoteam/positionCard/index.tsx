@@ -1,10 +1,14 @@
 import { Trans } from "react-i18next";
 import { Link } from "react-router-dom";
-import { main as koMain } from "src/locales/ko-KR";
 import cn from "src/utils/cn";
 
-type PositionCardProps =
-  (typeof koMain.onboarding.applyInfoteam.positionCards)[number];
+interface PositionCardProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  link?: string;
+  bgColor: string;
+}
 
 const PositionCard = ({
   title,

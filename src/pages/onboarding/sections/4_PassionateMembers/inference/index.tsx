@@ -2,11 +2,21 @@ import { CSSProperties } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
-import { main as koMain } from "src/locales/ko-KR";
+import { getInferenceExamples } from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
 import cn from "src/utils/cn";
 
+interface ExampleProps {
+  id: number;
+  title: string;
+  presentersId: number[];
+  description: string;
+}
+
 const Inference = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language === "ko-KR" ? "ko" : "en";
+  const examples = getInferenceExamples(lang);
 
   const BG_GRADIENT: CSSProperties = {
     background:
@@ -48,18 +58,13 @@ const Inference = () => {
       <div className="h-8" />
 
       <div className="w-full flex-col flex md:flex-row gap-2">
-        {t("onboarding.passionateMembers.inference.examples", {
-          returnObjects: true,
-        }).map((example) => (
+        {examples.map((example) => (
           <Example {...example} key={example.id} />
         ))}
       </div>
     </div>
   );
 };
-
-type ExampleProps =
-  (typeof koMain.onboarding.passionateMembers.inference.examples)[number];
 
 const Example = ({ title, presentersId, description }: ExampleProps) => {
   return (

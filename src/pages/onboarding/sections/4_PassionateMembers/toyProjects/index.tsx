@@ -2,13 +2,24 @@ import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
-import { main as koMain } from "src/locales/ko-KR";
+import { getToyProjects } from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
 import cn from "src/utils/cn";
 
 import ToyLogo from "./assets/toyLogo.svg?react";
 
+interface ExampleProps {
+  id: number;
+  title: string;
+  intendersId: number[];
+  description: string;
+  thumbnail: string;
+}
+
 const ToyProjects = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language === "ko-KR" ? "ko" : "en";
+  const examples = getToyProjects(lang);
 
   const BG_GRADIENT: CSSProperties = {
     background:
@@ -42,18 +53,13 @@ const ToyProjects = () => {
       <div className="h-8" />
 
       <div className="flex w-full flex-col gap-3">
-        {t("onboarding.passionateMembers.toyProjects.examples", {
-          returnObjects: true,
-        }).map((example) => (
+        {examples.map((example) => (
           <Example key={example.id} {...example} />
         ))}
       </div>
     </div>
   );
 };
-
-type ExampleProps =
-  (typeof koMain.onboarding.passionateMembers.toyProjects.examples)[number];
 
 const Example = ({
   title,
