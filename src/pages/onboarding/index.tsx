@@ -1,3 +1,4 @@
+import Footer from "src/components/common/footer";
 import Navbar from "src/components/common/navbar";
 
 import LapTopOpening from "./sections/1_LapTopOpening";
@@ -39,6 +40,8 @@ const OnboardingPage = () => {
 
         <ApplyInfoteam />
       </main>
+
+      <Footer mode="dark" />
     </div>
   );
 };

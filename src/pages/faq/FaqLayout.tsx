@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Outlet, useNavigate, useSearchParams } from "react-router-dom";
+import Footer from "src/components/common/footer";
 import Navbar from "src/components/common/navbar";
 import cn from "src/utils/cn";
 
@@ -78,6 +79,7 @@ export const FaqLayout = () => {
           <Outlet />
         </div>
       </div>
+      <Footer mode="light" />
     </div>
   );
 };

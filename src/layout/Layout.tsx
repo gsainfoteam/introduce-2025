@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "src/components/common/footer";
 import Navbar from "src/components/common/navbar";
 
 const Layout = () => {
@@ -7,6 +8,8 @@ const Layout = () => {
       <Navbar mode={"light"} hasBackground />
 
       <Outlet />
+
+      <Footer mode={"light"} />
     </>
   );
 };
