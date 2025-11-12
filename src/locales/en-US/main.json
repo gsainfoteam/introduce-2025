@@ -104,6 +104,13 @@
   "membersPage": {
     "title": "Members",
     "teamLeaders": "Team Leaders"
+  },
+  "footer": {
+    "services": "Services",
+    "ziggle": "Ziggle",
+    "bbun": "Bun Line Skating",
+    "idp": "GIST Mail Login",
+    "potg": "Pot-G"
   }
 }
 

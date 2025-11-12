@@ -104,6 +104,13 @@
   "membersPage": {
     "title": "멤버",
     "teamLeaders": "팀장"
+  },
+  "footer": {
+    "services": "서비스 바로가기",
+    "ziggle": "지글",
+    "bbun": "뻔라인스케이팅",
+    "idp": "GIST 메일로 로그인",
+    "potg": "팟쥐"
   }
 }
 
