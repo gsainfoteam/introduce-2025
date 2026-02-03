@@ -12,7 +12,7 @@ const Footer = ({ mode = "light" }: FooterProps) => {
   const services = [
     { name: t("footer.ziggle"), url: "https://ziggle.gistory.me" },
     { name: t("footer.bbun"), url: "https://bbun.gistory.me" },
-    { name: t("footer.idp"), url: "https://idp.gistory.me" },
+    { name: t("footer.account"), url: "https://account.gistory.me" },
     { name: t("footer.potg"), url: "https://pot-g.gistory.me" },
   ];
 
