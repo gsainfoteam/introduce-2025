@@ -21,11 +21,11 @@ const ProjectCard = ({ href, label, children }: ProjectCardProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col items-center gap-4"
+      className="group flex flex-col items-center gap-4 transition-transform duration-200 hover:scale-110"
       aria-label={label}
     >
       {children}
-      <span className="text-center text-base font-medium text-white">
+      <span className="text-center text-base font-medium text-white transition-colors duration-200 group-hover:text-neutral-300">
         {label}
       </span>
     </a>
