@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useTranslation } from "react-i18next";
 import cn from "src/utils/cn";
@@ -13,6 +14,17 @@ interface ModalProps {
 
 const Modal = ({ isOpen, onClose, member }: ModalProps) => {
   const { t, i18n } = useTranslation("main");
+
+  useEffect(() => {
+    if (isOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
