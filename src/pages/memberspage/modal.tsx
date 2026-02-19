@@ -1,3 +1,5 @@
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { Maximize2, Minus, X } from "lucide-react";
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { useTranslation } from "react-i18next";
@@ -37,26 +39,29 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex-shrink-0 bg-gray-100 px-6 py-4 border-b border-border relative">
-          <div className="flex items-center gap-2">
+          <div className="group flex items-center gap-2">
             <button
-              className="w-3 h-3 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-200 group relative"
+              className="size-3.5 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-200 relative flex items-center justify-center"
               onClick={onClose}
             >
-              <span className="absolute inset-0 flex items-center justify-center text-red-800 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                ×
-              </span>
+              <X
+                className="size-2.5 text-red-900 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                strokeWidth={2.5}
+              />
             </button>
 
-            <div className="w-3 h-3 bg-yellow-500 rounded-full hover:bg-yellow-600 transition-colors duration-200 group relative">
-              <span className="absolute inset-0 flex items-center justify-center text-yellow-800 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                −
-              </span>
+            <div className="size-3.5 bg-yellow-500 rounded-full hover:bg-yellow-600 transition-colors duration-200 relative flex items-center justify-center">
+              <Minus
+                className="size-2.5 text-amber-900 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                strokeWidth={2.5}
+              />
             </div>
 
-            <div className="w-3 h-3 bg-green-500 rounded-full hover:bg-green-600 transition-colors duration-200 group relative">
-              <span className="absolute inset-0 flex items-center justify-center text-green-800 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                +
-              </span>
+            <div className="size-3.5 bg-green-500 rounded-full hover:bg-green-600 transition-colors duration-200 relative flex items-center justify-center">
+              <Maximize2
+                className="size-2.5 text-green-900 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                strokeWidth={2.5}
+              />
             </div>
           </div>
 
@@ -68,7 +73,7 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
         </div>
 
         <div className="flex-1 min-h-0 overflow-y-auto p-8">
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex-shrink-0">
               <div className="size-45 bg-gray-50 rounded-xl shadow-sm border border-border overflow-hidden">
                 <img
@@ -100,9 +105,10 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
                     href={`https://github.com/${member.githubID}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-medium hover:underline transition-colors duration-200"
+                    className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium hover:underline transition-colors duration-200"
                   >
-                    @{member.githubID}
+                    <SiGithub className="w-4 h-4 shrink-0" />
+                    <span>@{member.githubID}</span>
                   </a>
                 </div>
 
