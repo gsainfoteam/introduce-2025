@@ -33,10 +33,10 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
       onClick={() => onClose()}
     >
       <div
-        className="bg-white rounded-xl w-[700px] max-w-[90vw] h-[500px] max-h-[90vh] relative shadow-2xl overflow-hidden border border-gray-300"
+        className="bg-white rounded-xl w-[700px] max-w-[90vw] h-[500px] max-h-[90vh] relative shadow-2xl overflow-hidden border border-gray-300 flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-gray-100 px-6 py-4 border-b border-border relative">
+        <div className="flex-shrink-0 bg-gray-100 px-6 py-4 border-b border-border relative">
           <div className="flex items-center gap-2">
             <button
               className="w-3 h-3 bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-200 group relative"
@@ -67,7 +67,7 @@ const Modal = ({ isOpen, onClose, member }: ModalProps) => {
           </div>
         </div>
 
-        <div className="p-8">
+        <div className="flex-1 min-h-0 overflow-y-auto p-8">
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-shrink-0">
               <div className="size-45 bg-gray-50 rounded-xl shadow-sm border border-border overflow-hidden">
