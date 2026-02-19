@@ -105,6 +105,9 @@
     "title": "Members",
     "teamLeaders": "Team Leaders"
   },
+  "projectsPage": {
+    "title": "Projects"
+  },
   "footer": {
     "services": "Services",
     "ziggle": "Ziggle",
@@ -113,4 +116,3 @@
     "potg": "Pot-G"
   }
 }
-

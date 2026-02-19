@@ -105,6 +105,9 @@
     "title": "멤버",
     "teamLeaders": "팀장"
   },
+  "projectsPage": {
+    "title": "프로젝트"
+  },
   "footer": {
     "services": "서비스 바로가기",
     "ziggle": "지글",

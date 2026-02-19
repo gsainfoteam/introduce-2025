@@ -16,6 +16,7 @@ const links: NavLink[] = [
   },
   {
     displayName: "navbar.projects",
+    link: "/projects",
   },
   {
     displayName: "navbar.faq",
