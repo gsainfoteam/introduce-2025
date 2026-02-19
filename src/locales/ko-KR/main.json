@@ -106,7 +106,14 @@
     "teamLeaders": "팀장"
   },
   "projectsPage": {
-    "title": "프로젝트"
+    "title": "프로젝트",
+    "account": "인포팀 계정",
+    "ziggle": "지글",
+    "bbun": "뻔라인 스케이팅",
+    "potg": "팟쥐",
+    "houseMovingOut": "하우스 퇴사검사",
+    "chatbot": "GIST 챗봇",
+    "blog": "블로그"
   },
   "footer": {
     "services": "서비스 바로가기",
