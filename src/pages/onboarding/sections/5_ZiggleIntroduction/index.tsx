@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
-import CellophaneButton from "src/components/common/cellophaneButton";
 import { H4, H5 } from "src/components/common/headers";
+import cn from "src/utils/cn";
 
 import AppStoreIcon from "./assets/appStore.svg?react";
 import Fire3DIconClay from "./assets/fire3dIconClay.png";
@@ -34,6 +34,7 @@ const LINKS = [
 
 const ZiggleIntroduction = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="w-full relative">
@@ -130,11 +131,19 @@ const ZiggleIntroduction = () => {
           {t("onboarding.ziggleIntroduction.wantToSeeMore")}
         </H5>
 
-        <CellophaneButton className="font-medium mt-6 flex gap-2 items-center">
+        <button
+          type="button"
+          onClick={() => navigate("/projects", { viewTransition: true })}
+          className={cn(
+            "font-medium mt-6 flex gap-2 items-center px-9 py-4 rounded-xl",
+            "bg-white text-primary border-2 border-primary",
+            "shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 hover:bg-white/75",
+            "transition-all cursor-pointer duration-200",
+          )}
+        >
           {t("onboarding.ziggleIntroduction.goSeeProjectButton")}
-
           <ArrowRightIcon className="size-6" />
-        </CellophaneButton>
+        </button>
 
         <div className="h-[300px]" />
       </div>

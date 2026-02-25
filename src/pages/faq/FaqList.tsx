@@ -12,7 +12,7 @@ export const Faq: React.FC = () => {
     | "service";
 
   const handleNavigate = (id: number) => {
-    navigate(`/faq/${id}?type=${selectedCategory}`);
+    navigate(`/faq/${id}?type=${selectedCategory}`, { viewTransition: true });
   };
 
   const questions = faqDetails.filter(

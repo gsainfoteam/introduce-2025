@@ -47,7 +47,7 @@ const Navbar = ({
       if (location.pathname === path) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        navigate(path);
+        navigate(path, { viewTransition: true });
       }
     } else {
       window.open(path, "_blank", "noopener,noreferrer");
