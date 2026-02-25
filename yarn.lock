@@ -473,6 +473,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@icons-pack/react-simple-icons@npm:^13.11.2":
+  version: 13.11.2
+  resolution: "@icons-pack/react-simple-icons@npm:13.11.2"
+  peerDependencies:
+    react: ^16.13 || ^17 || ^18 || ^19
+  checksum: 7184be40bad5e520eb12f90d6c1a5dfceee9a354eabbc2365e173929e10b109a56b8e3b764d3ae1cfc7dad8a71f00b074b1a20833b572bc1107ffbbc62592e87
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -3559,6 +3568,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.574.0":
+  version: 0.574.0
+  resolution: "lucide-react@npm:0.574.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 26170dd92143a88f749c831c5fa0369841243ef39190b879288d49eb0b6d8ad6add5ce9919e74d2dc70c7937b763ae103914dd76e63d212b6b7ba1b87107eb24
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^14.0.3":
   version: 14.0.3
   resolution: "make-fetch-happen@npm:14.0.3"
@@ -4442,6 +4460,7 @@ __metadata:
   resolution: "sample-front@workspace:."
   dependencies:
     "@gsap/react": ^2.1.2
+    "@icons-pack/react-simple-icons": ^13.11.2
     "@tailwindcss/vite": ^4.0.3
     "@types/eslint": ^8.56.2
     "@types/node": ^20.11.5
@@ -4462,6 +4481,7 @@ __metadata:
     i18next-browser-languagedetector: ^7.2.0
     jotai: ^2.11.3
     lottie-react: ^2.4.1
+    lucide-react: ^0.574.0
     prettier: ^3.2.4
     react: ^18.2.0
     react-dom: ^18.2.0
