@@ -37,7 +37,7 @@ export const FaqLayout = () => {
     | "service";
   const setSelectedCategory = useCallback(
     (type: "recruitment" | "service") => {
-      navigate(`/faq?type=${type}`);
+      navigate(`/faq?type=${type}`, { viewTransition: true });
     },
     [navigate],
   );

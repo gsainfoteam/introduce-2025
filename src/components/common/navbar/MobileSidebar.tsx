@@ -90,7 +90,9 @@ const MobileSidebar = ({
                     transitionDelay: isOpen ? `${index * 70}ms` : "0ms",
                   }}
                 >
-                  <Link to={link.link ?? ""}>{t(link.displayName)}</Link>
+                  <Link to={link.link ?? ""} viewTransition>
+                    {t(link.displayName)}
+                  </Link>
                 </li>
               ))}
           </ul>

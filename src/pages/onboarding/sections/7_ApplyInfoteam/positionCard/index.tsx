@@ -18,7 +18,7 @@ const PositionCard = ({
   bgColor,
 }: PositionCardProps) => {
   return (
-    <Link to={link || ""}>
+    <Link to={link || ""} viewTransition>
       <div
         className="flex h-[200px] rounded-lg overflow-clip"
         style={{ backgroundColor: bgColor }}
