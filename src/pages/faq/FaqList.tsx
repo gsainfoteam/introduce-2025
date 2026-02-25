@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 
 import faqDetails from "./faq.ts";
 
-const Faq: React.FC = () => {
+export const Faq: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const selectedCategory = searchParams.get("type") as
@@ -42,5 +42,3 @@ const Faq: React.FC = () => {
     </div>
   );
 };
-
-export default Faq;

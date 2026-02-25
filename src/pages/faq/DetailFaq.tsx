@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import faqDetails from "./faq.ts";
 
-const FaqDetail: React.FC = () => {
+export const FaqDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const faq = faqDetails.find((ex) => ex.id.toString() === id);
@@ -32,5 +32,3 @@ const FaqDetail: React.FC = () => {
     </div>
   );
 };
-
-export default FaqDetail;

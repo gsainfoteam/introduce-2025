@@ -6,11 +6,10 @@ import {
 } from "react-router-dom";
 
 import Layout from "./layout/Layout";
-import FaqDetail from "./pages/faq/DetailFaq.tsx";
-import { FaqLayout } from "./pages/faq/FaqLayout.tsx";
-import Faq from "./pages/faq/FaqList.tsx";
+import { Faq, FaqDetail, FaqLayout } from "./pages/faq";
 import Members from "./pages/memberspage/members";
 import OnboardingPage from "./pages/onboarding";
+import Projects from "./pages/projects";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +20,7 @@ const router = createBrowserRouter(
         <Route path="/faq/:id" element={<FaqDetail />} />
       </Route>
       <Route path="/members" element={<Members />} />
+      <Route path="/projects" element={<Projects />} />
       <Route element={<Layout />}></Route>
     </>,
   ),
