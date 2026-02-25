@@ -39,7 +39,7 @@ const PositionCard = ({
         </div>
 
         <div
-          className="w-11 bg-dark overflow-hidden relative"
+          className="w-11 bg-black overflow-hidden relative"
           style={{ border: `${bgColor} 1.5px solid` }}
         >
           <div
