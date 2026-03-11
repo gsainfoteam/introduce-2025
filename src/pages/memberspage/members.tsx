@@ -54,7 +54,7 @@ const Members = () => {
         <div className="flex flex-col gap-44">
           {(sortedLeaders.length > 0 || sortedDeputyLeaders.length > 0) && (
             <section className="content my-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2 mt-4 items-stretch">
                 {sortedLeaders.length > 0 && (
                   <div className="flex flex-col items-center h-full min-h-0">
                     <H4>{t("membersPage.teamLeaders")}</H4>
