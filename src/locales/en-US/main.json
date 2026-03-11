@@ -103,7 +103,8 @@
   },
   "membersPage": {
     "title": "Members",
-    "teamLeaders": "Team Leaders"
+    "teamLeaders": "Team Leaders",
+    "deputyTeamLeaders": "Deputy Team Leaders"
   },
   "projectsPage": {
     "title": "Projects",

@@ -42,7 +42,7 @@
     "id": 24,
     "name": { "en": "Ikjun Choi", "ko": "최익준" },
     "githubID": "no-ikjun",
-    "roles": ["Backend", "Designer", "Frontend"],
+    "roles": ["Backend", "Designer", "Frontend", "Manager", "App"],
     "introduction": {
       "en": "I was a full stack developer. I’m a deputy team leader now.",
       "ko": "백엔드, 디자이너, 프론트엔드를 담당하고 있습니다. 그리고 인포팀 부팀장을 맡고 있습니다."

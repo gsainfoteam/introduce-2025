@@ -5,7 +5,7 @@ import Navbar from "src/components/common/navbar";
 
 import { Member, members, Role } from "../../store/members";
 import MemberCard from "./MemberCard";
-import { roleLabels, TEAM_LEADER_IDS } from "./roles";
+import { DEPUTY_TEAM_LEADER_IDS, roleLabels, TEAM_LEADER_IDS } from "./roles";
 
 const Section = ({ title, members }: { title: string; members: Member[] }) => {
   return (
@@ -26,10 +26,18 @@ const Members = () => {
   const teamLeaders = members.filter((member) =>
     TEAM_LEADER_IDS.includes(member.id),
   );
+  const deputyTeamLeaders = members.filter((member) =>
+    DEPUTY_TEAM_LEADER_IDS.includes(member.id),
+  );
 
   const sortedLeaders = [...teamLeaders].sort((a, b) => {
     const priorityA = TEAM_LEADER_IDS.indexOf(a.id);
     const priorityB = TEAM_LEADER_IDS.indexOf(b.id);
+    return priorityA - priorityB;
+  });
+  const sortedDeputyLeaders = [...deputyTeamLeaders].sort((a, b) => {
+    const priorityA = DEPUTY_TEAM_LEADER_IDS.indexOf(a.id);
+    const priorityB = DEPUTY_TEAM_LEADER_IDS.indexOf(b.id);
     return priorityA - priorityB;
   });
   const { t } = useTranslation();
@@ -44,11 +52,37 @@ const Members = () => {
           {t("membersPage.title")}
         </h1>
         <div className="flex flex-col gap-44">
-          {sortedLeaders.length > 0 && (
-            <Section
-              title={t("membersPage.teamLeaders")}
-              members={sortedLeaders}
-            />
+          {(sortedLeaders.length > 0 || sortedDeputyLeaders.length > 0) && (
+            <section className="content my-8">
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-6">
+                {sortedLeaders.length > 0 && (
+                  <div className="flex flex-col items-center shrink-0">
+                    <H4>{t("membersPage.teamLeaders")}</H4>
+                    <div className="flex flex-wrap justify-center gap-6 mt-6">
+                      {sortedLeaders.map((member) => (
+                        <MemberCard
+                          key={`leader-${member.id}`}
+                          member={member}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {sortedDeputyLeaders.length > 0 && (
+                  <div className="flex flex-col items-center shrink-0">
+                    <H4>{t("membersPage.deputyTeamLeaders")}</H4>
+                    <div className="flex flex-wrap justify-center gap-6 mt-6">
+                      {sortedDeputyLeaders.map((member) => (
+                        <MemberCard
+                          key={`deputy-${member.id}`}
+                          member={member}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
           )}
           {(
             [

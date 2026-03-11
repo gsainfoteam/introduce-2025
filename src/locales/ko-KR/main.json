@@ -103,7 +103,8 @@
   },
   "membersPage": {
     "title": "멤버",
-    "teamLeaders": "팀장"
+    "teamLeaders": "팀장",
+    "deputyTeamLeaders": "부팀장"
   },
   "projectsPage": {
     "title": "프로젝트",
