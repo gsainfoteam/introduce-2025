@@ -6,7 +6,13 @@ import { Member } from "../../store/members";
 import Modal from "./modal.tsx";
 import { roleLabels, roleStyles } from "./roles.ts";
 
-const MemberCard = ({ member }: { member: Member }) => {
+const MemberCard = ({
+  member,
+  className,
+}: {
+  member: Member;
+  className?: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation();
 
@@ -21,7 +27,10 @@ const MemberCard = ({ member }: { member: Member }) => {
   return (
     <>
       <div
-        className="group w-[280px] bg-white rounded-2xl flex flex-col p-6 border border-border cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-100 hover:-translate-y-2 hover:border-border"
+        className={cn(
+          "group w-[280px] bg-white rounded-2xl flex flex-col p-6 border border-border cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-gray-100 hover:-translate-y-2 hover:border-border",
+          className,
+        )}
         role="button"
         tabIndex={0}
         onClick={handleCardClick}

@@ -54,28 +54,30 @@ const Members = () => {
         <div className="flex flex-col gap-44">
           {(sortedLeaders.length > 0 || sortedDeputyLeaders.length > 0) && (
             <section className="content my-8">
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 items-stretch">
                 {sortedLeaders.length > 0 && (
-                  <div className="flex flex-col items-center shrink-0">
+                  <div className="flex flex-col items-center h-full min-h-0">
                     <H4>{t("membersPage.teamLeaders")}</H4>
-                    <div className="flex flex-wrap justify-center gap-6 mt-6">
+                    <div className="mt-4 flex-1 flex flex-col items-center w-full min-h-0">
                       {sortedLeaders.map((member) => (
                         <MemberCard
                           key={`leader-${member.id}`}
                           member={member}
+                          className="h-full"
                         />
                       ))}
                     </div>
                   </div>
                 )}
                 {sortedDeputyLeaders.length > 0 && (
-                  <div className="flex flex-col items-center shrink-0">
+                  <div className="flex flex-col items-center h-full min-h-0">
                     <H4>{t("membersPage.deputyTeamLeaders")}</H4>
-                    <div className="flex flex-wrap justify-center gap-6 mt-6">
+                    <div className="mt-4 flex-1 flex flex-col items-center w-full min-h-0">
                       {sortedDeputyLeaders.map((member) => (
                         <MemberCard
                           key={`deputy-${member.id}`}
                           member={member}
+                          className="h-full"
                         />
                       ))}
                     </div>
