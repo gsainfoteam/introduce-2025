@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "src/utils/cn/index.ts";
 
-import { Member } from "../../store/members";
+import { Member, Role } from "../../store/members";
 import Modal from "./modal.tsx";
 import { roleLabels, roleStyles } from "./roles.ts";
 
@@ -54,18 +54,20 @@ const MemberCard = ({
               {i18n.language === "ko-KR" ? member.name.ko : member.name.en}
             </h2>
             <div className="flex flex-wrap gap-2">
-              {member.roles.map((r) => (
-                <span
-                  key={r}
-                  className={cn(
-                    `px-2 py-1 rounded-full text-sm font-medium border transition-colors duration-200`,
-                    roleStyles[r].text,
-                    roleStyles[r].bg,
-                  )}
-                >
-                  {roleLabels[r]}
-                </span>
-              ))}
+              {member.roles
+                .filter((r) => r !== Role.Education)
+                .map((r) => (
+                  <span
+                    key={r}
+                    className={cn(
+                      `px-2 py-1 rounded-full text-sm font-medium border transition-colors duration-200`,
+                      roleStyles[r].text,
+                      roleStyles[r].bg,
+                    )}
+                  >
+                    {roleLabels[r]}
+                  </span>
+                ))}
             </div>
           </div>
 

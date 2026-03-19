@@ -9,6 +9,7 @@ export enum Role {
   Designer,
   Manager,
   DevOps,
+  Education,
 }
 
 export interface IntendedProjects {

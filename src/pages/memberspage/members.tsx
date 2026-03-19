@@ -94,6 +94,7 @@ const Members = () => {
               Role.Designer,
               Role.Manager,
               Role.DevOps,
+              Role.Education,
             ] as Role[]
           ).map((role) => {
             const filteredMembers = members.filter((member) =>

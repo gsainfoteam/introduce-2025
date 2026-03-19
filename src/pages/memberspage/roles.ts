@@ -10,6 +10,7 @@ export const roleLabels: Record<Role, string> = {
   [Role.Designer]: "Designer",
   [Role.Manager]: "PM",
   [Role.DevOps]: "DevOps",
+  [Role.Education]: "Education",
 };
 
 export const roleStyles: Record<Role, { text: string; bg: string }> = {
@@ -36,5 +37,9 @@ export const roleStyles: Record<Role, { text: string; bg: string }> = {
   [Role.DevOps]: {
     text: "text-[#DC3545] border-[#F1B5B8]",
     bg: "bg-[#FADBD8]",
+  },
+  [Role.Education]: {
+    text: "text-[#16697A] border-[#A7C7CC]",
+    bg: "bg-[#D1EFF3]",
   },
 };
