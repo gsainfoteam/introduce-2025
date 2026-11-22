@@ -37,7 +37,46 @@
       "asADevGroup": "개발 단체로써",
       "leadsCool": "멋진 개발 문화를 이끌어 나갑니다.",
       "slackGithubCollab": "Slack & Github 기반 협업",
-      "illustAlt": "Slack을 통해 소통하고, Github Issue와 Pull Request 기반으로 협업하는 인포팀"
+      "illustAlt": "Slack을 통해 소통하고, Github Issue와 Pull Request 기반으로 협업하는 인포팀",
+      "git": {
+        "m1": {
+          "name": "심진서",
+          "time": "오후 2:28",
+          "body": "<m>@고도현</m> 님, 회의록 기반으로\n상세 페이지 작업 부탁드립니다!"
+        },
+        "m2": {
+          "name": "고도현",
+          "time": "오후 2:30",
+          "body": "넵, 이슈 생성하고 브랜치 파서 작업하겠습니다!"
+        },
+        "m3": {
+          "name": "고도현",
+          "time": "오전 10:10",
+          "body": "<m>@frontend</m> 71번 이슈 작업하다가 새로 도입해보면\n좋을 것 같은 <l>라이브러리</l>가 생겼는데, 다들 어떻게 생각하시나요?"
+        },
+        "m4": {
+          "name": "양예진",
+          "time": "오전 10:39",
+          "body": "오, 괜찮은 것 같아요! 다만 타입 안전성을 좀 더 신경써야 할 것 같아요."
+        },
+        "m5": {
+          "name": "박주명",
+          "time": "오전 10:40",
+          "body": "<m>@양예진</m> 님 피드백에 동의합니다!"
+        },
+        "m6": {
+          "name": "고도현",
+          "time": "오후 8:55",
+          "body": "리뷰 부탁드립니다!"
+        },
+        "m7": {
+          "name": "이보성",
+          "time": "오후 9:12",
+          "body": "LGTM 👍"
+        }
+      },
+      "gitIssueTitle": "[FEATURE] detail page",
+      "gitPrTitle": "[FEATURE] detail page & library"
     },
     "passionateMembers": {
       "title": "개발에 누구보다 진심인 팀원들",

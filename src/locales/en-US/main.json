@@ -37,7 +37,46 @@
       "asADevGroup": "As a developer group,",
       "leadsCool": "We lead a cool development culture.",
       "slackGithubCollab": "Co-op based on Slack & Github",
-      "illustAlt": "Infoteam communicating through Slack and collaborating based on Github Issues and Pull Requests"
+      "illustAlt": "Infoteam communicating through Slack and collaborating based on Github Issues and Pull Requests",
+      "git": {
+        "m1": {
+          "name": "Jinseo Shim",
+          "time": "2:28 PM",
+          "body": "<m>@Dohyun Ko</m> please work on the\ndetailed page based on the meeting notes!"
+        },
+        "m2": {
+          "name": "Dohyun Ko",
+          "time": "2:30 PM",
+          "body": "Got it! I’ll create an issue and set up a branch for the task."
+        },
+        "m3": {
+          "name": "Dohyun Ko",
+          "time": "10:10 AM",
+          "body": "<m>@frontend</m> While working on issue #71, I came across a <l>library</l>\nthat might be worth introducing. What do you all think?"
+        },
+        "m4": {
+          "name": "Yejin Yang",
+          "time": "10:39 AM",
+          "body": "Oh, that sounds good!\nBut we should be extra mindful of type safety"
+        },
+        "m5": {
+          "name": "Jumyung Park",
+          "time": "10:40 AM",
+          "body": "I agree with <m>@Yejin Yang</m> ‘s feedback!"
+        },
+        "m6": {
+          "name": "Dohyun Ko",
+          "time": "8:55 PM",
+          "body": "Please review!"
+        },
+        "m7": {
+          "name": "Boseong Lee",
+          "time": "9:12 PM",
+          "body": "LGTM 👍"
+        }
+      },
+      "gitIssueTitle": "[FEATURE] detail page",
+      "gitPrTitle": "[FEATURE] detail page & library"
     },
     "passionateMembers": {
       "title": "Team members who are truly passionate about development",
