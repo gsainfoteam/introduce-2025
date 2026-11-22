@@ -6,10 +6,11 @@
  *
  * 기준 스냅샷은 `e2e/__snapshots__` (git 무시)에 저장된다.
  */
-import { $ } from "bun";
 import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+
+import { $ } from "bun";
 
 const [mode, ref = "master"] = process.argv.slice(2);
 const cwd = process.cwd();

@@ -41,7 +41,9 @@ async function settle(page: Page) {
         img.complete ? undefined : img.decode().catch(() => undefined),
       ),
     );
-    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+    await new Promise((r) =>
+      requestAnimationFrame(() => requestAnimationFrame(r)),
+    );
   });
   await page.waitForTimeout(700);
 }
@@ -71,7 +73,9 @@ async function forceRepaint(page: Page) {
       void el.offsetHeight;
       el.style.display = "";
     }
-    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+    await new Promise((r) =>
+      requestAnimationFrame(() => requestAnimationFrame(r)),
+    );
   });
 }
 

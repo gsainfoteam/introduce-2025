@@ -8,8 +8,7 @@ export const Faq: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const selectedCategory = searchParams.get("type") as
-    | "recruitment"
-    | "service";
+    "recruitment" | "service";
 
   const handleNavigate = (id: number) => {
     navigate(`/faq/${id}?type=${selectedCategory}`, { viewTransition: true });

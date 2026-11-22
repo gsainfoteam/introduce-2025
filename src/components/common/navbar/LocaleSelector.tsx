@@ -4,7 +4,8 @@ import cn from "src/utils/cn";
 import { HeaderProps } from ".";
 
 interface LocaleButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     Pick<HeaderProps, "mode"> {
   isSelected: boolean;
 }
@@ -39,7 +40,7 @@ const LocaleButton = ({
   );
 };
 
-interface LocaleSelectorProps extends Pick<HeaderProps, "mode"> {}
+type LocaleSelectorProps = Pick<HeaderProps, "mode">;
 
 const LocaleSelector = ({ mode }: LocaleSelectorProps) => {
   const { i18n } = useTranslation();

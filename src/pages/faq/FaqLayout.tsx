@@ -33,8 +33,7 @@ export const FaqLayout = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const selectedCategory = searchParams.get("type") as
-    | "recruitment"
-    | "service";
+    "recruitment" | "service";
   const setSelectedCategory = useCallback(
     (type: "recruitment" | "service") => {
       navigate(`/faq?type=${type}`, { viewTransition: true });
