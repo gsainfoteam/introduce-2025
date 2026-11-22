@@ -28,6 +28,9 @@ async function prepare(page: Page, path: string, locale: "ko" | "en") {
     await engs.first().click();
     if (mobile) await toggle.click();
   }
+  // 모바일에서 메뉴를 여닫으면 페이지가 약간 스크롤되고, 그 상태로 fullPage 를 찍으면
+  // sticky 요소 위치가 캡처 타이밍에 따라 달라지므로 항상 맨 위에서 시작한다.
+  await page.evaluate(() => window.scrollTo(0, 0));
   await settle(page);
   // 진입 애니메이션(GSAP/CSS transition)이 끝날 때까지 추가 대기
   await page.waitForTimeout(2000);
