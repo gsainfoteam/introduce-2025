@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router";
 import HamburgerIcon from "src/assets/common/menu/menu.svg?react";
 import CloseIcon from "src/assets/common/xmark/xmark.svg?react";
 import DarkLogo from "src/assets/logos/logo-dark.svg?react";

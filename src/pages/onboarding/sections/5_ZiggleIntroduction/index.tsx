@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
 import { H4, H5 } from "src/components/common/headers";
 import cn from "src/utils/cn";

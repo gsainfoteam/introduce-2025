@@ -3,7 +3,7 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router";
 
 import Layout from "./layout/Layout";
 import { Faq, FaqDetail, FaqLayout } from "./pages/faq";

@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Outlet, useNavigate, useSearchParams } from "react-router-dom";
+import { Outlet, useNavigate, useSearchParams } from "react-router";
 import Footer from "src/components/common/footer";
 import Navbar from "src/components/common/navbar";
 import cn from "src/utils/cn";
