@@ -4,16 +4,16 @@ GIST 정보통신 동아리 인포팀(Infoteam)을 소개하는 사이트입니�
 
 ## 기술 스택
 
-| 영역                   | 사용 기술                                   |
-| ---------------------- | ------------------------------------------- |
-| 런타임 / 패키지 매니저 | [Bun](https://bun.sh)                       |
-| UI                     | React 19 (+ React Compiler), React Router 8 |
-| 빌드                   | Vite 8, TypeScript 6                        |
-| 스타일                 | Tailwind CSS 4                              |
-| 애니메이션             | GSAP (ScrollTrigger), Lottie                |
-| 상태 / i18n            | Jotai, i18next (ko-KR, en-US)               |
-| 린트 / 포맷            | ESLint 10 (flat config), Prettier           |
-| 시각 회귀 테스트       | Playwright                                  |
+| 영역                   | 사용 기술                                    |
+| ---------------------- | -------------------------------------------- |
+| 런타임 / 패키지 매니저 | [Bun](https://bun.sh)                        |
+| UI                     | React 19 (+ React Compiler), TanStack Router |
+| 빌드                   | Vite 8, TypeScript 6                         |
+| 스타일                 | Tailwind CSS 4                               |
+| 애니메이션             | GSAP (ScrollTrigger), Lottie                 |
+| 상태 / i18n            | Jotai, i18next (ko-KR, en-US)                |
+| 린트 / 포맷            | ESLint 10 (flat config), Prettier            |
+| 시각 회귀 테스트       | Playwright                                   |
 
 ## 시작하기
 
@@ -46,6 +46,7 @@ src/
 │   ├── memberspage/   멤버 목록과 상세 모달
 │   ├── faq/
 │   └── projects/
+├── router.tsx         TanStack Router 라우트 정의 (코드 기반, 랜딩 외 페이지는 lazy)
 ├── store/             Jotai atom, 멤버 데이터 (data.json)
 ├── types/             공용 타입, i18next 타입 선언
 └── utils/
@@ -53,6 +54,7 @@ public/profiles/       멤버 프로필 이미지
 ```
 
 - **멤버 추가/수정**: `src/store/data.json`과 `public/profiles/`를 수정합니다.
+- **라우팅 동작**: 페이지 이동 시 스크롤 위치를 유지합니다(`resetScroll: false`). 기존 React Router 동작과 같게 하기 위함이며, 새 `Link`/`navigate`에도 똑같이 지정해야 합니다.
 - **번역 추가**: `src/locales/*/main.json`의 키를 양쪽 언어에 같이 추가합니다. 빈 문자열(`""`)은 유효한 번역으로 취급합니다(`returnEmptyString`).
 
 ## 시각 회귀 테스트

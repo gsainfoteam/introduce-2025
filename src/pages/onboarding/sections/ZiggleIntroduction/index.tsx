@@ -1,6 +1,6 @@
+import { useNavigate } from "@tanstack/react-router";
 import { Fragment } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router";
 import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
 import { H4, H5 } from "src/components/common/headers";
 import cn from "src/utils/cn";
@@ -73,10 +73,10 @@ const ZiggleIntroduction = () => {
           <div className="justify-center flex gap-4 items-center">
             {LINKS.map((link, index) => (
               <Fragment key={link.displayName}>
-                <Link to={link.link} className="flex flex-col items-center">
+                <a href={link.link} className="flex flex-col items-center">
                   <link.logo className="size-15 mb-2" />
                   <p>{link.displayName}</p>
-                </Link>
+                </a>
 
                 {LINKS.length - 1 !== index && (
                   <div className="w-[1px] h-8 bg-white" />
@@ -133,7 +133,13 @@ const ZiggleIntroduction = () => {
 
         <button
           type="button"
-          onClick={() => navigate("/projects", { viewTransition: true })}
+          onClick={() =>
+            navigate({
+              to: "/projects",
+              viewTransition: true,
+              resetScroll: false,
+            })
+          }
           className={cn(
             "font-medium mt-6 flex gap-2 items-center px-9 py-4 rounded-xl",
             "bg-white text-primary border-2 border-primary",

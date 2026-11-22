@@ -1,7 +1,7 @@
+import { useLocation, useNavigate } from "@tanstack/react-router";
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router";
 import HamburgerIcon from "src/assets/common/menu/menu.svg?react";
 import CloseIcon from "src/assets/common/xmark/xmark.svg?react";
 import DarkLogo from "src/assets/logos/logo-dark.svg?react";
@@ -11,9 +11,11 @@ import WhiteLogoCompact from "src/assets/logos/logo-white-compact.svg?react";
 import { navbarStateAtom } from "src/store/atoms";
 import cn from "src/utils/cn";
 
-import links from "./links";
+import links, { NavLink } from "./links";
 import LocaleSelector from "./LocaleSelector";
 import MobileSidebar from "./MobileSidebar";
+
+const HOME_LINK: NavLink = { displayName: "navbar.aboutTeam", to: "/" };
 
 export interface HeaderProps {
   mode?: "dark" | "light";
@@ -42,15 +44,15 @@ const Navbar = ({
     setIsMobileMenuOpen(false);
   };
 
-  const handleNavigate = (path: string) => {
-    if (path.startsWith("/")) {
-      if (location.pathname === path) {
+  const handleNavigate = (link: NavLink) => {
+    if ("to" in link) {
+      if (location.pathname === link.to) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        navigate(path, { viewTransition: true });
+        navigate({ to: link.to, viewTransition: true, resetScroll: false });
       }
     } else {
-      window.open(path, "_blank", "noopener,noreferrer");
+      window.open(link.href, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -73,10 +75,10 @@ const Navbar = ({
             role="link"
             tabIndex={0}
             aria-label="Home"
-            onClick={() => handleNavigate("/")}
+            onClick={() => handleNavigate(HOME_LINK)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
-                handleNavigate("/");
+                handleNavigate(HOME_LINK);
               }
             }}
           >
@@ -114,30 +116,28 @@ const Navbar = ({
 
           <div className="hidden md:flex items-center gap-16">
             <ul className="flex gap-6">
-              {links
-                .filter((link) => link.link)
-                .map((link) => (
-                  <li
-                    key={link.displayName}
-                    className={cn(
-                      "tracking-tight py-1 px-2.5 rounded-lg transition hover:scale-95 cursor-pointer",
-                      mode === "dark"
-                        ? ["text-white hover:bg-bg-dark-light"]
-                        : ["text-dark hover:bg-bg-light"],
-                    )}
-                    role="link"
-                    tabIndex={0}
-                    aria-label={t(link.displayName)}
-                    onClick={() => handleNavigate(link.link ?? "")}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        handleNavigate(link.link ?? "");
-                      }
-                    }}
-                  >
-                    {t(link.displayName)}
-                  </li>
-                ))}
+              {links.map((link) => (
+                <li
+                  key={link.displayName}
+                  className={cn(
+                    "tracking-tight py-1 px-2.5 rounded-lg transition hover:scale-95 cursor-pointer",
+                    mode === "dark"
+                      ? ["text-white hover:bg-bg-dark-light"]
+                      : ["text-dark hover:bg-bg-light"],
+                  )}
+                  role="link"
+                  tabIndex={0}
+                  aria-label={t(link.displayName)}
+                  onClick={() => handleNavigate(link)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      handleNavigate(link);
+                    }
+                  }}
+                >
+                  {t(link.displayName)}
+                </li>
+              ))}
             </ul>
             <LocaleSelector mode={mode} />
           </div>

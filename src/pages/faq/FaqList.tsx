@@ -1,17 +1,22 @@
+import { useNavigate, useSearch } from "@tanstack/react-router";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useSearchParams } from "react-router";
 
 import faqDetails from "./faq.ts";
 
 export const Faq: React.FC = () => {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const selectedCategory = searchParams.get("type") as
-    "recruitment" | "service";
+  const { type } = useSearch({ strict: false });
+  const selectedCategory = type as "recruitment" | "service";
 
   const handleNavigate = (id: number) => {
-    navigate(`/faq/${id}?type=${selectedCategory}`, { viewTransition: true });
+    navigate({
+      to: "/faq/$id",
+      params: { id: String(id) },
+      search: { type: selectedCategory },
+      viewTransition: true,
+      resetScroll: false,
+    });
   };
 
   const questions = faqDetails.filter(

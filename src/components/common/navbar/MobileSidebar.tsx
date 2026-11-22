@@ -1,7 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 import cn from "src/utils/cn";
 
 import links from "./links";
@@ -70,31 +70,33 @@ const MobileSidebar = ({
       >
         <div className="p-5 flex flex-col items-center overflow-hidden">
           <ul className="flex flex-col items-center gap-6 mt-10 my-6">
-            {links
-              .filter((link) => link.link)
-              .map((link, index) => (
-                <li
-                  key={link.displayName}
-                  className={cn(
-                    "tracking-tight py-2 px-6 rounded-sm hover:scale-95 cursor-pointer text-lg font-medium",
-                    "transform transition-all duration-300 ease-out",
-                    mode === "dark"
-                      ? "text-white hover:bg-bg-dark-light"
-                      : "text-dark hover:bg-bg-light",
-                    isOpen
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 -translate-y-5",
-                  )}
-                  onClick={onClose}
-                  style={{
-                    transitionDelay: isOpen ? `${index * 70}ms` : "0ms",
-                  }}
-                >
-                  <Link to={link.link ?? ""} viewTransition>
+            {links.map((link, index) => (
+              <li
+                key={link.displayName}
+                className={cn(
+                  "tracking-tight py-2 px-6 rounded-sm hover:scale-95 cursor-pointer text-lg font-medium",
+                  "transform transition-all duration-300 ease-out",
+                  mode === "dark"
+                    ? "text-white hover:bg-bg-dark-light"
+                    : "text-dark hover:bg-bg-light",
+                  isOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-5",
+                )}
+                onClick={onClose}
+                style={{
+                  transitionDelay: isOpen ? `${index * 70}ms` : "0ms",
+                }}
+              >
+                {"to" in link ? (
+                  <Link to={link.to} viewTransition resetScroll={false}>
                     {t(link.displayName)}
                   </Link>
-                </li>
-              ))}
+                ) : (
+                  <a href={link.href}>{t(link.displayName)}</a>
+                )}
+              </li>
+            ))}
           </ul>
           <div
             className={cn(
@@ -102,9 +104,7 @@ const MobileSidebar = ({
               isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5",
             )}
             style={{
-              transitionDelay: isOpen
-                ? `${links.filter((link) => link.link).length * 70}ms`
-                : "0ms",
+              transitionDelay: isOpen ? `${links.length * 70}ms` : "0ms",
             }}
           >
             <LocaleSelector mode={mode} />
