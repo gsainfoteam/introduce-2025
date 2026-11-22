@@ -1,5 +1,5 @@
+import { Link } from "@tanstack/react-router";
 import { ClassValue } from "clsx";
-import { Link } from "react-router-dom";
 import cn from "src/utils/cn";
 
 import { useMember } from "../memberWrapper";
@@ -12,7 +12,7 @@ const MemberLink = ({ className }: MemberLinkProps) => {
   const member = useMember();
 
   return (
-    <Link to="" className={cn(className)} viewTransition>
+    <Link to="." className={cn(className)} viewTransition>
       {member.name}
     </Link>
   );

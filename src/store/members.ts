@@ -1,4 +1,4 @@
-import { ObjectLocale } from "src/commonTypes";
+import { ObjectLocale } from "src/types/locale";
 
 import data from "./data.json";
 

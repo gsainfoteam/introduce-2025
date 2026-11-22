@@ -1,13 +1,13 @@
 import Footer from "src/components/common/footer";
 import Navbar from "src/components/common/navbar";
 
-import LapTopOpening from "./sections/1_LapTopOpening";
-import Introduction from "./sections/2_Introduction";
-import CoolDevCulture from "./sections/3_CoolDevCulture";
-import PassionateMembers from "./sections/4_PassionateMembers";
-import ZiggleIntroduction from "./sections/5_ZiggleIntroduction";
-import SmallGathering from "./sections/6_SmallGathering";
-import ApplyInfoteam from "./sections/7_ApplyInfoteam";
+import ApplyInfoteam from "./sections/ApplyInfoteam";
+import CoolDevCulture from "./sections/CoolDevCulture";
+import Introduction from "./sections/Introduction";
+import LapTopOpening from "./sections/LapTopOpening";
+import PassionateMembers from "./sections/PassionateMembers";
+import SmallGathering from "./sections/SmallGathering";
+import ZiggleIntroduction from "./sections/ZiggleIntroduction";
 
 const OnboardingPage = () => {
   return (

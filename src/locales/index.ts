@@ -25,6 +25,8 @@ i18next
       en: ["en-US"],
       default: ["ko-KR"],
     },
+    // 빈 문자열("")을 유효한 번역으로 취급 (i18next 23 의 동작 유지)
+    returnEmptyString: true,
     interpolation: {
       escapeValue: false,
     },

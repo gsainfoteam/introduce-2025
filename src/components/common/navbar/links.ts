@@ -1,30 +1,29 @@
 import { ParseKeys } from "i18next";
 
-interface NavLink {
-  displayName: ParseKeys;
-  link?: string;
-}
+export type NavLink = { displayName: ParseKeys } & (
+  { to: "/" | "/members" | "/projects" | "/faq" } | { href: string }
+);
 
 const links: NavLink[] = [
   {
     displayName: "navbar.aboutTeam",
-    link: "/",
+    to: "/",
   },
   {
     displayName: "navbar.members",
-    link: "/members",
+    to: "/members",
   },
   {
     displayName: "navbar.projects",
-    link: "/projects",
+    to: "/projects",
   },
   {
     displayName: "navbar.faq",
-    link: "/faq",
+    to: "/faq",
   },
   {
     displayName: "navbar.bugReport",
-    link: "https://cs.gistory.me/",
+    href: "https://cs.gistory.me/",
   },
 ];
 

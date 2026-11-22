@@ -1,6 +1,6 @@
+import { Outlet, useNavigate, useSearch } from "@tanstack/react-router";
 import { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Outlet, useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "src/components/common/footer";
 import Navbar from "src/components/common/navbar";
 import cn from "src/utils/cn";
@@ -31,13 +31,15 @@ const Category = ({
 
 export const FaqLayout = () => {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const selectedCategory = searchParams.get("type") as
-    | "recruitment"
-    | "service";
+  const { type } = useSearch({ strict: false });
+  const selectedCategory = type as "recruitment" | "service";
   const setSelectedCategory = useCallback(
     (type: "recruitment" | "service") => {
-      navigate(`/faq?type=${type}`, { viewTransition: true });
+      navigate({
+        to: "/faq",
+        search: { type },
+        viewTransition: true,
+      });
     },
     [navigate],
   );

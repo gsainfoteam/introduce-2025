@@ -1,0 +1,9 @@
+build
+bun.lock
+public
+e2e/__snapshots__
+test-results
+playwright-report
+src/store/data.json
+src/pages/onboarding/sections/**/ziggleTextAnimation.json
+src/pages/onboarding/sections/5_ZiggleIntroduction/assets/*.json

@@ -1,28 +1,20 @@
+import babel from "@rolldown/plugin-babel";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
+import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import checker from "vite-plugin-checker";
 import svgr from "vite-plugin-svgr";
-import tsconfigPaths from "vite-tsconfig-paths";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   build: {
     outDir: "build",
   },
+  resolve: {
+    tsconfigPaths: true,
+  },
   plugins: [
     react(),
-    tsconfigPaths(),
-    checker({
-      typescript: true,
-      eslint: {
-        lintCommand: "eslint src/",
-        dev: {
-          logLevel: ["warning"],
-        },
-      },
-      enableBuild: false,
-    }),
+    babel({ presets: [reactCompilerPreset()] }),
     svgr(),
     tailwindcss(),
   ],
