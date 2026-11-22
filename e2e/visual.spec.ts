@@ -164,7 +164,11 @@ for (const vp of [VIEWPORTS[0], VIEWPORTS[2]]) {
       test.use({ viewport: { width: vp.width, height: vp.height } });
       for (const id of FAQ_IDS) {
         test(`faq/${id}`, async ({ page }) => {
-          await prepare(page, `/faq/${id}`, locale);
+          // type 이 없으면 목록으로 리다이렉트되므로 유효한 type 을 함께 전달한다
+          await prepare(page, `/faq/${id}?type=recruitment`, locale);
+          // 목록이 아닌 상세 화면인지 확인한다
+          await expect(page.getByRole("button", { name: /←/ })).toBeVisible();
+          expect(new URL(page.url()).pathname).toBe(`/faq/${id}`);
           await expect(page).toHaveScreenshot(
             `faq-${id}-${vp.name}-${locale}.png`,
             { ...SHOT, fullPage: true },

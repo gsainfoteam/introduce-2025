@@ -22,11 +22,14 @@ if (mode === "baseline") {
   try {
     await $`bun install`.cwd(dir);
     await $`bunx --bun vite build --mode production`.cwd(dir).env(env);
-    await $`bunx playwright test --update-snapshots`.cwd(cwd).env({
-      ...env,
-      VISUAL_ROOT: dir,
-      VISUAL_PORT: "4174",
-    });
+    // 기준 스냅샷은 시각 테스트만 대상으로 한다 (navigation 테스트는 현재 빌드 기준 동작을 검사함)
+    await $`bunx playwright test e2e/visual.spec.ts --update-snapshots`
+      .cwd(cwd)
+      .env({
+        ...env,
+        VISUAL_ROOT: dir,
+        VISUAL_PORT: "4174",
+      });
   } finally {
     await $`git worktree remove --force ${dir}`;
   }

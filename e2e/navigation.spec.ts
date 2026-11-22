@@ -106,7 +106,8 @@ test.describe("desktop", () => {
   });
 
   test("navbar: 버그 제보는 새 탭", async ({ page, context }) => {
-    await page.route("https://cs.gistory.me/**", (r) =>
+    // 새 탭의 최초 요청은 page.route 로 가로챌 수 없으므로 context.route 를 쓴다
+    await context.route("https://cs.gistory.me/**", (r) =>
       r.fulfill({ body: "ok", contentType: "text/html" }),
     );
     await page.goto("/members");
@@ -131,13 +132,26 @@ test.describe("desktop", () => {
     await expect.poll(() => url(page)).toBe("/projects");
   });
 
-  test("알 수 없는 경로 이동 후에도 앱이 살아있다", async ({ page }) => {
+  test("히스토리: 뒤로가기 / 앞으로가기", async ({ page }) => {
     await page.goto("/members");
     await page.goto("/");
     await page.goBack();
     await expect.poll(() => url(page)).toBe("/members");
     await page.goForward();
     await expect.poll(() => url(page)).toBe("/");
+  });
+
+  test("정의되지 않은 경로는 Not Found 를 보여주고, 정상 경로로 복구된다", async ({
+    page,
+  }) => {
+    await page.goto("/no-such-page");
+    await expect(page.locator("body")).toContainText("Not Found");
+    expect(url(page)).toBe("/no-such-page");
+
+    await page.goto("/members");
+    await expect(page.locator("nav")).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Not Found");
+    expect(url(page)).toBe("/members");
   });
 });
 
