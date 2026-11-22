@@ -23,10 +23,11 @@ const Section = ({ title, members }: { title: string; members: Member[] }) => {
 };
 
 const Members = () => {
-  const teamLeaders = members.filter((member) =>
+  const activeMembers = members.filter((m) => m.status === "ACTIVE");
+  const teamLeaders = activeMembers.filter((member) =>
     TEAM_LEADER_IDS.includes(member.id),
   );
-  const deputyTeamLeaders = members.filter((member) =>
+  const deputyTeamLeaders = activeMembers.filter((member) =>
     DEPUTY_TEAM_LEADER_IDS.includes(member.id),
   );
 
@@ -97,7 +98,7 @@ const Members = () => {
               Role.Education,
             ] as Role[]
           ).map((role) => {
-            const filteredMembers = members.filter((member) =>
+            const filteredMembers = activeMembers.filter((member) =>
               member.roles.includes(role),
             );
             if (filteredMembers.length === 0) return null;

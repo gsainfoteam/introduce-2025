@@ -12,6 +12,8 @@ export enum Role {
   Education,
 }
 
+export type MemberStatus = "ACTIVE" | "GRADUATED" | "INACTIVE";
+
 export interface IntendedProjects {
   projectId: number;
   role: Role[];
@@ -26,10 +28,12 @@ export interface Member {
   profileImage: string;
   intendedProjects: IntendedProjects[];
   year: number;
+  status: MemberStatus;
 }
 
 export const members: Member[] = data.map((v) => ({
   ...v,
+  status: ((v as { status?: MemberStatus }).status ?? "ACTIVE") as MemberStatus,
   profileImage: v.profileImage ? `/profiles/${v.profileImage}` : "/favicon.svg",
   roles: v.roles
     .map((r) => Role[r as keyof typeof Role])
