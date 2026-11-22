@@ -32,3 +32,9 @@ build
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+*.tsbuildinfo
+vite.config.d.ts
+test-results
+playwright-report
+e2e/__snapshots__
