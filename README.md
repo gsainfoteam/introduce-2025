@@ -54,7 +54,6 @@ public/profiles/       멤버 프로필 이미지
 ```
 
 - **멤버 추가/수정**: `src/store/data.json`과 `public/profiles/`를 수정합니다.
-- **라우팅 동작**: 페이지 이동 시 스크롤 위치를 유지합니다(`resetScroll: false`). 기존 React Router 동작과 같게 하기 위함이며, 새 `Link`/`navigate`에도 똑같이 지정해야 합니다.
 - **번역 추가**: `src/locales/*/main.json`의 키를 양쪽 언어에 같이 추가합니다. 빈 문자열(`""`)은 유효한 번역으로 취급합니다(`returnEmptyString`).
 
 ## 시각 회귀 테스트

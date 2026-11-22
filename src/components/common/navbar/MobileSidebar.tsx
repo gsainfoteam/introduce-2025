@@ -89,7 +89,7 @@ const MobileSidebar = ({
                 }}
               >
                 {"to" in link ? (
-                  <Link to={link.to} viewTransition resetScroll={false}>
+                  <Link to={link.to} viewTransition>
                     {t(link.displayName)}
                   </Link>
                 ) : (

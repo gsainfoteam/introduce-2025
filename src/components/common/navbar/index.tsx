@@ -49,7 +49,7 @@ const Navbar = ({
       if (location.pathname === link.to) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        navigate({ to: link.to, viewTransition: true, resetScroll: false });
+        navigate({ to: link.to, viewTransition: true });
       }
     } else {
       window.open(link.href, "_blank", "noopener,noreferrer");

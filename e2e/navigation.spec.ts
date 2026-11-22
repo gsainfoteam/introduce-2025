@@ -87,9 +87,10 @@ test.describe("desktop", () => {
     expect(url(page)).toBe("/");
   });
 
-  test("이동 시 스크롤 위치를 유지한다 (맨 위로 리셋하지 않음)", async ({
-    page,
-  }) => {
+  // 의도된 변경: 기존(React Router)은 이동 후 스크롤을 유지했지만,
+  // TanStack Router 로 옮기면서 페이지 이동 시 맨 위로 이동하도록 했다.
+  // (이 테스트는 baseline 이 아닌 현재 빌드 기준이다.)
+  test("이동 시 맨 위로 스크롤된다", async ({ page }) => {
     await page.goto("/members");
     await page.waitForLoadState("networkidle");
     await page.evaluate(() => window.scrollTo(0, 600));
@@ -99,13 +100,7 @@ test.describe("desktop", () => {
       .getByRole("link", { name: /프로젝트/ })
       .click();
     await expect.poll(() => url(page)).toBe("/projects");
-    await page.waitForTimeout(800);
-    const { y, max } = await page.evaluate(() => ({
-      y: window.scrollY,
-      max: document.documentElement.scrollHeight - window.innerHeight,
-    }));
-    expect(y).toBe(Math.min(600, max));
-    expect(y).toBeGreaterThan(0);
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
   });
 
   test("navbar: 버그 제보는 새 탭", async ({ page, context }) => {

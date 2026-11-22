@@ -65,7 +65,7 @@ const PositionCard = ({
   return link ? (
     <a href={link}>{content}</a>
   ) : (
-    <Link to="." viewTransition resetScroll={false}>
+    <Link to="." viewTransition>
       {content}
     </Link>
   );

@@ -12,7 +12,7 @@ const MemberLink = ({ className }: MemberLinkProps) => {
   const member = useMember();
 
   return (
-    <Link to="." className={cn(className)} viewTransition resetScroll={false}>
+    <Link to="." className={cn(className)} viewTransition>
       {member.name}
     </Link>
   );
