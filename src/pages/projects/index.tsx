@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import AccountIcon from "src/assets/logos/projects/account.svg?react";
+import bbosongIcon from "src/assets/logos/projects/bbosong.png";
 import BbunIcon from "src/assets/logos/projects/bbun.svg?react";
 import BlogIcon from "src/assets/logos/projects/blog.svg?react";
 import ChatbotIcon from "src/assets/logos/projects/chatbot.svg?react";
@@ -50,6 +51,18 @@ const Projects = () => {
       href: "https://bbun.gistory.me",
       label: t("projectsPage.bbun"),
       icon: <BbunIcon className="size-20 md:size-28" aria-hidden />,
+    },
+    {
+      href: "https://bbosong.gistory.me",
+      label: t("projectsPage.bbosong"),
+      icon: (
+        <img
+          src={bbosongIcon}
+          alt=""
+          className="size-20 rounded-[22%] md:size-28"
+          aria-hidden
+        />
+      ),
     },
     {
       href: "https://pot-g.gistory.me",

@@ -25,7 +25,7 @@ const toyProjects: ToyProject[] = [
       en: "Yacht Dice",
       ko: "요트다이스",
     },
-    intendersId: [90, 96, 3],
+    intendersId: [90, 3, 96],
     description: {
       en: "A Yacht Dice game made with React, inspired by 51 Worldwide Games!",
       ko: "리액트로 만들어본 51 WorldWide Games의 요트다이스!",
@@ -51,7 +51,7 @@ const toyProjects: ToyProject[] = [
       en: "Meeting Minutes Automation",
       ko: "회의록 자동화",
     },
-    intendersId: [11, 23],
+    intendersId: [23, 11],
     description: {
       en: "A program that automatically extracts and writes meeting minutes from Hangul (.hwp) files submitted by students.",
       ko: "학생회 제출용 한글 파일 회의록을 노션으로부터 자동 추출/작성해주는 프로그램",
