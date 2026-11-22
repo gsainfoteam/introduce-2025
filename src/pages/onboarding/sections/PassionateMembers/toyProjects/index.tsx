@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import { useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
-import { getToyProjects } from "src/pages/onboarding/sections/4_PassionateMembers/toyProjects/toyProjectExamples";
+import { getToyProjects } from "src/pages/onboarding/sections/PassionateMembers/toyProjects/toyProjectExamples";
 import cn from "src/utils/cn";
 
 import ToyLogo from "./assets/toyLogo.svg?react";

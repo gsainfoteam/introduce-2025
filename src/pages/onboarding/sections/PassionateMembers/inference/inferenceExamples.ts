@@ -1,4 +1,4 @@
-import { ObjectLocale } from "src/commonTypes";
+import { ObjectLocale } from "src/types/locale";
 
 interface InferenceExample {
   id: number;

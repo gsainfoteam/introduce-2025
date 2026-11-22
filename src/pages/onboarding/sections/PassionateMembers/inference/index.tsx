@@ -2,7 +2,7 @@ import { CSSProperties } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import MemberLink from "src/components/common/memberLink";
 import MemberWrapper from "src/components/common/memberWrapper";
-import { getInferenceExamples } from "src/pages/onboarding/sections/4_PassionateMembers/inference/inferenceExamples";
+import { getInferenceExamples } from "src/pages/onboarding/sections/PassionateMembers/inference/inferenceExamples";
 import cn from "src/utils/cn";
 
 interface ExampleProps {

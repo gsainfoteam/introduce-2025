@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import ArrowRightIcon from "src/assets/common/arrow-right/arrow-right.svg?react";
 import CellophaneButton from "src/components/common/cellophaneButton";
 import { H2 } from "src/components/common/headers";
-import { getPositionCards } from "src/pages/onboarding/sections/7_ApplyInfoteam/positionsCards";
+import { getPositionCards } from "src/pages/onboarding/sections/ApplyInfoteam/positionsCards";
 
 import PositionCard from "./positionCard";
 

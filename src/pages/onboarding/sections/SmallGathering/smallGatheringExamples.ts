@@ -1,7 +1,7 @@
-import { ObjectLocale } from "src/commonTypes";
-import SmallGatheringIcon0 from "src/pages/onboarding/sections/6_SmallGathering/assets/0.png";
-import SmallGatheringIcon1 from "src/pages/onboarding/sections/6_SmallGathering/assets/1.png";
-import SmallGatheringIcon2 from "src/pages/onboarding/sections/6_SmallGathering/assets/2.png";
+import SmallGatheringIcon0 from "src/pages/onboarding/sections/SmallGathering/assets/0.png";
+import SmallGatheringIcon1 from "src/pages/onboarding/sections/SmallGathering/assets/1.png";
+import SmallGatheringIcon2 from "src/pages/onboarding/sections/SmallGathering/assets/2.png";
+import { ObjectLocale } from "src/types/locale";
 
 interface SmallGatheringExample {
   id: number;

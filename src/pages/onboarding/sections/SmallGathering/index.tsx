@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { H2, H4, H5, ShortHr } from "src/components/common/headers";
-import { getSmallGatheringExamples } from "src/pages/onboarding/sections/6_SmallGathering/smallGatheringExamples";
+import { getSmallGatheringExamples } from "src/pages/onboarding/sections/SmallGathering/smallGatheringExamples";
 
 interface ExampleProps {
   id: number;
