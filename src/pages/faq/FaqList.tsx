@@ -15,7 +15,6 @@ export const Faq: React.FC = () => {
       params: { id: String(id) },
       search: { type: selectedCategory },
       viewTransition: true,
-      resetScroll: false,
     });
   };
 

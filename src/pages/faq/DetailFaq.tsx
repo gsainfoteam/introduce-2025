@@ -24,7 +24,6 @@ export const FaqDetail: React.FC = () => {
             to: "/faq",
             search: { type },
             viewTransition: true,
-            resetScroll: false,
           })
         }
         className="flex items-center text-[#7A7A7A] cursor-pointer"

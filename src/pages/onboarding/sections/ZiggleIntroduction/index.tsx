@@ -137,7 +137,6 @@ const ZiggleIntroduction = () => {
             navigate({
               to: "/projects",
               viewTransition: true,
-              resetScroll: false,
             })
           }
           className={cn(

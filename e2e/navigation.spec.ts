@@ -74,6 +74,8 @@ test.describe("desktop", () => {
     await expect.poll(() => url(page)).toBe("/members");
     await page.getByRole("link", { name: "Home" }).click();
     await expect.poll(() => url(page)).toBe("/");
+    // 이동 직후의 스크롤 리셋이 끝난 뒤에 스크롤한다
+    await page.waitForTimeout(800);
 
     // 같은 경로 클릭: 이동하지 않고 맨 위로 스크롤
     await page.evaluate(() => window.scrollTo(0, 3000));

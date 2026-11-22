@@ -39,7 +39,6 @@ export const FaqLayout = () => {
         to: "/faq",
         search: { type },
         viewTransition: true,
-        resetScroll: false,
       });
     },
     [navigate],
